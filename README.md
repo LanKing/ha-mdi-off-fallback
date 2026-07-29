@@ -4,54 +4,54 @@
 [![Downloads](https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads)](https://github.com/LanKing/ha-mdi-off-fallback/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> Home Assistant can display custom MDI icons for entities, but not every icon has a matching `-off` variant. The result is that an entity may be clearly off while its icon still looks active. This plugin fills that gap without replacing the standard Home Assistant cards.
+> Home Assistant умеет показывать произвольные MDI-иконки, но далеко не у каждой иконки есть подходящий `-off` вариант. В итоге устройство уже выключено, а иконка визуально всё ещё выглядит активной. Этот плагин закрывает этот пробел, не заменяя стандартные карточки Home Assistant.
 
-# 🚫 MDI Off Fallback for Home Assistant
+# 🚫 MDI Off Fallback для Home Assistant
 
-Automatically adds an MDI-style crossed-out icon when a Home Assistant entity is in an inactive state and the selected icon has no suitable native crossed-out variant.
+Автоматически добавляет перечёркивание в стиле MDI, когда сущность Home Assistant находится в неактивном состоянии, а у выбранной иконки нет подходящего нативного перечёркнутого варианта.
 
-The plugin works with standard Home Assistant Tile cards and preserves their native appearance, behavior, colors, sizing, and interactions.
+Плагин работает со стандартными Tile-карточками Home Assistant и сохраняет их штатный внешний вид, поведение, цвета, размеры и взаимодействия.
 
-It modifies only the rendered icon when a fallback is needed.
+Он меняет только уже отрисованную иконку — и только когда действительно нужен fallback.
 
 <a id="how-it-works"></a>
-## 🤓 How it works
+## 🤓 Как это работает
 
-Home Assistant normally resolves an entity icon through its own frontend components.
+Home Assistant сам определяет, какую иконку нужно показать сущности, и отрисовывает её через свои frontend-компоненты.
 
-MDI Off Fallback waits until Home Assistant has rendered the icon and then:
+MDI Off Fallback ждёт, пока Home Assistant отрисует иконку, а затем:
 
-1. Detects Tile icons whose entity is in a configured inactive state.
-2. Leaves the icon untouched if Home Assistant already rendered a native crossed-out variant.
-3. Reads the actual SVG rendered by Home Assistant.
-4. Cuts a diagonal transparent corridor through the original SVG using a mask.
-5. Adds an MDI-style diagonal slash using the same `24 × 24` coordinate system as Material Design Icons.
-6. Preserves Home Assistant's original SVG in the DOM so normal frontend updates continue to work.
+1. Находит Tile-иконки, сущности которых находятся в настроенном неактивном состоянии.
+2. Не трогает иконку, если Home Assistant уже отрисовал штатный перечёркнутый вариант.
+3. Берёт реальный SVG, уже отрисованный Home Assistant.
+4. Через SVG-mask вырезает диагональный прозрачный канал в исходной иконке.
+5. Добавляет диагональную полосу в стиле MDI в той же системе координат `24 × 24`, которую используют Material Design Icons.
+6. Оставляет оригинальный SVG Home Assistant в DOM, чтобы штатные обновления frontend продолжали работать.
 
-The plugin does not replace `hui-tile-card`, does not recreate Home Assistant styling, and does not modify entity states.
+Плагин не заменяет `hui-tile-card`, не воссоздаёт стили Home Assistant вручную и не меняет состояния сущностей.
 
 <a id="native-ui"></a>
-## 🧩 Native Home Assistant UI
+## 🧩 Штатный интерфейс Home Assistant
 
-The goal is to make the fallback indistinguishable from a normal Home Assistant icon.
+Цель — чтобы fallback выглядел так, будто Home Assistant умеет это сам.
 
 MDI Off Fallback:
 
-* uses the icon Home Assistant already rendered;
-* keeps the standard Tile card untouched;
-* keeps native tap, hold, hover, state colors, and sizing;
-* uses the native inactive icon background when Home Assistant provides one;
-* can add a matching faint inactive background when one is missing;
-* automatically reacts when entity state or card content changes.
+* использует ту иконку, которую уже выбрал и отрисовал Home Assistant;
+* не заменяет стандартную Tile-карточку;
+* сохраняет штатные tap, hold, hover, state colors и размеры;
+* использует штатный фон неактивной иконки, если Home Assistant уже его рисует;
+* может добавить такой же бледный фон, если штатного фона нет;
+* автоматически реагирует на изменения состояния сущности и содержимого карточки.
 
-No custom card is required.
+Никакая отдельная custom card не нужна.
 
 <a id="default-states"></a>
-## ⚙️ Default inactive states
+## ⚙️ Неактивные состояния по умолчанию
 
-The following rules are enabled by default:
+По умолчанию включены такие правила:
 
-| Domain | Inactive state |
+| Домен | Неактивное состояние |
 |---|---|
 | `light` | `off` |
 | `switch` | `off` |
@@ -63,22 +63,22 @@ The following rules are enabled by default:
 | `water_heater` | `off` |
 | `siren` | `off` |
 
-Other domains and states can be added through the optional global configuration file.
+Другие домены и состояния можно добавить через необязательный глобальный конфиг.
 
 <a id="configuration"></a>
-## 🔧 Configuration
+## 🔧 Конфигурация
 
-Configuration is optional.
+Конфигурация необязательна.
 
-Without a configuration file, the built-in defaults above are used.
+Если файла конфигурации нет, используются встроенные правила выше.
 
-To customize the rules for the whole Home Assistant installation, create:
+Чтобы изменить правила сразу для всей установки Home Assistant, создайте файл:
 
 ```text
 /config/www/ha-mdi-off-fallback.config.json
 ```
 
-Example:
+Пример:
 
 ```json
 {
@@ -100,19 +100,19 @@ Example:
 }
 ```
 
-The file is available to the frontend as:
+Для frontend этот файл доступен как:
 
 ```text
 /local/ha-mdi-off-fallback.config.json
 ```
 
-Because the configuration is stored on the Home Assistant server, the same rules are used by every browser and device.
+Поскольку конфигурация хранится на сервере Home Assistant, одни и те же правила используются на всех браузерах и устройствах.
 
-The configuration file is separate from the HACS-managed plugin files, so plugin updates do not overwrite it.
+Конфиг хранится отдельно от файлов плагина, которыми управляет HACS, поэтому обновление плагина его не перезаписывает.
 
-Only entries present in `states` override the built-in defaults. Use an empty array to disable a default domain.
+Только домены, перечисленные в `states`, переопределяют встроенные значения. Чтобы отключить дефолтный домен, укажите для него пустой массив.
 
-For example:
+Например:
 
 ```json
 {
@@ -124,28 +124,28 @@ For example:
 ```
 
 <a id="reload-config"></a>
-### Reload configuration
+### Перезагрузка конфигурации
 
-After changing the JSON file, configuration can be reloaded without refreshing the page:
+После изменения JSON-файла конфиг можно перечитать без перезагрузки страницы:
 
 ```js
 haMdiOffFallback.reloadConfig()
 ```
 
-Show the active configuration:
+Посмотреть активную конфигурацию:
 
 ```js
 haMdiOffFallback.getConfig()
 ```
 
 <a id="background"></a>
-### Inactive icon background
+### Фон неактивной иконки
 
-When Home Assistant already provides its normal inactive icon background, the plugin leaves it untouched.
+Если Home Assistant уже рисует свой штатный фон неактивной иконки, плагин его не трогает.
 
-When it is missing, the plugin can add a faint circular background matching the native Home Assistant inactive Tile treatment.
+Если такого фона нет, плагин может добавить бледный круг, совпадающий с оформлением стандартной inactive Tile-иконки Home Assistant.
 
-Disable it:
+Отключить:
 
 ```json
 {
@@ -153,7 +153,7 @@ Disable it:
 }
 ```
 
-Or change its opacity:
+Изменить прозрачность:
 
 ```json
 {
@@ -162,59 +162,59 @@ Or change its opacity:
 ```
 
 <a id="installation"></a>
-## 📦 Installation
+## 📦 Установка
 
 ### HACS
 
-Until the plugin is available in the default HACS repository:
+Пока плагин не добавлен в стандартный каталог HACS:
 
-1. Open HACS.
-2. Open **Custom repositories**.
-3. Add:
+1. Откройте HACS.
+2. Откройте **Custom repositories**.
+3. Добавьте:
 
 ```text
 https://github.com/LanKing/ha-mdi-off-fallback
 ```
 
-4. Select **Dashboard** as the repository type.
-5. Install **HA MDI Off Fallback**.
-6. Reload the Home Assistant frontend.
+4. Выберите тип репозитория **Dashboard**.
+5. Установите **HA MDI Off Fallback**.
+6. Перезагрузите frontend Home Assistant.
 
-No custom card configuration is required.
+Никакая дополнительная настройка карточек не требуется.
 
 <a id="manual-installation"></a>
-### Manual installation
+### Ручная установка
 
-Copy:
+Скопируйте:
 
 ```text
 dist/ha-mdi-off-fallback.js
 ```
 
-to:
+в:
 
 ```text
 /config/www/ha-mdi-off-fallback.js
 ```
 
-Then add a Dashboard resource:
+Затем добавьте Dashboard Resource:
 
 ```text
 /local/ha-mdi-off-fallback.js
 ```
 
-Resource type:
+Тип ресурса:
 
 ```text
 JavaScript Module
 ```
 
-Reload the Home Assistant frontend afterwards.
+После этого перезагрузите frontend Home Assistant.
 
 <a id="debugging"></a>
-## 🐛 Debugging
+## 🐛 Отладка
 
-Enable debug output:
+Включить debug-вывод:
 
 ```js
 haMdiOffFallback.configure({
@@ -222,48 +222,50 @@ haMdiOffFallback.configure({
 })
 ```
 
-Force the plugin to scan the current dashboard again:
+Принудительно пересканировать текущий dashboard:
 
 ```js
 haMdiOffFallback.rescan()
 ```
 
-Show the plugin version:
+Посмотреть версию плагина:
 
 ```js
 haMdiOffFallback.version
 ```
 
 <a id="notes"></a>
-## 📓 Notes
+## 📓 Примечания
 
-* The plugin currently targets Home Assistant Tile icons.
-* Only configured domain/state combinations are treated as inactive.
-* Existing native crossed-out icons are left untouched.
-* The fallback is generated from the SVG Home Assistant already rendered; it does not maintain its own MDI icon database.
-* The SVG fallback is designed for standard Material Design Icons using a `0 0 24 24` view box.
-* Home Assistant frontend internals are not a stable public API. A future Home Assistant frontend update may require an update to this plugin.
-* The plugin changes presentation only. It never changes entity states, services, automations, or device behavior.
+* Сейчас плагин ориентирован на стандартные Tile-иконки Home Assistant.
+* Неактивными считаются только настроенные комбинации домен/состояние.
+* Уже существующие штатные перечёркнутые иконки не изменяются.
+* Fallback строится из SVG, который уже отрисовал Home Assistant; собственной базы MDI-иконок у плагина нет.
+* SVG-fallback рассчитан на стандартные Material Design Icons с `viewBox="0 0 24 24"`.
+* Внутренние frontend-компоненты Home Assistant не являются стабильным публичным API. Будущие обновления frontend могут потребовать обновления плагина.
+* Плагин меняет только отображение. Он никогда не меняет состояния сущностей, не вызывает сервисы, не вмешивается в автоматизации и не управляет устройствами.
 
 <a id="why"></a>
-## 💡 Why not just use `mdi:*-off`?
+## 💡 Почему не использовать просто `mdi:*-off`?
 
-Because not every Material Design Icon has a matching crossed-out variant.
+Потому что далеко не у каждой Material Design Icon существует соответствующий перечёркнутый вариант.
 
-A custom icon may look perfect while an entity is active, but when the entity turns off there may simply be no corresponding icon such as:
+Иконка может отлично выглядеть, пока устройство активно, но для выключенного состояния аналога вроде:
 
 ```text
 mdi:some-icon-off
 ```
 
-MDI Off Fallback keeps the original icon and generates the missing visual state automatically.
+может просто не существовать.
+
+MDI Off Fallback сохраняет исходную иконку и автоматически создаёт недостающее визуальное состояние.
 
 <a id="implementation"></a>
-## 🛠 Implementation
+## 🛠 Реализация
 
-The plugin deliberately avoids monkey-patching Home Assistant's Lit components.
+Плагин специально не monkey-patch'ит Lit-компоненты Home Assistant.
 
-Instead it observes the rendered frontend DOM and follows Home Assistant's icon chain:
+Вместо этого он наблюдает уже отрисованный frontend DOM и проходит по штатной цепочке компонентов Home Assistant:
 
 ```text
 ha-tile-icon
@@ -273,10 +275,10 @@ ha-tile-icon
             └── svg
 ```
 
-Open Shadow Roots are discovered recursively and monitored for new cards and state changes.
+Открытые Shadow Root рекурсивно обнаруживаются и отслеживаются на появление новых карточек и изменения состояния.
 
-The original SVG remains owned by Home Assistant. The plugin adds only the visual fallback layer and removes it again when it is no longer needed.
+Исходный SVG остаётся под управлением Home Assistant. Плагин добавляет только визуальный fallback и удаляет его, когда он больше не нужен.
 
-## 📄 License
+## 📄 Лицензия
 
 MIT — contributions welcome.
