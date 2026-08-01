@@ -4,7 +4,7 @@
 [![Downloads](https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads)](https://github.com/LanKing/ha-mdi-off-fallback/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> Home Assistant умеет показывать произвольные MDI-иконки, но далеко не у каждой иконки есть подходящий вариант `-off`. В итоге устройство уже выключено, а иконка визуально всё ещё выглядит активной. Этот плагин решает проблему эстетики, не заменяя стандартные карточки Home Assistant.
+> Home Assistant умеет показывать произвольные MDI-иконки, но далеко не у каждой иконки есть подходящий вариант `-off`. В итоге устройство уже выключено, а иконка визуально всё ещё выглядит активной. Этот плагин решает проблему эстетики, используя стандартные карточки Home Assistant.
 
 # 🚫 MDI Off Fallback для Home Assistant
 
