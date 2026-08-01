@@ -1,5 +1,5 @@
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Frontend-41BDF5?logo=homeassistant&logoColor=white)](https://www.home-assistant.io/)
-[![HACS](https://img.shields.io/badge/HACS-Frontend-41BDF5)](https://hacs.xyz/)8
+[![HACS](https://img.shields.io/badge/HACS-Frontend-41BDF5)](https://hacs.xyz/)
 [![Latest release](https://img.shields.io/github/v/release/LanKing/ha-mdi-off-fallback?label=release)](https://github.com/LanKing/ha-mdi-off-fallback/releases)
 [![Downloads](https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads)](https://github.com/LanKing/ha-mdi-off-fallback/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -8,7 +8,7 @@
 
 # 🚫 MDI Off Fallback для Home Assistant
 
-<p align="center"><img src="docs/demo.jpg" width="0%" /></p>
+<p align="center"><img src="docs/demo.jpg" width="80%" /></p>
 ![Plugin function visualized](docs/demo.jpg)
 
 
