@@ -7,7 +7,7 @@
 > Home Assistant умеет показывать произвольные MDI-иконки, но далеко не у каждой иконки есть подходящий вариант `-off`. В итоге устройство уже выключено, а иконка визуально всё ещё выглядит активной. Этот плагин решает проблему, не заменяя стандартные карточки Home Assistant.
 
 # 🚫 MDI Off Fallback для Home Assistant
-
+<img src="docs/demo.jpg" width="50%" />
 ![Plugin function visualized](docs/demo.jpg)
 
 
