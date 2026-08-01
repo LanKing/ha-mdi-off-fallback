@@ -8,7 +8,7 @@
 
 # 🚫 MDI Off Fallback для Home Assistant
 
-<p align="center"><img src="docs/demo.jpg" alt="Plugin function visualized" /></p>
+![Plugin function visualized](docs/demo.jpg)
 
 Автоматически добавляет перечёркивание в стиле MDI, когда сущность Home Assistant находится в неактивном состоянии, а у выбранной иконки нет подходящего штатного перечёркнутого варианта.
 
