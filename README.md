@@ -8,7 +8,7 @@
 
 # 🚫 MDI Off Fallback для Home Assistant
 
-<p align="center"><img src="docs/demo.jpg" width="80%" /></p>
+<p align="center"><img src="docs/demo.jpg" width="50%" /></p>
 ![Plugin function visualized](docs/demo.jpg)
 
 
