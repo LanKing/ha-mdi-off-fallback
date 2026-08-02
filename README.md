@@ -227,29 +227,6 @@ JavaScript Module
 
 После этого перезагрузите интерфейс Home Assistant.
 
-<a id="debugging"></a>
-## 🐛 Отладка
-
-Включить отладочный вывод:
-
-```js
-haMdiOffFallback.configure({
-  debug: true
-})
-```
-
-Принудительно заново просканировать текущую панель:
-
-```js
-haMdiOffFallback.rescan()
-```
-
-Посмотреть версию плагина:
-
-```js
-haMdiOffFallback.version
-```
-
 ## 📄 Лицензия
 
 MIT — вклад в проект приветствуется.
