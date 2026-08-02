@@ -1,0 +1,16 @@
+{
+  "states": {
+    "light": ["off"],
+    "switch": ["off"],
+    "fan": ["off"],
+    "climate": ["off"],
+    "media_player": ["off"],
+    "cover": ["closed"],
+    "humidifier": ["off"],
+    "water_heater": ["off"],
+    "siren": ["off"]
+  },
+  "faint_background_when_missing": true,
+  "faint_background_opacity": 0.2,
+  "debug": false
+}
