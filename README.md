@@ -1,7 +1,7 @@
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Frontend-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Frontend-41BDF5" alt="HACS"></a>
 <a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-mdi-off-fallback?label=release&cacheSeconds=300" alt="Latest release"></a>
-<a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads&cacheSeconds=5" alt="Downloads"></a>
+<a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads&cacheSeconds=300" alt="Downloads"></a>
 <a href="https://github.com/LanKing/ha-mdi-off-fallback/blob/main/LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-mdi-off-fallback?cacheSeconds=300" alt="License"></a>
 
 > Home Assistant позволяет использовать произвольные MDI-иконки, но не у каждой существует вариант `-off`. В итоге устройство уже выключено, а иконка визуально всё ещё выглядит активной. Этот плагин автоматически добавляет перечёркивание в стиле MDI для неактивных сущностей, когда штатной выключенной иконки нет.
@@ -15,6 +15,8 @@
 * изменяет только уже отрисованные иконки и только при отсутствии штатного варианта `-off`;
 * добавляет бледный круглый фон в стиле Home Assistant, если штатного фона нет;
 * не меняет состояния сущностей и не вмешивается в работу устройств.
+
+📦 [Установка](#installation)  🔧 [Настройка](#configuration)  🏠 [Больше прикольных штук](#moar)
   
 
 <a id="configuration"></a>
@@ -203,6 +205,11 @@ https://github.com/LanKing/ha-mdi-off-fallback
 6. Выберите тип **Модуль JavaScript** (**JavaScript Module**) и нажмите **Создать** (**Create**).
 7. Обновите страницу Home Assistant с очисткой кэша браузера.
 
+<a id="license"></a>
 ## 📄 Лицензия
 
 MIT — вклад в проект приветствуется.
+
+<a id="moar"></a>
+## 🏠 Больше прикольных штук
+[Познакомьтесь с другими моими инструментами для Home Assistant](https://github.com/LanKing/ha-tools/blob/main/README.md)
