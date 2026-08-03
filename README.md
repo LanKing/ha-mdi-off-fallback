@@ -18,8 +18,40 @@ The plugin is designed so that the added slash looks like a native part of Home 
 * adds a faint circular Home Assistant-style background when the native background is missing;
 * does not change entity states or interfere with device operation.
 
-📦 [Installation](#installation)  🔧 [Configuration](#configuration)  🏠 [More cool stuff](#moar)
-  
+<a id="installation"></a>
+## 📦 Installation
+
+### 🛍 Installation via HACS
+ℹ️ [What is HACS and how do I install it?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/README.md)
+
+#### 1. Add this repository to HACS
+It may take months for the plugin to be added to the default HACS catalog (we are waiting), so first add this repository to HACS manually:
+1. Open HACS.
+2. Open the menu in the upper-right corner and select **Custom repositories**.
+3. Add this repository:
+
+```text
+https://github.com/LanKing/ha-mdi-off-fallback
+```
+4. Select **Dashboard** as the type and click **Add**.
+
+> Adding a repository under **Custom repositories** only makes the plugin available in HACS. The plugin itself is installed separately with the **Download** button.
+
+#### 2. Install the plugin
+1. Search HACS for: `MDI Off Fallback` and open it.
+2. Click **Download** and confirm the installation.
+3. When the download is complete, reload Home Assistant while clearing the browser cache.
+
+<a id="manual-installation"></a>
+### 🧑‍💻 Manual installation (without HACS)
+
+1. Download [`ha-mdi-off-fallback.js`](https://github.com/LanKing/ha-mdi-off-fallback/releases/latest/download/ha-mdi-off-fallback.js).
+2. Copy the file to `/config/www/ha-mdi-off-fallback.js`.
+3. [Open Resources](https://my.home-assistant.io/redirect/lovelace_resources/) or navigate there manually in Home Assistant: **Settings → Dashboards → ⋮ → Resources**.
+4. Click **Add resource**.
+5. Enter `/local/ha-mdi-off-fallback.js` in the URL field.
+6. Select **JavaScript Module** and click **Create**.
+7. Reload Home Assistant while clearing the browser cache.
 
 <a id="configuration"></a>
 ## 🔧 Configuration
@@ -170,42 +202,6 @@ View the active configuration:
 ```js
 haMdiOffFallback.getConfig()
 ```
-
-<a id="installation"></a>
-## 📦 Installation
-
-### 🛍 HACS
-ℹ️ [What is HACS and how do I install it?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/README.md)
-
-#### 1. Add this repository to HACS
-It may take months for the plugin to be added to the default HACS catalog (we are waiting), so first add this repository to HACS manually:
-1. Open HACS.
-2. Open the menu in the upper-right corner and select **Custom repositories**.
-3. Add this repository:
-
-```text
-https://github.com/LanKing/ha-mdi-off-fallback
-```
-4. Select **Dashboard** as the type and click **Add**.
-
-> Adding a repository under **Custom repositories** only makes the plugin available in HACS. The plugin itself is installed separately with the **Download** button.
-
-#### 2. Install the plugin
-1. Search for **MDI Off Fallback** in HACS and open it.
-2. Click **Download** and confirm the installation.
-3. When the download is complete, reload Home Assistant while clearing the browser cache.
-
-
-<a id="manual-installation"></a>
-### 🧑‍💻 Manual installation (without HACS)
-
-1. Download [`ha-mdi-off-fallback.js`](https://github.com/LanKing/ha-mdi-off-fallback/releases/latest/download/ha-mdi-off-fallback.js).
-2. Copy the file to `/config/www/ha-mdi-off-fallback.js`.
-3. [Open Resources](https://my.home-assistant.io/redirect/lovelace_resources/) or navigate there manually in Home Assistant: **Settings → Dashboards → ⋮ → Resources**.
-4. Click **Add resource**.
-5. Enter `/local/ha-mdi-off-fallback.js` in the URL field.
-6. Select **JavaScript Module** and click **Create**.
-7. Reload Home Assistant while clearing the browser cache.
 
 <a id="license"></a>
 ## 📄 License
