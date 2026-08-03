@@ -198,7 +198,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
 
 1. Скачайте [`ha-mdi-off-fallback.js`](https://github.com/LanKing/ha-mdi-off-fallback/releases/latest/download/ha-mdi-off-fallback.js).
 2. Скопируйте файл в `/config/www/ha-mdi-off-fallback.js`.
-3. В Home Assistant откройте **Настройки → Панели управления → ⋮ → Ресурсы** (**Settings → Dashboards → ⋮ → Resources**).
+3. В Home Assistant [перейдите в ресурсы](https://my.home-assistant.io/redirect/lovelace_resources/) или откройте их вручную: **Настройки → Панели управления → ⋮ → Ресурсы** *(**Settings → Dashboards → ⋮ → Resources**)*.
 4. Нажмите **Добавить ресурс** (**Add resource**).
 5. В поле URL укажите `/local/ha-mdi-off-fallback.js`.
 6. Выберите тип **Модуль JavaScript** (**JavaScript Module**) и нажмите **Создать** (**Create**).
