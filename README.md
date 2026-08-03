@@ -1,7 +1,7 @@
 <a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Frontend-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
 <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Frontend-41BDF5" alt="HACS"></a>
 <a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-mdi-off-fallback?label=release&cacheSeconds=300" alt="Latest release"></a>
-<a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads&cacheSeconds=300" alt="Downloads"></a>
+<a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads&cacheSeconds=5" alt="Downloads"></a>
 <a href="https://github.com/LanKing/ha-mdi-off-fallback/blob/main/LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-mdi-off-fallback?cacheSeconds=300" alt="License"></a>
 
 > Home Assistant позволяет использовать произвольные MDI-иконки, но не у каждой существует вариант `-off`. В итоге устройство уже выключено, а иконка визуально всё ещё выглядит активной. Этот плагин автоматически добавляет перечёркивание в стиле MDI для неактивных сущностей, когда штатной выключенной иконки нет.
