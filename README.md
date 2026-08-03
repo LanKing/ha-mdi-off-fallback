@@ -199,7 +199,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
 Скопируйте:
 
 ```text
-dist/ha-mdi-off-fallback.js
+ha-mdi-off-fallback.js
 ```
 
 в:
