@@ -171,7 +171,7 @@ haMdiOffFallback.getConfig()
 ## 📦 Установка
 
 ### 🛍 HACS
-> ℹ️ [Что такое HACS и как его установить?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/langs/README_ru.md)
+ℹ️ [Что такое HACS и как его установить?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/langs/README_ru.md)
 
 #### 1. Добавление этого репозитория в HACS
 Пока плагин будет официально добавлен в HACS могут пройти месяцы (ждём), поэтому вначале нужно добавить репозиторий в HACS самостоятельно:
