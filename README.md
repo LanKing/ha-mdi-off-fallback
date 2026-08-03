@@ -185,7 +185,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
 ```
 
 4. Выберите тип **Dashboard** и нажмите **Add**.
-5. После добавления найдите и откройте **HA MDI Off Fallback** в HACS.
+5. После добавления найдите и откройте **MDI Off Fallback** в HACS.
 6. Нажмите **Download** и подтвердите установку.
 7. После завершения загрузки обновите страницу Home Assistant с очисткой кэша браузера.
 
