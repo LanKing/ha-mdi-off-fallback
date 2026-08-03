@@ -23,5 +23,5 @@ jobs:
         run: |
           gh release upload \
             "${{ github.event.release.tag_name }}" \
-            "dist/ha-mdi-off-fallback.js" \
+            "ha-mdi-off-fallback.js" \
             --clobber
