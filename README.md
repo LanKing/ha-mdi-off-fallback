@@ -196,31 +196,23 @@ https://github.com/LanKing/ha-mdi-off-fallback
 <a id="manual-installation"></a>
 ### Ручная установка
 
-Скопируйте:
-
-```text
-ha-mdi-off-fallback.js
-```
-
-в:
+1. [Скачайте `ha-mdi-off-fallback.js`](https://github.com/LanKing/ha-mdi-off-fallback/releases/latest/download/ha-mdi-off-fallback.js).
+2. Скопируйте файл в:
 
 ```text
 /config/www/ha-mdi-off-fallback.js
 ```
 
-Затем добавьте ресурс панели управления:
+3. В Home Assistant откройте **Настройки → Панели управления → Ресурсы** (**Settings → Dashboards → Resources**).
+4. Нажмите **Добавить ресурс** (**Add resource**).
+5. В поле URL укажите:
 
 ```text
 /local/ha-mdi-off-fallback.js
 ```
 
-Тип ресурса:
-
-```text
-JavaScript Module
-```
-
-После этого обновите страницу Home Assistant с очисткой кэша браузера.
+6. Выберите тип **Модуль JavaScript** (**JavaScript Module**) и нажмите **Создать** (**Create**).
+7. Обновите страницу Home Assistant с очисткой кэша браузера.
 
 ## 📄 Лицензия
 
