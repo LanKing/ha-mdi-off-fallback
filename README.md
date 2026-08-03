@@ -203,7 +203,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
 /config/www/ha-mdi-off-fallback.js
 ```
 
-3. В Home Assistant откройте **Настройки → Панели управления → Ресурсы** (**Settings → Dashboards → Resources**).
+3. В Home Assistant откройте **Настройки → Панели управления → ⋮ → Ресурсы** (**Settings → Dashboards → ⋮ → Resources**).
 4. Нажмите **Добавить ресурс** (**Add resource**).
 5. В поле URL укажите:
 
