@@ -1,11 +1,11 @@
 /**
  * HA MDI Off Fallback
- * v0.2.5
+ * v0.2.6
  */
 (() => {
   "use strict";
 
-  const VERSION = "0.2.5";
+  const VERSION = "0.2.6";
   const DEFAULT_STATES = Object.freeze({
     light: ["off"],
     switch: ["off"],
@@ -162,7 +162,9 @@
   };
 
   const getIconDetails = (tileIcon) => {
-    const stateIcon = tileIcon.shadowRoot?.querySelector("ha-state-icon");
+    const stateIcon =
+      tileIcon.querySelector("ha-state-icon") ??
+      tileIcon.shadowRoot?.querySelector("ha-state-icon");
     const haIcon = stateIcon?.shadowRoot?.querySelector("ha-icon");
     const svgIcon = haIcon?.shadowRoot?.querySelector("ha-svg-icon");
     const svgRoot = svgIcon?.shadowRoot;
