@@ -1,0 +1,213 @@
+<sub>🇺🇸&nbsp;<a href="../README.md">E&#8288;n&#8288;g&#8288;l&#8288;i&#8288;s&#8288;h</a>&nbsp;|</sub> <sub>🇺🇦&nbsp;<a href="README_uk.md">У&#8288;к&#8288;р&#8288;а&#8288;ї&#8288;н&#8288;с&#8288;ь&#8288;к&#8288;а</a>&nbsp;|</sub> <sub>ru&nbsp;<a href="README_ru.md">Р&#8288;у&#8288;с&#8288;с&#8288;к&#8288;и&#8288;й</a>&nbsp;|</sub> <sub>🇿🇦&nbsp;<a href="README_af.md">A&#8288;f&#8288;r&#8288;i&#8288;k&#8288;a&#8288;a&#8288;n&#8288;s</a>&nbsp;|</sub> <sub>🇸🇦&nbsp;<a href="README_ar.md">ا&#8288;ل&#8288;ع&#8288;ر&#8288;ب&#8288;ي&#8288;ة</a>&nbsp;|</sub> <sub>🇧🇬&nbsp;<a href="README_bg.md">Б&#8288;ъ&#8288;л&#8288;г&#8288;а&#8288;р&#8288;с&#8288;к&#8288;и</a>&nbsp;|</sub> <sub>🇧🇩&nbsp;<a href="README_bn.md">বাং&#8288;লা</a>&nbsp;|</sub> <sub>🇧🇦&nbsp;<a href="README_bs.md">B&#8288;o&#8288;s&#8288;a&#8288;n&#8288;s&#8288;k&#8288;i</a>&nbsp;|</sub> <sub>ca&nbsp;<a href="README_ca.md">C&#8288;a&#8288;t&#8288;a&#8288;l&#8288;à</a>&nbsp;|</sub> <sub>🇨🇿&nbsp;<a href="README_cs.md">Č&#8288;e&#8288;š&#8288;t&#8288;i&#8288;n&#8288;a</a>&nbsp;|</sub> <sub>cy&nbsp;<a href="README_cy.md">C&#8288;y&#8288;m&#8288;r&#8288;a&#8288;e&#8288;g</a>&nbsp;|</sub> <sub>🇩🇰&nbsp;<a href="README_da.md">D&#8288;a&#8288;n&#8288;s&#8288;k</a>&nbsp;|</sub> <sub>🇩🇪&nbsp;<a href="README_de.md">D&#8288;e&#8288;u&#8288;t&#8288;s&#8288;c&#8288;h</a>&nbsp;|</sub> <sub>🇬🇷&nbsp;<a href="README_el.md">Ε&#8288;λ&#8288;λ&#8288;η&#8288;ν&#8288;ι&#8288;κ&#8288;ά</a>&nbsp;|</sub> <sub>eo&nbsp;<a href="README_eo.md">E&#8288;s&#8288;p&#8288;e&#8288;r&#8288;a&#8288;n&#8288;t&#8288;o</a>&nbsp;|</sub> <sub>🇪🇸&nbsp;<a href="README_es.md">E&#8288;s&#8288;p&#8288;a&#8288;ñ&#8288;o&#8288;l</a>&nbsp;|</sub> <sub>🇪🇪&nbsp;<a href="README_et.md">E&#8288;e&#8288;s&#8288;t&#8288;i</a>&nbsp;|</sub> <sub>eu&nbsp;<a href="README_eu.md">E&#8288;u&#8288;s&#8288;k&#8288;a&#8288;r&#8288;a</a>&nbsp;|</sub> <sub>🇮🇷&nbsp;<a href="README_fa.md">ف&#8288;ا&#8288;ر&#8288;س&#8288;ی</a>&nbsp;|</sub> <sub>🇫🇮&nbsp;<a href="README_fi.md">S&#8288;u&#8288;o&#8288;m&#8288;i</a>&nbsp;|</sub> <sub>fy&nbsp;<a href="README_fy.md">F&#8288;r&#8288;y&#8288;s&#8288;k</a>&nbsp;|</sub> <sub>🇫🇷&nbsp;<a href="README_fr.md">F&#8288;r&#8288;a&#8288;n&#8288;ç&#8288;a&#8288;i&#8288;s</a>&nbsp;|</sub> <sub>🇮🇪&nbsp;<a href="README_ga.md">G&#8288;a&#8288;e&#8288;i&#8288;l&#8288;g&#8288;e</a>&nbsp;|</sub> <sub>gl&nbsp;<a href="README_gl.md">G&#8288;a&#8288;l&#8288;e&#8288;g&#8288;o</a>&nbsp;|</sub> <sub>🇨🇭&nbsp;<a href="README_gsw.md">S&#8288;c&#8288;h&#8288;w&#8288;i&#8288;i&#8288;z&#8288;e&#8288;r&#8288;d&#8288;ü&#8288;t&#8288;s&#8288;c&#8288;h</a>&nbsp;|</sub> <sub>🇮🇱&nbsp;<a href="README_he.md">ע&#8288;ב&#8288;ר&#8288;י&#8288;ת</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_hi.md">हि&#8288;न्दी</a>&nbsp;|</sub> <sub>🇭🇷&nbsp;<a href="README_hr.md">H&#8288;r&#8288;v&#8288;a&#8288;t&#8288;s&#8288;k&#8288;i</a>&nbsp;|</sub> <sub>🇭🇺&nbsp;<a href="README_hu.md">M&#8288;a&#8288;g&#8288;y&#8288;a&#8288;r</a>&nbsp;|</sub> <sub>🇦🇲&nbsp;<a href="README_hy.md">Հ&#8288;ա&#8288;յ&#8288;ե&#8288;ր&#8288;ե&#8288;ն</a>&nbsp;|</sub> <sub>🇮🇩&nbsp;<a href="README_id.md">I&#8288;n&#8288;d&#8288;o&#8288;n&#8288;e&#8288;s&#8288;i&#8288;a</a>&nbsp;|</sub> <sub>🇮🇸&nbsp;<a href="README_is.md">Í&#8288;s&#8288;l&#8288;e&#8288;n&#8288;s&#8288;k&#8288;a</a>&nbsp;|</sub> <sub>🇮🇹&nbsp;<a href="README_it.md">I&#8288;t&#8288;a&#8288;l&#8288;i&#8288;a&#8288;n&#8288;o</a>&nbsp;|</sub> <sub>🇯🇵&nbsp;<a href="README_ja.md">日&#8288;本&#8288;語</a>&nbsp;|</sub> <sub>🇬🇪&nbsp;<a href="README_ka.md">K&#8288;a&#8288;r&#8288;t&#8288;u&#8288;l&#8288;i</a>&nbsp;|</sub> <sub>🇰🇷&nbsp;<a href="README_ko.md">한&#8288;국&#8288;어</a>&nbsp;|</sub> <sub>🇱🇺&nbsp;<a href="README_lb.md">L&#8288;ë&#8288;t&#8288;z&#8288;e&#8288;b&#8288;u&#8288;e&#8288;r&#8288;g&#8288;e&#8288;s&#8288;c&#8288;h</a>&nbsp;|</sub> <sub>🇱🇹&nbsp;<a href="README_lt.md">L&#8288;i&#8288;e&#8288;t&#8288;u&#8288;v&#8288;i&#8288;ų</a>&nbsp;|</sub> <sub>🇱🇻&nbsp;<a href="README_lv.md">L&#8288;a&#8288;t&#8288;v&#8288;i&#8288;e&#8288;š&#8288;u</a>&nbsp;|</sub> <sub>🇲🇰&nbsp;<a href="README_mk.md">М&#8288;а&#8288;к&#8288;е&#8288;д&#8288;о&#8288;н&#8288;с&#8288;к&#8288;и</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ml.md">മ&#8288;ല&#8288;യാ&#8288;ളം</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nb.md">N&#8288;o&#8288;r&#8288;s&#8288;k&#8288;&nbsp;&#8288;B&#8288;o&#8288;k&#8288;m&#8288;å&#8288;l</a>&nbsp;|</sub> <sub>🇳🇱&nbsp;<a href="README_nl.md">N&#8288;e&#8288;d&#8288;e&#8288;r&#8288;l&#8288;a&#8288;n&#8288;d&#8288;s</a>&nbsp;|</sub> <sub>🇳🇴&nbsp;<a href="README_nn.md">N&#8288;o&#8288;r&#8288;s&#8288;k&#8288;&nbsp;&#8288;N&#8288;y&#8288;n&#8288;o&#8288;r&#8288;s&#8288;k</a>&nbsp;|</sub> <sub>🇵🇱&nbsp;<a href="README_pl.md">P&#8288;o&#8288;l&#8288;s&#8288;k&#8288;i</a>&nbsp;|</sub> <sub>🇵🇹&nbsp;<a href="README_pt.md">P&#8288;o&#8288;r&#8288;t&#8288;u&#8288;g&#8288;u&#8288;ê&#8288;s</a>&nbsp;|</sub> <sub>🇧🇷&nbsp;<a href="README_pt-BR.md">P&#8288;o&#8288;r&#8288;t&#8288;u&#8288;g&#8288;u&#8288;ê&#8288;s&#8288;&nbsp;&#8288;(&#8288;B&#8288;R&#8288;)</a>&nbsp;|</sub> <sub>🇷🇴&nbsp;<a href="README_ro.md">R&#8288;o&#8288;m&#8288;â&#8288;n&#8288;ă</a>&nbsp;|</sub> <sub>🇸🇰&nbsp;<a href="README_sk.md">S&#8288;l&#8288;o&#8288;v&#8288;e&#8288;n&#8288;č&#8288;i&#8288;n&#8288;a</a>&nbsp;|</sub> <sub>🇸🇮&nbsp;<a href="README_sl.md">S&#8288;l&#8288;o&#8288;v&#8288;e&#8288;n&#8288;š&#8288;č&#8288;i&#8288;n&#8288;a</a>&nbsp;|</sub> <sub>🇦🇱&nbsp;<a href="README_sq.md">S&#8288;h&#8288;q&#8288;i&#8288;p</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr.md">С&#8288;р&#8288;п&#8288;с&#8288;к&#8288;и</a>&nbsp;|</sub> <sub>🇷🇸&nbsp;<a href="README_sr-Latn.md">S&#8288;r&#8288;p&#8288;s&#8288;k&#8288;i</a>&nbsp;|</sub> <sub>🇸🇪&nbsp;<a href="README_sv.md">S&#8288;v&#8288;e&#8288;n&#8288;s&#8288;k&#8288;a</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_ta.md">த&#8288;மி&#8288;ழ்</a>&nbsp;|</sub> <sub>🇮🇳&nbsp;<a href="README_te.md">తె&#8288;లు&#8288;గు</a>&nbsp;|</sub> <sub>🇹🇭&nbsp;<a href="README_th.md">ภ&#8288;า&#8288;ษ&#8288;า&#8288;ไ&#8288;ท&#8288;ย</a>&nbsp;|</sub> <sub>🇹🇷&nbsp;<a href="README_tr.md">T&#8288;ü&#8288;r&#8288;k&#8288;ç&#8288;e</a>&nbsp;|</sub> <sub>🇻🇳&nbsp;<a href="README_vi.md">T&#8288;i&#8288;ế&#8288;n&#8288;g&#8288;&nbsp;&#8288;V&#8288;i&#8288;ệ&#8288;t</a>&nbsp;|</sub> <sub>🇨🇳&nbsp;<a href="README_zh-Hans.md">简&#8288;体&#8288;中&#8288;文</a>&nbsp;|</sub> <sub>🇹🇼&nbsp;<a href="README_zh-Hant.md">繁&#8288;體&#8288;中&#8288;文</a></sub>
+
+<a href="https://www.home-assistant.io/"><img src="https://img.shields.io/badge/Home%20Assistant-Frontend-41BDF5?logo=homeassistant&logoColor=white" alt="Home Assistant"></a>
+<a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Frontend-41BDF5" alt="HACS"></a>
+<a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/v/release/LanKing/ha-mdi-off-fallback?label=release&cacheSeconds=300" alt="Latest release"></a>
+<a href="https://github.com/LanKing/ha-mdi-off-fallback/releases"><img src="https://img.shields.io/github/downloads/LanKing/ha-mdi-off-fallback/total?label=downloads&cacheSeconds=300" alt="Downloads"></a>
+<a href="https://github.com/LanKing/ha-mdi-off-fallback/blob/main/LICENSE"><img src="https://img.shields.io/github/license/LanKing/ha-mdi-off-fallback?cacheSeconds=300" alt="License"></a>
+
+> Home Assistant آپ کو کوئی بھی MDI آئیکن استعمال کرنے دیتا ہے، لیکن ہر آئیکن کا `-off` ورژن موجود نہیں ہوتا۔ نتیجتاً آلہ بند ہونے کے باوجود اس کا آئیکن فعال دکھائی دے سکتا ہے۔ جب معیاری بند آئیکن دستیاب نہ ہو تو یہ پلگ اِن غیر فعال entities پر خودکار طور پر MDI طرز کی ترچھی لکیر شامل کرتا ہے۔
+
+# 🚫 Home Assistant کے لیے MDI Off Fallback
+
+![پلگ اِن کے کام کی تصویر](demo.jpg)
+
+پلگ اِن اس طرح بنایا گیا ہے کہ شامل کی گئی ترچھی لکیر Home Assistant کا قدرتی حصہ محسوس ہو:
+* معیاری Tile cards کے ساتھ انہیں بدلے بغیر کام کرتا ہے اور ان کی اصل شکل، رویہ، رنگ، سائز اور تعامل محفوظ رکھتا ہے؛
+* صرف پہلے سے render کیے گئے آئیکنز میں تبدیلی کرتا ہے اور وہ بھی تب جب معیاری `-off` ورژن موجود نہ ہو؛
+* اگر معیاری پس منظر موجود نہ ہو تو Home Assistant طرز کا مدھم گول پس منظر شامل کرتا ہے؛
+* entities کی حالت نہیں بدلتا اور آلات کے کام میں مداخلت نہیں کرتا۔
+
+<a id="installation"></a>
+## 📦 تنصیب
+
+### 🛍 HACS کے ذریعے تنصیب
+ℹ️ [HACS کیا ہے اور اسے کیسے نصب کیا جائے؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ur.md)
+
+#### 1. اس repository کو HACS میں شامل کریں
+پلگ اِن کو HACS کی سرکاری فہرست میں شامل ہونے میں کئی ماہ لگ سکتے ہیں، اس لیے پہلے یہ repository دستی طور پر HACS میں شامل کریں:
+1. **HACS** کھولیں۔
+2. اوپر دائیں کونے کا مینو کھولیں اور **حسب ضرورت repositories** (**Custom repositories**) منتخب کریں۔
+3. یہ repository شامل کریں:
+
+```text
+https://github.com/LanKing/ha-mdi-off-fallback
+```
+4. قسم کے طور پر **ڈیش بورڈ** (**Dashboard**) منتخب کریں اور **شامل کریں** (**Add**) دبائیں۔
+
+> repository کو **حسب ضرورت repositories** میں شامل کرنے سے پلگ اِن صرف HACS میں دستیاب ہوتا ہے۔ خود پلگ اِن الگ سے **ڈاؤن لوڈ** (**Download**) بٹن کے ذریعے نصب کیا جاتا ہے۔
+
+#### 2. پلگ اِن نصب کریں
+1. HACS میں تلاش کریں: `MDI Off Fallback` اور اسے کھولیں۔
+2. **ڈاؤن لوڈ** (**Download**) دبائیں اور تنصیب کی تصدیق کریں۔
+3. ڈاؤن لوڈ مکمل ہونے کے بعد browser cache صاف کرتے ہوئے Home Assistant دوبارہ لوڈ کریں۔
+
+<a id="manual-installation"></a>
+### 🧑‍💻 دستی تنصیب (HACS کے بغیر)
+
+1. [`ha-mdi-off-fallback.js`](https://github.com/LanKing/ha-mdi-off-fallback/releases/latest/download/ha-mdi-off-fallback.js) ڈاؤن لوڈ کریں۔
+2. فائل کو `/config/www/ha-mdi-off-fallback.js` میں نقل کریں۔
+3. [وسائل کھولیں](https://my.home-assistant.io/redirect/lovelace_resources/) یا Home Assistant میں دستی طور پر جائیں: **ترتیبات → ڈیش بورڈز → ⋮ → وسائل** *(**Settings → Dashboards → ⋮ → Resources**)*۔
+4. **وسیلہ شامل کریں** (**Add resource**) دبائیں۔
+5. URL والے خانے میں `/local/ha-mdi-off-fallback.js` درج کریں۔
+6. **JavaScript ماڈیول** (**JavaScript Module**) منتخب کریں اور **بنائیں** (**Create**) دبائیں۔
+7. browser cache صاف کرتے ہوئے Home Assistant دوبارہ لوڈ کریں۔
+
+<a id="configuration"></a>
+## 🔧 ترتیب
+
+حسب ضرورت ترتیب اختیاری ہے۔ اگر حسب ضرورت فائل موجود نہ ہو تو پلگ اِن اپنی اندرونی قدریں استعمال کرتا ہے:
+
+<a id="default-configuration"></a>
+### طے شدہ ترتیب
+
+طے شدہ طور پر درج ذیل حالتیں غیر فعال سمجھی جاتی ہیں:
+
+| entity domain | غیر فعال حالتیں |
+|---|---|
+| `light` | `off` |
+| `switch` | `off` |
+| `fan` | `off` |
+| `climate` | `off` |
+| `media_player` | `off` |
+| `cover` | `closed` |
+| `humidifier` | `off` |
+| `water_heater` | `off` |
+| `siren` | `off` |
+
+درج ذیل ترتیبات بھی استعمال ہوتی ہیں:
+
+```json
+{
+  "faint_background_when_missing": true,
+  "faint_background_opacity": 0.2,
+  "debug": false
+}
+```
+
+<a id="user-configuration"></a>
+### حسب ضرورت ترتیب
+
+اپنے قواعد مقرر کرنے کے لیے یہ فائل بنائیں:
+
+```text
+/config/www/ha-mdi-off-fallback.config.json
+```
+
+مثال:
+
+```json
+{
+  "states": {
+    "light": ["off"],
+    "switch": ["off"],
+    "fan": ["off"],
+    "climate": ["off"],
+    "media_player": ["off"],
+    "cover": ["closed"],
+    "humidifier": ["off"],
+    "water_heater": ["off"],
+    "siren": ["off"],
+    "remote": ["off"]
+  },
+  "faint_background_when_missing": true,
+  "faint_background_opacity": 0.2,
+  "debug": false
+}
+```
+
+ترتیب کی فائل HACS کے زیر انتظام پلگ اِن فائلوں سے الگ رکھی جاتی ہے، اس لیے پلگ اِن updates اسے overwrite نہیں کریں گی۔
+
+#### `states` سیکشن کیسے کام کرتا ہے
+
+اگر حسب ضرورت ترتیب میں `states` object موجود ہو تو یہ اندرونی فہرست کو **مکمل طور پر بدل دیتا ہے**۔ پلگ اِن صرف واضح طور پر درج domains اور states کو دیکھے گا۔
+
+```json
+{
+  "states": {
+    "light": ["off"],
+    "cover": ["closed"]
+  }
+}
+```
+
+اس مثال میں ترچھی لکیر صرف `light` اور `cover` پر لگے گی۔ `switch`، `fan`، `climate` اور دیگر domains کے اندرونی قواعد استعمال نہیں ہوں گے۔
+
+اندرونی فہرست پر واپس جانے کے لیے ترتیب سے `states` ہٹا دیں یا ترتیب کی فائل حذف کر دیں۔
+
+باقی settings آزاد ہیں: اگر کوئی setting درج نہ ہو تو اس کی اندرونی قدر برقرار رہتی ہے۔
+
+<a id="background"></a>
+#### غیر فعال آئیکن کا پس منظر
+
+اگر Home Assistant پہلے ہی غیر فعال آئیکن کا معیاری پس منظر بناتا ہے تو پلگ اِن اسے تبدیل نہیں کرتا۔
+
+اگر ایسا پس منظر موجود نہ ہو تو پلگ اِن معیاری Home Assistant Tile آئیکن کے مطابق ایک مدھم دائرہ شامل کرتا ہے تاکہ آئیکنز کی نمائش یکساں رہے۔
+
+اسے بند کریں:
+
+```json
+{
+  "faint_background_when_missing": false
+}
+```
+
+شفافیت تبدیل کریں:
+
+```json
+{
+  "faint_background_opacity": 0.2
+}
+```
+
+<a id="runtime-configuration"></a>
+#### console سے عارضی ترتیب
+
+`haMdiOffFallback.configure()` بھی یہی قواعد استعمال کرتا ہے۔
+
+دیا گیا `states` object موجودہ فہرست کو مکمل طور پر بدل دیتا ہے:
+
+```js
+haMdiOffFallback.configure({
+  states: {
+    light: ["off"],
+    cover: ["closed"],
+    remote: ["off"]
+  },
+  debug: true
+})
+```
+
+اگر `states` فراہم نہ کیا جائے تو موجودہ فہرست تبدیل نہیں ہوتی:
+
+```js
+haMdiOffFallback.configure({
+  debug: true
+})
+```
+
+`configure()` کے ذریعے دی گئی settings صرف موجودہ tab میں page reload ہونے تک فعال رہتی ہیں۔ مستقل ترتیب کے لیے JSON فائل استعمال کریں۔
+
+<a id="reload-config"></a>
+#### ترتیب دوبارہ لوڈ کرنا
+
+JSON فائل میں تبدیلی کے بعد page reload کیے بغیر ترتیب دوبارہ لوڈ کریں:
+
+```js
+haMdiOffFallback.reloadConfig()
+```
+
+فعال ترتیب دیکھیں:
+
+```js
+haMdiOffFallback.getConfig()
+```
+
+<a id="license"></a>
+## 📄 لائسنس
+
+MIT — تعاون کا خیرمقدم ہے۔
+
+<a id="moar"></a>
+## 🏠 مزید دلچسپ چیزیں
+[میرے دوسرے Home Assistant tools دیکھیں](https://github.com/LanKing/ha-tools/blob/main/docs/README_ur.md)
