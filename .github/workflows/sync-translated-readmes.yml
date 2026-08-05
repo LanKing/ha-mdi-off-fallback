@@ -53,13 +53,13 @@ jobs:
 
           You can still enable the background if you prefer the more balanced appearance:
 
-          __CFG_TRUE__
+          731947731947
 
           When enabled, the plugin only adds the background where Home Assistant does not already render one.
 
           You can also adjust its opacity:
 
-          __CFG_OPACITY__
+          731948731948
 
           Choose whichever behavior matters more for your dashboard: preserving Home Assistant's native interaction cues or keeping slashed icons visually centered.'''
 
@@ -77,9 +77,9 @@ jobs:
           ```'''
 
           protected = {
-              'Home Assistant': '__HOME_ASSISTANT__',
-              'MDI': '__MDI__',
-              'Tile': '__TILE__',
+              'Home Assistant': 'ZXQHOMEASSISTANTQXZ',
+              'MDI': 'ZXQMDIQXZ',
+              'Tile': 'ZXQTILEQXZ',
           }
 
           def protect(s):
@@ -105,6 +105,7 @@ jobs:
                       time.sleep(2 + attempt * 2)
               raise RuntimeError(f'Translation to {target} failed: {last}')
 
+          cache = {}
           changed = []
           for path in sorted(Path('docs').glob('README_*.md')):
               code = path.stem.removeprefix('README_')
@@ -114,13 +115,17 @@ jobs:
 
               text = path.read_text(encoding='utf-8')
               original = text
-
               text = text.replace('"faint_background_when_missing": true', '"faint_background_when_missing": false')
 
-              section = translate(SECTION_SOURCE, target)
-              if '__CFG_TRUE__' not in section or '__CFG_OPACITY__' not in section:
+              if target not in cache:
+                  translated_section = translate(SECTION_SOURCE, target)
+                  translated_bullet = translate(BULLET_SOURCE, target).strip()
+                  cache[target] = (translated_section, translated_bullet)
+              section, translated_bullet = cache[target]
+
+              if '731947731947' not in section or '731948731948' not in section:
                   raise RuntimeError(f'Code placeholders were changed for {code}')
-              section = section.replace('__CFG_TRUE__', CFG_TRUE).replace('__CFG_OPACITY__', CFG_OPACITY)
+              section = section.replace('731947731947', CFG_TRUE).replace('731948731948', CFG_OPACITY)
               section = '<a id="background"></a>\n' + section.strip() + '\n\n'
 
               pattern = re.compile(
@@ -140,7 +145,6 @@ jobs:
               bullets = [i for i, line in enumerate(lines) if line.startswith('* ')]
               if len(bullets) < 4:
                   raise RuntimeError(f'Expected intro bullets not found in {path}')
-              translated_bullet = translate(BULLET_SOURCE, target).strip()
               lines[bullets[2]] = '* ' + translated_bullet
               text = '\n'.join(lines) + rest
 
@@ -148,7 +152,7 @@ jobs:
                   path.write_text(text, encoding='utf-8')
                   changed.append(str(path))
               print(f'updated {path}')
-              time.sleep(0.25)
+              time.sleep(0.2)
 
           if not changed:
               raise RuntimeError('No README files changed')
