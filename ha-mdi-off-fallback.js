@@ -44,7 +44,7 @@
     states: resolveStates(bootstrap.states),
     debug: Boolean(bootstrap.debug),
     faintBackgroundWhenMissing:
-      bootstrap.faint_background_when_missing !== false,
+      bootstrap.faint_background_when_missing === true,
     faintBackgroundOpacity:
       Number.isFinite(Number(bootstrap.faint_background_opacity))
         ? Math.max(0, Math.min(1, Number(bootstrap.faint_background_opacity)))
