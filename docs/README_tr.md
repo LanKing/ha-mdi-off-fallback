@@ -15,9 +15,8 @@
 Eklenti, eklenen çizginin Home Assistant'ın yerleşik bir parçası gibi görünmesi için tasarlanmıştır:
 * standart Döşeme kartlarını değiştirmeden çalışır ve yerleşik görünüm, davranış, renk, boyut ve etkileşimleri korur;
 * yalnızca önceden oluşturulmuş simgeleri ve yalnızca yerleşik `-off` çeşidi yoksa değiştirir;
-* yerleşik arka plan yoksa Home Assistant tarzında soluk, dairesel bir arka plan ekler;
+* yerel arka plan eksik olduğunda isteğe bağlı olarak soluk bir dairesel arka plan ekleyebilir;
 * varlık durumlarını değiştirmez ve cihazların çalışmasına müdahale etmez.
-
 <a id="installation"></a>
 ## 📦 Kurulum
 
@@ -79,7 +78,7 @@ Aşağıdaki ayarlar da kullanılır:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Kendi kurallarınızı tanımlamak için şu dosyayı oluşturun:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Yerleşik listeye dönmek için yapılandırmadan `states` öğesini kaldırın 
 Diğer ayarlar bağımsızdır: Bir ayar belirtilmezse yerleşik değeri kullanılmaya devam eder.
 
 <a id="background"></a>
-#### Etkin olmayan simgenin arka planı
+#### Daire içermeyen simgeler için isteğe bağlı arka plan
 
-Home Assistant etkin olmayan simgenin yerleşik arka planını zaten çiziyorsa eklenti bunu değiştirmez.
+Bazı MDI simgeleri görsel olarak merkezin dışındadır. Eğik çizgi eklendikten sonra, onları çerçeveleyecek dairesel bir arka plan olmadığında dengesiz görünebilirler.
 
-Arka plan yoksa eklenti, Home Assistant'taki standart etkin olmayan Döşeme simgelerinin stiline uyan soluk bir daire ekler.
+Bu, görsel düzen anlayışımı rahatsız etti, bu nedenle eklenti, Home Assistant sağlamadığında etkin olmayan simgelerin arkasına soluk bir daire çizen isteğe bağlı bir ayar içeriyor.
 
-Devre dışı bırakma:
+Bu seçenek varsayılan olarak devre dışıdır çünkü dairenin Home Assistant arayüzünde bir anlamı vardır: Tile kartında, normalde simgeye tıklamanın kartın geri kalanına tıklamaktan ayrı bir eylem gerçekleştirdiğini gösterir. Bu nedenle, yalnızca görsel hizalama için bir daire eklemek görsel anlambilimi değiştirir.
+
+Daha dengeli bir görünüm tercih ediyorsanız arka planı yine de etkinleştirebilirsiniz:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Saydamlığı değiştirme:
+Etkinleştirildiğinde, eklenti yalnızca Home Assistant'nin halihazırda oluşturmadığı arka planı ekler.
+
+Ayrıca opaklığını da ayarlayabilirsiniz:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Kontrol paneliniz için hangi davranışın daha önemli olduğunu seçin: Home Assistant'nin yerel etkileşim ipuçlarını korumak veya eğik çizgili simgeleri görsel olarak ortada tutmak.
 
 <a id="runtime-configuration"></a>
 #### Konsoldan geçici yapılandırma

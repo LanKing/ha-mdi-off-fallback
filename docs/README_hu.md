@@ -15,9 +15,8 @@
 A bővítmény úgy készült, hogy a hozzáadott áthúzás a Home Assistant természetes részének tűnjön:
 * a szabványos Tile-kártyákkal azok lecserélése nélkül működik, megőrizve az eredeti megjelenést, viselkedést, színeket, méreteket és interakciókat;
 * csak a már kirajzolt ikonokat módosítja, és csak akkor, ha nincs beépített `-off` változat;
-* halvány, kör alakú Home Assistant-stílusú hátteret ad hozzá, ha az eredeti háttér hiányzik;
+* opcionálisan hozzáadhat egy halvány kör alakú hátteret, ha a natív háttér hiányzik;
 * nem módosítja az entitások állapotát, és nem avatkozik az eszközök működésébe.
-
 <a id="installation"></a>
 ## 📦 Telepítés
 
@@ -79,7 +78,7 @@ A következő beállítások is használatban vannak:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Példa:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ A beépített listához való visszatéréshez távolítsd el a `states` elemet 
 A többi beállítás független: ha egy beállítás nincs megadva, annak beépített értéke marad érvényben.
 
 <a id="background"></a>
-#### Az inaktív ikon háttere
+#### Választható háttér a kör nélküli ikonokhoz
 
-Ha a Home Assistant már megjeleníti az inaktív ikon eredeti hátterét, a bővítmény változatlanul hagyja.
+Egyes MDI ikonok vizuálisan a középponton kívül vannak. A perjel hozzáadása után kiegyensúlyozatlannak tűnhetnek, ha nincs kör alakú háttér a keretezéshez.
 
-Ha ez a háttér hiányzik, a bővítmény egy halvány kört ad hozzá, amely illeszkedik a Home Assistant szabványos inaktív Tile-ikonjának stílusához.
+Ez zavarta a vizuális rendezettségemet, így a bővítmény tartalmaz egy opcionális beállítást, amely halvány kört rajzol az inaktív ikonok mögé, ha a Home Assistant nem biztosít ilyet.
 
-Kikapcsolás:
+Ez az opció alapértelmezés szerint le van tiltva, mert a körnek van jelentése a Home Assistant felületen: a Tile kártyán általában azt jelzi, hogy az ikonra kattintás a kártya többi részének kattintásától eltérő műveletet hajt végre. Egy kör hozzáadásával pusztán a vizuális igazítás érdekében megváltozik ez a vizuális szemantika.
+
+Továbbra is engedélyezheti a hátteret, ha a kiegyensúlyozottabb megjelenést szeretné:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Átlátszóság módosítása:
+Ha engedélyezve van, a beépülő modul csak ott adja hozzá a hátteret, ahol a Home Assistant még nem jeleníti meg.
+
+Az átlátszatlanságát is beállíthatja:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Válassza ki, hogy melyik viselkedés a fontosabb az irányítópult számára: a Home Assistant natív interakciós jelzéseinek megőrzése vagy a vágott ikonok vizuális középpontban tartása.
 
 <a id="runtime-configuration"></a>
 #### Ideiglenes konfiguráció a konzolból

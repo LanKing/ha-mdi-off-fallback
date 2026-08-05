@@ -15,9 +15,8 @@
 Plugin dirancang agar garis yang ditambahkan terlihat seperti bagian bawaan Home Assistant:
 * bekerja dengan kartu Tile standar tanpa menggantinya serta mempertahankan tampilan, perilaku, warna, ukuran, dan interaksi bawaan;
 * hanya mengubah ikon yang sudah dirender dan hanya jika varian `-off` bawaan tidak tersedia;
-* menambahkan latar belakang lingkaran samar bergaya Home Assistant ketika latar belakang bawaan tidak ada;
+* secara opsional dapat menambahkan latar belakang melingkar samar ketika latar belakang asli tidak ada;
 * tidak mengubah status entitas dan tidak mengganggu pengoperasian perangkat.
-
 <a id="installation"></a>
 ## 📦 Instalasi
 
@@ -79,7 +78,7 @@ Pengaturan berikut juga digunakan:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Contoh:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Untuk kembali ke daftar bawaan, hapus `states` dari konfigurasi atau hapus berka
 Pengaturan lain bersifat independen: jika suatu pengaturan tidak disebutkan, nilai bawaannya tetap digunakan.
 
 <a id="background"></a>
-#### Latar belakang ikon tidak aktif
+#### Latar belakang opsional untuk ikon tanpa lingkaran
 
-Jika Home Assistant sudah menampilkan latar belakang bawaan ikon tidak aktif, plugin membiarkannya tetap seperti itu.
+Beberapa ikon MDI secara visual tidak berada di tengah. Setelah garis miring ditambahkan, gambar tersebut akan terlihat tidak seimbang jika tidak ada latar belakang melingkar untuk membingkainya.
 
-Jika latar belakang tersebut tidak ada, plugin menambahkan lingkaran samar yang sesuai dengan gaya ikon Tile tidak aktif standar Home Assistant.
+Hal ini mengganggu keteraturan visual saya, sehingga plugin menyertakan pengaturan opsional yang menggambar lingkaran samar di belakang ikon yang tidak aktif ketika Home Assistant tidak menyediakannya.
 
-Untuk menonaktifkan:
+Opsi ini dinonaktifkan secara default karena lingkaran memiliki arti di antarmuka Home Assistant: pada kartu Tile, biasanya ini menunjukkan bahwa mengklik ikon melakukan tindakan terpisah dari mengklik sisa kartu. Menambahkan lingkaran semata-mata untuk penyelarasan visual akan mengubah semantik visual tersebut.
+
+Anda masih dapat mengaktifkan latar belakang jika Anda menginginkan tampilan yang lebih seimbang:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Untuk mengubah opasitas:
+Saat diaktifkan, plugin hanya menambahkan latar belakang yang belum dirender oleh Home Assistant.
+
+Anda juga dapat menyesuaikan opacitynya:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Pilih perilaku mana saja yang lebih penting untuk dasbor Anda: mempertahankan isyarat interaksi asli Home Assistant atau menjaga ikon garis miring tetap terpusat secara visual.
 
 <a id="runtime-configuration"></a>
 #### Konfigurasi sementara melalui konsol

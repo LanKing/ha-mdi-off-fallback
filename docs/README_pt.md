@@ -15,9 +15,8 @@
 O plug-in foi desenvolvido para que o traço adicionado pareça uma parte nativa do Home Assistant:
 * funciona com os cartões Mosaico padrão sem os substituir e preserva o aspeto, comportamento, cores, tamanhos e interações originais;
 * altera apenas ícones já renderizados e apenas quando não existe uma variante nativa `-off`;
-* adiciona um fundo circular discreto ao estilo do Home Assistant quando o fundo nativo não existe;
+* opcionalmente, pode adicionar um fundo circular fraco quando o fundo nativo estiver faltando;
 * não altera estados das entidades nem interfere com o funcionamento dos dispositivos.
-
 <a id="installation"></a>
 ## 📦 Instalação
 
@@ -79,7 +78,7 @@ São também utilizadas as seguintes definições:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Exemplo:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Para regressar à lista incorporada, remova `states` da configuração ou elimin
 As restantes definições são independentes: quando uma definição é omitida, mantém-se o respetivo valor incorporado.
 
 <a id="background"></a>
-#### Fundo do ícone inativo
+#### Fundo opcional para ícones sem círculo
 
-Se o Home Assistant já apresentar o fundo nativo do ícone inativo, o plug-in não o altera.
+Alguns ícones MDI estão visualmente descentralizados. Depois que uma barra é adicionada, elas podem parecer desequilibradas quando não há um fundo circular para enquadrá-las.
 
-Se esse fundo não existir, o plug-in adiciona um círculo discreto correspondente ao estilo dos ícones Mosaico inativos padrão do Home Assistant.
+Isso incomodou meu senso de ordem visual, então o plug-in inclui uma configuração opcional que desenha um círculo tênue atrás dos ícones inativos quando Home Assistant não fornece um.
 
-Desativar:
+Esta opção está desabilitada por padrão porque o círculo tem um significado na interface Home Assistant: em um cartão Tile, normalmente indica que clicar no ícone executa uma ação separada de clicar no resto do cartão. Adicionar um círculo puramente para alinhamento visual altera, portanto, a semântica visual.
+
+Você ainda pode ativar o plano de fundo se preferir uma aparência mais equilibrada:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Alterar a opacidade:
+Quando ativado, o plugin apenas adiciona o plano de fundo onde Home Assistant ainda não renderizou um.
+
+Você também pode ajustar sua opacidade:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Escolha o comportamento que for mais importante para o seu painel: preservando as dicas de interação nativas do Home Assistant ou mantendo os ícones cortados visualmente centralizados.
 
 <a id="runtime-configuration"></a>
 #### Configuração temporária através da consola

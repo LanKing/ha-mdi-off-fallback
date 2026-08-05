@@ -15,9 +15,8 @@
 Wtyczka została zaprojektowana tak, aby dodane przekreślenie wyglądało jak natywny element Home Assistant:
 * działa ze standardowymi kartami Kafelek bez ich zastępowania i zachowuje ich wygląd, zachowanie, kolory, rozmiary oraz interakcje;
 * modyfikuje wyłącznie już wyrenderowane ikony i tylko wtedy, gdy brak natywnego wariantu `-off`;
-* dodaje delikatne okrągłe tło w stylu Home Assistant, gdy brakuje tła systemowego;
+* może opcjonalnie dodać słabe, okrągłe tło, gdy brakuje tła natywnego;
 * nie zmienia stanów encji i nie ingeruje w działanie urządzeń.
-
 <a id="installation"></a>
 ## 📦 Instalacja
 
@@ -79,7 +78,7 @@ Używane są również następujące ustawienia:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Przykład:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Aby wrócić do listy wbudowanej, usuń `states` z konfiguracji albo usuń cały
 Pozostałe ustawienia są niezależne: jeśli ustawienie nie zostało podane, zachowywana jest jego wartość wbudowana.
 
 <a id="background"></a>
-#### Tło nieaktywnej ikony
+#### Opcjonalne tło dla ikon bez okręgu
 
-Jeśli Home Assistant już rysuje natywne tło nieaktywnej ikony, wtyczka pozostawia je bez zmian.
+Niektóre ikony MDI są wizualnie niecentralne. Po dodaniu ukośnika mogą wyglądać na niezrównoważone, jeśli nie ma okrągłego tła, które by je obramowało.
 
-Jeśli takiego tła nie ma, wtyczka dodaje delikatny okrąg zgodny ze stylem standardowej nieaktywnej ikony Kafelek w Home Assistant.
+Zakłócało to moje poczucie porządku wizualnego, więc wtyczka zawiera opcjonalne ustawienie, które rysuje słaby okrąg za nieaktywnymi ikonami, gdy Home Assistant takiego nie zapewnia.
 
-Wyłączanie:
+Ta opcja jest domyślnie wyłączona, ponieważ okrąg ma znaczenie w interfejsie Home Assistant: na karcie Tile zwykle oznacza, że ​​kliknięcie ikony powoduje odrębną akcję niż kliknięcie reszty karty. Dodanie okręgu wyłącznie w celu wyrównania wizualnego zmienia zatem semantykę wizualną.
+
+Nadal możesz włączyć tło, jeśli wolisz bardziej zrównoważony wygląd:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Zmiana przezroczystości:
+Po włączeniu wtyczka dodaje tylko tło tam, gdzie Home Assistant jeszcze go nie renderuje.
+
+Możesz także dostosować jego krycie:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Wybierz, które zachowanie ma większe znaczenie dla Twojego pulpitu nawigacyjnego: zachowanie natywnych wskazówek dotyczących interakcji Home Assistant lub utrzymanie wyśrodkowanych wizualnie ikon.
 
 <a id="runtime-configuration"></a>
 #### Tymczasowa konfiguracja przez konsolę

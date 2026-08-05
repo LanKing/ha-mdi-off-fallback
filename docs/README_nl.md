@@ -15,9 +15,8 @@
 De plug-in is zo ontworpen dat de toegevoegde schuine streep eruitziet als een standaardonderdeel van Home Assistant:
 * werkt met standaard Tegel-kaarten zonder ze te vervangen en behoudt hun standaarduiterlijk, gedrag, kleuren, afmetingen en interacties;
 * wijzigt alleen reeds weergegeven pictogrammen en alleen wanneer geen ingebouwde `-off`-variant bestaat;
-* voegt een lichte ronde achtergrond in Home Assistant-stijl toe wanneer de standaardachtergrond ontbreekt;
+* kan optioneel een vage cirkelvormige achtergrond toevoegen als de oorspronkelijke achtergrond ontbreekt;
 * wijzigt geen entiteitsstatussen en grijpt niet in op de werking van apparaten.
-
 <a id="installation"></a>
 ## 📦 Installatie
 
@@ -79,7 +78,7 @@ Ook worden de volgende instellingen gebruikt:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Voorbeeld:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Verwijder `states` uit de configuratie of verwijder het configuratiebestand om t
 De overige instellingen zijn onafhankelijk: als een instelling ontbreekt, blijft de ingebouwde waarde gelden.
 
 <a id="background"></a>
-#### Achtergrond van een inactief pictogram
+#### Optionele achtergrond voor pictogrammen zonder cirkel
 
-Als Home Assistant al een standaardachtergrond voor het inactieve pictogram tekent, laat de plug-in deze ongewijzigd.
+Sommige MDI-pictogrammen staan visueel niet in het midden. Nadat er een schuine streep is toegevoegd, kunnen ze er onevenwichtig uitzien als er geen ronde achtergrond is om ze te omlijsten.
 
-Als die achtergrond ontbreekt, voegt de plug-in een lichte cirkel toe die overeenkomt met de stijl van standaard inactieve Tegel-pictogrammen in Home Assistant.
+Dit stoorde mijn gevoel voor visuele orde, dus bevat de plug-in een optionele instelling die een vage cirkel achter inactieve pictogrammen tekent wanneer Home Assistant er geen biedt.
 
-Uitschakelen:
+Deze optie is standaard uitgeschakeld omdat de cirkel een betekenis heeft in de Home Assistant-interface: op een Tile-kaart geeft dit normaal gesproken aan dat klikken op het pictogram een ​​andere actie uitvoert dan klikken op de rest van de kaart. Het toevoegen van een cirkel puur voor visuele uitlijning verandert daarom die visuele semantiek.
+
+U kunt de achtergrond nog steeds inschakelen als u de voorkeur geeft aan een evenwichtiger uiterlijk:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Doorzichtigheid wijzigen:
+Indien ingeschakeld, voegt de plug-in alleen de achtergrond toe waar Home Assistant er nog niet een weergeeft.
+
+Je kunt ook de dekking aanpassen:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Kies welk gedrag het belangrijkst is voor uw dashboard: behoud van de eigen interactie-aanwijzingen van Home Assistant of houd schuine pictogrammen visueel gecentreerd.
 
 <a id="runtime-configuration"></a>
 #### Tijdelijke configuratie via de console

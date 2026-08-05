@@ -15,9 +15,8 @@
 El complemento está diseñado para que la barra diagonal añadida parezca una parte nativa de Home Assistant:
 * funciona con las tarjetas Tile estándar sin sustituirlas y conserva su aspecto, comportamiento, colores, tamaños e interacciones originales;
 * modifica únicamente los iconos ya renderizados y solo cuando no existe una variante `-off` nativa;
-* añade un fondo circular tenue de estilo Home Assistant cuando falta el fondo nativo;
+* opcionalmente, puede agregar un fondo circular tenue cuando falta el fondo nativo;
 * no cambia los estados de las entidades ni interfiere con el funcionamiento de los dispositivos.
-
 <a id="installation"></a>
 ## 📦 Instalación
 
@@ -80,7 +79,7 @@ También se utilizan los siguientes parámetros:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Ejemplo:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Para volver a la lista integrada, elimine `states` de la configuración o borre 
 Los demás parámetros son independientes: si no se especifica un parámetro, se conserva su valor integrado.
 
 <a id="background"></a>
-#### Fondo del icono inactivo
+#### Fondo opcional para iconos sin círculo
 
-Si Home Assistant ya muestra el fondo nativo del icono inactivo, el complemento no lo modifica.
+Algunos íconos MDI están visualmente descentrados. Después de agregar una barra, pueden verse desequilibradas cuando no hay un fondo circular para enmarcarlas.
 
-Si falta ese fondo, el complemento añade un círculo tenue que coincide con el estilo estándar de un icono Tile inactivo en Home Assistant.
+Esto molestó mi sentido del orden visual, por lo que el complemento incluye una configuración opcional que dibuja un círculo tenue detrás de los íconos inactivos cuando Home Assistant no proporciona uno.
 
-Desactivar:
+Esta opción está deshabilitada de forma predeterminada porque el círculo tiene un significado en la interfaz Home Assistant: en una tarjeta Tile, normalmente indica que hacer clic en el icono realiza una acción separada de hacer clic en el resto de la tarjeta. Por lo tanto, agregar un círculo únicamente para alineación visual cambia esa semántica visual.
+
+Aún puedes habilitar el fondo si prefieres una apariencia más equilibrada:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Cambiar la opacidad:
+Cuando está habilitado, el complemento solo agrega el fondo donde Home Assistant aún no representa uno.
+
+También puedes ajustar su opacidad:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Elija el comportamiento que sea más importante para su panel: preservar las señales de interacción nativas de Home Assistant o mantener los íconos recortados visualmente centrados.
 
 <a id="runtime-configuration"></a>
 #### Configuración temporal mediante la consola

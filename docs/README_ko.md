@@ -15,9 +15,8 @@
 추가된 대각선이 Home Assistant의 기본 요소처럼 보이도록 설계되었습니다.
 * 표준 Tile 카드를 교체하지 않고 동작하며 기본 모양, 동작, 색상, 크기 및 상호작용을 유지합니다.
 * 이미 렌더링된 아이콘만 수정하며, 기본 `-off` 버전이 없을 때만 적용합니다.
-* 기본 배경이 없으면 Home Assistant 스타일의 흐린 원형 배경을 추가합니다.
+* 기본 배경이 누락된 경우 선택적으로 희미한 원형 배경을 추가할 수 있습니다.
 * 엔티티 상태를 변경하거나 기기 동작에 간섭하지 않습니다.
-
 <a id="installation"></a>
 ## 📦 설치
 
@@ -79,7 +78,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ https://github.com/LanKing/ha-mdi-off-fallback
 다른 설정은 독립적입니다. 설정을 지정하지 않으면 내장 값이 유지됩니다.
 
 <a id="background"></a>
-#### 비활성 아이콘 배경
+#### 원이 없는 아이콘의 선택적 배경
 
-Home Assistant가 이미 기본 비활성 아이콘 배경을 표시하는 경우 플러그인은 변경하지 않습니다.
+일부 MDI 아이콘은 시각적으로 중앙에서 벗어났습니다. 슬래시를 추가한 후 프레임을 구성할 원형 배경이 없으면 균형이 맞지 않게 보일 수 있습니다.
 
-배경이 없으면 플러그인이 Home Assistant의 표준 비활성 Tile 아이콘 스타일에 맞는 흐린 원을 추가합니다.
+이는 시각적 순서 감각을 방해했기 때문에 플러그인에는 Home Assistant가 제공하지 않을 때 비활성 아이콘 뒤에 희미한 원을 그리는 선택적 설정이 포함되어 있습니다.
 
-비활성화:
+원은 Home Assistant 인터페이스에서 의미를 갖기 때문에 이 옵션은 기본적으로 비활성화되어 있습니다. Tile 카드에서는 일반적으로 아이콘을 클릭하는 것이 카드의 나머지 부분을 클릭하는 것과 별도의 작업을 수행함을 나타냅니다. 따라서 순전히 시각적 정렬을 위해 원을 추가하면 시각적 의미가 변경됩니다.
+
+보다 균형 잡힌 모양을 원하는 경우 배경을 활성화할 수 있습니다.
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-불투명도 변경:
+활성화되면 플러그인은 Home Assistant가 아직 렌더링하지 않은 배경만 추가합니다.
+
+불투명도를 조정할 수도 있습니다.
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Home Assistant의 기본 상호 작용 신호를 유지하거나 슬래시 아이콘을 시각적으로 중앙에 유지하는 것 중 대시보드에 더 중요한 동작을 선택하십시오.
 
 <a id="runtime-configuration"></a>
 #### 콘솔에서 임시 구성

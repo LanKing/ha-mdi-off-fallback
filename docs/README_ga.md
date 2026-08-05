@@ -15,9 +15,8 @@
 Tá an breiseán deartha ionas go mbeidh an líne bhreise cosúil le cuid dhúchasach de Home Assistant:
 * oibríonn sé le gnáthchártaí Tile gan iad a athsholáthar agus coinníonn sé a gcuma, a n-iompar, a ndathanna, a méideanna agus a n-idirghníomhaíochtaí dúchasacha;
 * ní athraíonn sé ach deilbhíní atá rindreáilte cheana féin agus sin amháin nuair nach bhfuil leagan dúchasach `-off` ar fáil;
-* cuireann sé cúlra ciorclach éadrom i stíl Home Assistant leis nuair atá an cúlra dúchasach ar iarraidh;
+* is féidir cúlra beag ciorclach a chur leis go roghnach nuair atá an cúlra dúchais in easnamh;
 * ní athraíonn sé staid na n-eintiteas agus ní chuireann sé isteach ar oibriú na ngléasanna.
-
 <a id="installation"></a>
 ## 📦 Suiteáil
 
@@ -79,7 +78,7 @@ De réir réamhshocraithe, meastar na staideanna seo a leanas a bheith neamhghn�
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Sampla:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Chun filleadh ar an liosta ionsuite, bain `states` den chumraíocht nó scrios a
 Tá na socruithe eile neamhspleách: mura sonraítear socrú, fanann a luach ionsuite i bhfeidhm.
 
 <a id="background"></a>
-#### Cúlra an deilbhín neamhghníomhaigh
+#### Cúlra roghnach le haghaidh deilbhíní gan ciorcal
 
-Má tharraingíonn Home Assistant an cúlra dúchasach do dheilbhín neamhghníomhach cheana féin, fágann an breiseán gan athrú é.
+Tá roinnt deilbhíní MDI lasmuigh den ionad ó thaobh amhairc de. Tar éis slais a chur leis, is féidir leo breathnú neamhchothrom nuair nach bhfuil cúlra ciorclach ann chun iad a fhrámú.
 
-Má tá an cúlra sin ar iarraidh, cuireann an breiseán ciorcal éadrom leis a mheaitseálann stíl chaighdeánach deilbhín Tile neamhghníomhach Home Assistant.
+Chuir sé seo isteach ar mo chiall ar ord amhairc, mar sin cuimsíonn an breiseán suíomh roghnach a tharraingíonn ciorcal beag taobh thiar de dheilbhíní neamhghníomhacha nuair nach soláthraíonn Home Assistant ceann.
 
-Chun é a dhíchumasú:
+Tá an rogha seo díchumasaithe de réir réamhshocraithe toisc go bhfuil brí ag an gciorcal sa chomhéadan Home Assistant: ar chárta Tile, de ghnáth cuireann sé in iúl go ndéanann cliceáil ar an deilbhín gníomh ar leith ó chliceáil ar an gcuid eile den chárta. Dá bhrí sin, nuair a chuirtear ciorcal leis chun ailíniú amhairc amháin, athraítear an tséimeantaic amhairc sin.
+
+Is féidir leat an cúlra a chumasú fós más fearr leat an chuma níos cothroime:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Chun an teimhneacht a athrú:
+Nuair a bheidh sé cumasaithe, ní chuireann an breiseán ach an cúlra nuair nach bhfuil Home Assistant le fáil cheana féin.
+
+Is féidir leat a teimhneacht a choigeartú freisin:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Roghnaigh cibé iompraíocht is tábhachtaí do do dheais: leideanna idirghníomhaithe dúchais Home Assistant a chaomhnú nó deilbhíní slais a choinneáil dírithe ar an radharc.
 
 <a id="runtime-configuration"></a>
 #### Cumraíocht shealadach ón gconsól

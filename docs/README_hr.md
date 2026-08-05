@@ -15,9 +15,8 @@
 Dodatak je napravljen tako da dodana crta izgleda kao izvorni dio Home Assistanta:
 * radi sa standardnim Tile karticama bez njihove zamjene te zadržava izvorni izgled, ponašanje, boje, veličine i interakcije;
 * mijenja samo već prikazane ikone i samo kada nema izvorne varijante `-off`;
-* dodaje blijedu kružnu pozadinu u stilu Home Assistanta kada izvorna pozadina nedostaje;
+* može po izboru dodati blijedu kružnu pozadinu kada izvorna pozadina nedostaje;
 * ne mijenja stanja entiteta i ne ometa rad uređaja.
-
 <a id="installation"></a>
 ## 📦 Instalacija
 
@@ -79,7 +78,7 @@ Koriste se i sljedeće postavke:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Primjer:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Za povratak na ugrađeni popis uklonite `states` iz konfiguracije ili izbrišite
 Ostale su postavke neovisne: ako postavka nije navedena, zadržava se njezina ugrađena vrijednost.
 
 <a id="background"></a>
-#### Pozadina neaktivne ikone
+#### Izborna pozadina za ikone bez kruga
 
-Ako Home Assistant već prikazuje izvornu pozadinu neaktivne ikone, dodatak je ne mijenja.
+Neke MDI ikone su vizualno izvan centra. Nakon dodavanja kose crte, mogu izgledati neuravnoteženo ako nema kružne pozadine koja bi ih uokvirila.
 
-Ako pozadina nedostaje, dodatak dodaje blijedi krug koji odgovara standardnom stilu neaktivne Tile ikone u Home Assistantu.
+To je smetalo mom osjećaju vizualnog reda, tako da dodatak uključuje neobaveznu postavku koja crta blijedi krug iza neaktivnih ikona kada Home Assistant to ne nudi.
 
-Isključivanje:
+Ova je opcija prema zadanim postavkama onemogućena jer krug ima značenje u Home Assistant sučelju: na Tile kartici obično označava da klik na ikonu izvodi radnju odvojenu od klika na ostatak kartice. Dodavanje kruga isključivo radi vizualnog poravnanja mijenja tu vizualnu semantiku.
+
+Još uvijek možete omogućiti pozadinu ako želite uravnoteženiji izgled:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Promjena neprozirnosti:
+Kada je omogućen, dodatak samo dodaje pozadinu tamo gdje je Home Assistant već ne prikazuje.
+
+Također možete prilagoditi njegovu neprozirnost:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Odaberite bilo koje ponašanje koje je važnije za vašu nadzornu ploču: očuvanje izvornih znakova interakcije Home Assistant-a ili zadržavanje iscrtanih ikona vizualno centriranih.
 
 <a id="runtime-configuration"></a>
 #### Privremena konfiguracija putem konzole

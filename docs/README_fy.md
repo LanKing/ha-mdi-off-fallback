@@ -15,9 +15,8 @@
 De plugin is sa makke dat de tafoege streek as in natuerlik ûnderdiel fan Home Assistant liket:
 * wurket mei standert Tile-kaarten sûnder se te ferfangen en behâldt har oarspronklike uterlik, gedrach, kleuren, maten en ynteraksjes;
 * feroaret allinnich al werjûne piktogrammen en allinnich as der gjin ynboude `-off`-fariant is;
-* foeget in ljochte rûne eftergrûn yn Home Assistant-styl ta as de ynboude eftergrûn ûntbrekt;
+* kin opsjoneel in swakke sirkulêre eftergrûn tafoegje as de eigen eftergrûn ûntbrekt;
 * feroaret gjin entiteitssteaten en bemuoit him net mei de wurking fan apparaten.
-
 <a id="installation"></a>
 ## 📦 Ynstallaasje
 
@@ -80,7 +79,7 @@ De folgjende ynstellingen wurde ek brûkt:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Foarbyld:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Om werom te gean nei de ynboude list, ferwiderje `states` út de konfiguraasje o
 De oare ynstellingen binne ûnôfhinklik: as in ynstelling net opjûn wurdt, bliuwt de ynboude wearde jildich.
 
 <a id="background"></a>
-#### Eftergrûn fan in ynaktyf piktogram
+#### Opsjonele eftergrûn foar ikoanen sûnder sirkel
 
-As Home Assistant de ynboude eftergrûn fan in ynaktyf piktogram al werjout, feroaret de plugin dy net.
+Guon MDI-ikoanen binne visueel off-sintrum. Nei't in slash is tafoege, kinne se ûnbalâns lykje as d'r gjin sirkelfoarmige eftergrûn is om se te framen.
 
-As de eftergrûn ûntbrekt, foeget de plugin in ljochte sirkel ta dy't oerienkomt mei de standertstyl fan in ynaktyf Tile-piktogram yn Home Assistant.
+Dit hindere myn gefoel foar fisuele oarder, sadat it plugin in opsjonele ynstelling omfettet dy't in swakke sirkel tekenet efter ynaktive ikoanen as Home Assistant gjin ien leveret.
 
-Utskeakelje:
+Dizze opsje is standert útskeakele om't de sirkel in betsjutting hat yn 'e Home Assistant-ynterface: op in Tile-kaart jout it normaal oan dat it klikken op it ikoan in aparte aksje útfiert fan it klikken op 'e rest fan' e kaart. It tafoegjen fan in sirkel puur foar fisuele ôfstimming feroaret dêrom dy fisuele semantyk.
+
+Jo kinne de eftergrûn noch ynskeakelje as jo it mear lykwichtige uterlik leaver hawwe:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Trochsichtigens feroarje:
+As it ynskeakele is, foeget de plugin allinich de eftergrûn ta wêr't Home Assistant net al ien werjaan.
+
+Jo kinne de dekking ek oanpasse:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Kies hokker gedrach it wichtichste is foar jo dashboard: behâld fan Home Assistant's lânseigen ynteraksje-oanwizings of hâld ôfsnien ikoanen visueel sintraal.
 
 <a id="runtime-configuration"></a>
 #### Tydlike konfiguraasje fia de konsole

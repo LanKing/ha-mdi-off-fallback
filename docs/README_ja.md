@@ -15,9 +15,8 @@
 追加された斜線が Home Assistant の標準要素に見えるように設計されています。
 * 標準の Tile カードを置き換えずに動作し、標準の外観、動作、色、サイズ、操作性を維持します。
 * すでに描画されたアイコンだけを、標準の `-off` バリエーションがない場合に限って変更します。
-* 標準の背景がない場合は、Home Assistant 風の薄い円形背景を追加します。
+* ネイティブの背景が欠落している場合は、オプションで薄い円形の背景を追加できます。
 * エンティティの状態を変更せず、デバイスの動作にも干渉しません。
-
 <a id="installation"></a>
 ## 📦 インストール
 
@@ -79,7 +78,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ https://github.com/LanKing/ha-mdi-off-fallback
 その他の設定は独立しています。指定しなかった設定には内蔵値が使用されます。
 
 <a id="background"></a>
-#### 非アクティブアイコンの背景
+#### 円のないアイコンのオプションの背景
 
-Home Assistant がすでに標準の非アクティブ背景を描画している場合、プラグインは変更しません。
+一部の MDI アイコンは視覚的に中心からずれています。スラッシュを追加した後、それらを囲む円形の背景がない場合、それらはアンバランスに見えることがあります。
 
-背景がない場合、Home Assistant の標準的な非アクティブ Tile アイコンに合う薄い円を追加します。
+これは私の視覚的順序の感覚を悩ませたので、Home Assistant が提供していない場合に非アクティブなアイコンの後ろに薄い円を描くオプション設定がプラグインに含まれています。
 
-無効化：
+このオプションはデフォルトでは無効になっています。これは、円が Home Assistant インターフェイスで意味を持っているためです。Tile カードでは、通常、アイコンをクリックすると、カードの残りの部分をクリックするのとは別のアクションが実行されることを示します。したがって、純粋に視覚的な配置を目的として円を追加すると、視覚的なセマンティクスが変更されます。
+
+よりバランスのとれた外観を希望する場合は、背景を有効にすることもできます。
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-不透明度の変更：
+有効にすると、プラグインは、Home Assistant がまだレンダリングしていない背景のみを追加します。
+
+不透明度を調整することもできます。
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Home Assistant のネイティブ インタラクション キューを保持するか、斜線アイコンを視覚的に中央に配置するか、ダッシュボードにとって重要な動作を選択してください。
 
 <a id="runtime-configuration"></a>
 #### コンソールからの一時設定

@@ -15,9 +15,8 @@
 Dodatak je napravljen tako da dodato precrtavanje izgleda kao sastavni deo Home Assistant-a:
 * radi sa standardnim karticama Pločica bez njihove zamene i čuva izgled, ponašanje, boje, veličine i interakcije;
 * menja samo već iscrtane ikone i samo kada ne postoji ugrađena varijanta `-off`;
-* dodaje bledu kružnu pozadinu u stilu Home Assistant-a kada ugrađena pozadina nedostaje;
+* може опционо додати бледу кружну позадину када недостаје изворна позадина;
 * ne menja stanja entiteta i ne utiče na rad uređaja.
-
 <a id="installation"></a>
 ## 📦 Instalacija
 
@@ -79,7 +78,7 @@ Koriste se i sledeća podešavanja:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Primer:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Za povratak na ugrađenu listu uklonite `states` iz konfiguracije ili izbrišite
 Ostala podešavanja su nezavisna: ako podešavanje nije navedeno, koristi se njegova ugrađena vrednost.
 
 <a id="background"></a>
-#### Pozadina neaktivne ikone
+#### Опциона позадина за иконе без круга
 
-Ako Home Assistant već prikazuje ugrađenu pozadinu neaktivne ikone, dodatak je ne menja.
+Неке ЗКСКМДИККСЗ иконе су визуелно удаљене од центра. Након што се дода коса црта, могу изгледати неуравнотежено када нема кружне позадине која би их уоквирила.
 
-Kada pozadina nedostaje, dodatak dodaje bledi krug koji odgovara stilu standardnih neaktivnih ikona Pločica u Home Assistant-u.
+Ово је сметало мом осећају за визуелни поредак, тако да додатак укључује опционо подешавање које црта слаб круг иза неактивних икона када га ЗКСКХОМЕАССИСТАНТККСЗ не пружа.
 
-Isključivanje:
+Ова опција је подразумевано онемогућена зато што круг има значење у интерфејсу ЗКСКХОМЕАССИСТАНТККСЗ: на ЗКСКТИЛЕККСЗ картици, обично означава да се кликом на икону обавља засебна радња од клика на остатак картице. Додавање круга искључиво ради визуелног поравнања стога мења ту визуелну семантику.
+
+Још увек можете да омогућите позадину ако више волите уравнотеженији изглед:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Promena providnosti:
+Када је омогућен, додатак додаје само позадину где је ЗКСКХОМЕАССИСТАНТККСЗ већ не приказује.
+
+Такође можете подесити његову непрозирност:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Изаберите које је понашање важније за вашу контролну таблу: очување изворних знакова интеракције ЗКСКХОМЕАССИСТАНТККСЗ или задржавање исечених икона визуелно центрираних.
 
 <a id="runtime-configuration"></a>
 #### Privremena konfiguracija preko konzole

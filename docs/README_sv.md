@@ -15,9 +15,8 @@
 Tillägget är utformat så att det tillagda snedstrecket ser ut som en inbyggd del av Home Assistant:
 * fungerar med standardkortet Ruta utan att ersätta det och bevarar utseende, beteende, färger, storlekar och interaktioner;
 * ändrar endast redan renderade ikoner och endast när en inbyggd `-off`-variant saknas;
-* lägger till en svag rund bakgrund i Home Assistant-stil när standardbakgrunden saknas;
+* kan valfritt lägga till en svag cirkulär bakgrund när den ursprungliga bakgrunden saknas;
 * ändrar inte entiteternas tillstånd och påverkar inte enheternas funktion.
-
 <a id="installation"></a>
 ## 📦 Installation
 
@@ -79,7 +78,7 @@ Följande inställningar används också:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Exempel:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Ta bort `states` från konfigurationen eller radera konfigurationsfilen för att
 Övriga inställningar är oberoende: om en inställning utelämnas används dess inbyggda värde.
 
 <a id="background"></a>
-#### Bakgrund för inaktiv ikon
+#### Valfri bakgrund för ikoner utan cirkel
 
-Om Home Assistant redan visar standardbakgrunden för en inaktiv ikon lämnar tillägget den oförändrad.
+Vissa MDI-ikoner är visuellt förskjutna. Efter att ett snedstreck har lagts till kan de se obalanserade ut när det inte finns någon cirkulär bakgrund för att rama in dem.
 
-Om bakgrunden saknas lägger tillägget till en svag cirkel som motsvarar stilen för vanliga inaktiva Ruta-ikoner i Home Assistant.
+Detta störde min känsla för visuell ordning, så pluginet inkluderar en valfri inställning som ritar en svag cirkel bakom inaktiva ikoner när Home Assistant inte tillhandahåller en.
 
-Inaktivera:
+Det här alternativet är inaktiverat som standard eftersom cirkeln har en betydelse i Home Assistant-gränssnittet: på ett Tile-kort indikerar det normalt att ett klick på ikonen utför en separat åtgärd från att klicka på resten av kortet. Att lägga till en cirkel enbart för visuell justering förändrar därför den visuella semantiken.
+
+Du kan fortfarande aktivera bakgrunden om du föredrar det mer balanserade utseendet:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Ändra genomskinlighet:
+När det är aktiverat lägger insticksprogrammet bara till bakgrunden där Home Assistant inte redan renderar en.
+
+Du kan också justera dess opacitet:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Välj vilket beteende som är viktigast för din instrumentpanel: bevara Home Assistant:s inbyggda interaktionssignaler eller håll de nedskurna ikonerna visuellt centrerade.
 
 <a id="runtime-configuration"></a>
 #### Tillfällig konfiguration via konsolen

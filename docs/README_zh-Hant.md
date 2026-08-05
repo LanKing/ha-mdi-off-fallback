@@ -15,9 +15,8 @@
 此外掛程式經過設計，使新增的斜線看起來像 Home Assistant 的原生組成部分：
 * 適用於標準「方塊」卡片，無需取代卡片，並保留原生外觀、行為、顏色、尺寸與互動；
 * 僅修改已經呈現的圖示，而且只在沒有原生 `-off` 變體時修改；
-* 當原生背景缺少時，新增 Home Assistant 風格的淡色圓形背景；
+* 當原生背景缺失時，可以選擇加入微弱的圓形背景；
 * 不會變更實體狀態，也不會干擾裝置運作。
-
 <a id="installation"></a>
 ## 📦 安裝
 
@@ -79,7 +78,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ https://github.com/LanKing/ha-mdi-off-fallback
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ https://github.com/LanKing/ha-mdi-off-fallback
 其他設定彼此獨立：如果省略某項設定，則繼續使用其內建值。
 
 <a id="background"></a>
-#### 非啟用圖示背景
+#### 沒有圓圈的圖示的可選背景
 
-如果 Home Assistant 已經繪製非啟用圖示的原生背景，外掛程式不會修改它。
+某些 MDI 圖示在視覺上偏離中心。添加斜線後，如果沒有圓形背景來框住它們，它們可能看起來不平衡。
 
-如果背景缺少，外掛程式會新增一個淡色圓圈，與 Home Assistant 標準非啟用「方塊」圖示的樣式一致。
+這困擾了我的視覺順序感，因此該插件包含一個可選設置，當 Home Assistant 未提供時，該設置會在非活動圖標後面繪製一個微弱的圓圈。
 
-停用：
+預設情況下停用此選項，因為圓圈在 Home Assistant 介面中具有含義：在 Tile 卡上，它通常表示單擊該圖示與單擊卡的其餘部分執行單獨的操作。因此，純粹為了視覺對齊而添加圓圈會改變視覺語義。
+
+如果您喜歡更平衡的外觀，您仍然可以啟用背景：
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-變更透明度：
+啟用後，該外掛程式僅新增 Home Assistant 尚未渲染的背景。
+
+您也可以調整其不透明度：
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+選擇對您的儀表板更重要的行為：保留 Home Assistant 的本機互動提示或保持斜線圖示視覺居中。
 
 <a id="runtime-configuration"></a>
 #### 透過主控台暫時設定

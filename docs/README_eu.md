@@ -15,9 +15,8 @@
 Plugina barra diagonala Home Assistant-en jatorrizko zati baten moduan agertzeko diseinatuta dago:
 * Tile txartel estandarrekin funtzionatzen du haiek ordezkatu gabe, eta jatorrizko itxura, portaera, koloreak, neurriak eta interakzioak mantentzen ditu;
 * dagoeneko errendatutako ikonoak bakarrik aldatzen ditu, eta soilik `-off` aldaera jatorrizkorik ez dagoenean;
-* Home Assistant estiloko atzeko plano zirkular lausoa gehitzen du jatorrizko atzeko planoa falta denean;
+* aukeran, hondo zirkular ahul bat gehi dezake jatorrizko atzeko planoa falta denean;
 * ez ditu entitateen egoerak aldatzen eta ez du gailuen funtzionamenduan esku hartzen.
-
 <a id="installation"></a>
 ## 📦 Instalazioa
 
@@ -80,7 +79,7 @@ Ezarpen hauek ere erabiltzen dira:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Adibidea:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Zerrenda integratura itzultzeko, kendu `states` konfiguraziotik edo ezabatu konf
 Gainerako ezarpenak independenteak dira: ezarpen bat zehazten ez bada, haren balio integratua mantentzen da.
 
 <a id="background"></a>
-#### Ikono inaktiboaren atzeko planoa
+#### Zirkulurik gabeko ikonoentzako hautazko atzeko planoa
 
-Home Assistant-ek ikono inaktiboaren jatorrizko atzeko planoa dagoeneko marrazten badu, pluginak ez du aldatzen.
+MDI ikono batzuk bisualki erdiratuta daude. Barra bat gehitu ondoren, desorekatuak izan daitezke enkoratzeko atzeko plano zirkularrik ez dagoenean.
 
-Atzeko planoa falta bada, pluginak Home Assistant-eko Tile ikono inaktibo estandarraren estiloarekin bat datorren zirkulu lausoa gehitzen du.
+Horrek ordena bisualaren zentzua gogaitu zuen, beraz, pluginak aukerako ezarpen bat barne hartzen du, zirkulu arin bat marrazten duena ikono inaktiboen atzean Home Assistantk ematen ez duenean.
 
-Desgaitzeko:
+Aukera hau lehenespenez desgaituta dago zirkuluak esanahi bat duelako Home Assistant interfazean: Tile txartel batean, normalean, ikonoa sakatzeak beste ekintza bat egiten duela adierazten du gainerako txartelaren gainean klik egitean. Lerrokatze bisualerako soilik zirkulu bat gehitzeak, beraz, semantika bisual hori aldatzen du.
+
+Oraindik atzeko planoa gaitu dezakezu itxura orekatuagoa nahi baduzu:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Opakutasuna aldatzeko:
+Gaituta dagoenean, pluginak Home Assistant lehendik errendatzen ez duen atzeko planoa bakarrik gehitzen du.
+
+Bere opakutasuna ere doi dezakezu:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Aukeratu zure aginte-panelerako garrantzitsuena den jokabidea: Home Assistant-ren jatorrizko interakzio-seinaleak gordetzea edo moztutako ikonoak ikus-entzunezko erdian mantentzea.
 
 <a id="runtime-configuration"></a>
 #### Aldi baterako konfigurazioa kontsolaren bidez

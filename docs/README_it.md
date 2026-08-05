@@ -15,9 +15,8 @@
 Il plugin è progettato affinché la barra aggiunta sembri una parte nativa di Home Assistant:
 * funziona con le schede Tile standard senza sostituirle e ne conserva aspetto, comportamento, colori, dimensioni e interazioni;
 * modifica solo le icone già renderizzate e soltanto quando non è disponibile una variante nativa `-off`;
-* aggiunge uno sfondo circolare tenue in stile Home Assistant quando manca lo sfondo nativo;
+* può facoltativamente aggiungere un debole sfondo circolare quando manca lo sfondo nativo;
 * non modifica gli stati delle entità e non interferisce con il funzionamento dei dispositivi.
-
 <a id="installation"></a>
 ## 📦 Installazione
 
@@ -79,7 +78,7 @@ Vengono inoltre utilizzate le seguenti impostazioni:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Esempio:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Per tornare all'elenco incorporato, rimuovi `states` dalla configurazione o elim
 Le altre impostazioni sono indipendenti: se un'impostazione non è specificata, rimane valido il suo valore incorporato.
 
 <a id="background"></a>
-#### Sfondo dell'icona inattiva
+#### Sfondo opzionale per le icone senza cerchio
 
-Se Home Assistant mostra già lo sfondo nativo dell'icona inattiva, il plugin lo lascia invariato.
+Alcune icone MDI sono visivamente decentrate. Dopo l'aggiunta di una barra, possono apparire sbilanciati quando non c'è uno sfondo circolare per incorniciarli.
 
-Se lo sfondo manca, il plugin aggiunge un cerchio tenue che corrisponde allo stile standard delle icone Tile inattive di Home Assistant.
+Ciò ha infastidito il mio senso dell'ordine visivo, quindi il plug-in include un'impostazione opzionale che disegna un debole cerchio dietro le icone inattive quando Home Assistant non ne fornisce uno.
 
-Per disattivarlo:
+Questa opzione è disabilitata di default perché il cerchio ha un significato nell'interfaccia Home Assistant: su una scheda Tile, normalmente indica che cliccando sull'icona si esegue un'azione separata dal cliccare sul resto della scheda. L'aggiunta di un cerchio esclusivamente per l'allineamento visivo modifica quindi la semantica visiva.
+
+Puoi comunque abilitare lo sfondo se preferisci un aspetto più equilibrato:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Per modificare l'opacità:
+Quando abilitato, il plugin aggiunge lo sfondo solo dove Home Assistant non ne esegue già il rendering.
+
+Puoi anche regolarne l'opacità:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Scegli il comportamento più importante per la tua dashboard: preservare i segnali di interazione nativi di Home Assistant o mantenere le icone barrate visivamente centrate.
 
 <a id="runtime-configuration"></a>
 #### Configurazione temporanea dalla console

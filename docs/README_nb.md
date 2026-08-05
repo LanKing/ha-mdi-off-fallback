@@ -15,9 +15,8 @@
 Programtillegget er laget slik at den ekstra skråstreken ser ut som en innebygd del av Home Assistant:
 * fungerer med standard Flis-kort uten å erstatte dem, og beholder standard utseende, oppførsel, farger, størrelser og interaksjoner;
 * endrer bare ikoner som allerede er tegnet, og bare når det ikke finnes en innebygd `-off`-variant;
-* legger til en svak, rund bakgrunn i Home Assistant-stil når standardbakgrunnen mangler;
+* kan eventuelt legge til en svak sirkulær bakgrunn når den opprinnelige bakgrunnen mangler;
 * endrer ikke entitetstilstander og påvirker ikke enhetenes funksjon.
-
 <a id="installation"></a>
 ## 📦 Installasjon
 
@@ -79,7 +78,7 @@ Følgende innstillinger brukes også:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Eksempel:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Fjern `states` fra konfigurasjonen eller slett konfigurasjonsfilen for å gå ti
 De andre innstillingene er uavhengige: Hvis en innstilling ikke er oppgitt, brukes den innebygde verdien.
 
 <a id="background"></a>
-#### Bakgrunn for inaktivt ikon
+#### Valgfri bakgrunn for ikoner uten sirkel
 
-Hvis Home Assistant allerede tegner standardbakgrunnen for et inaktivt ikon, lar programtillegget den være uendret.
+Noen MDI-ikoner er visuelt utenfor midten. Etter at en skråstrek er lagt til, kan de se ubalanserte ut når det ikke er noen sirkulær bakgrunn for å ramme dem inn.
 
-Hvis bakgrunnen mangler, legger programtillegget til en svak sirkel som samsvarer med utformingen til standard inaktive Flis-ikoner i Home Assistant.
+Dette plaget min følelse av visuell rekkefølge, så plugin-en inkluderer en valgfri innstilling som tegner en svak sirkel bak inaktive ikoner når Home Assistant ikke gir en.
 
-Deaktiver den:
+Dette alternativet er deaktivert som standard fordi sirkelen har en betydning i Home Assistant-grensesnittet: på et Tile-kort indikerer det normalt at å klikke på ikonet utfører en annen handling fra å klikke på resten av kortet. Å legge til en sirkel utelukkende for visuell justering endrer derfor den visuelle semantikken.
+
+Du kan fortsatt aktivere bakgrunnen hvis du foretrekker det mer balanserte utseendet:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Endre gjennomsiktigheten:
+Når den er aktivert, legger plugin-en bare til bakgrunnen der Home Assistant ikke allerede gjengir en.
+
+Du kan også justere opasiteten:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Velg hvilken oppførsel som er viktigst for dashbordet ditt: bevar Home Assistants opprinnelige interaksjonssignaler eller hold ikonene med skråstilte visuelt sentrert.
 
 <a id="runtime-configuration"></a>
 #### Midlertidig konfigurasjon via konsollen

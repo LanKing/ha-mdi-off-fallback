@@ -15,9 +15,8 @@
 Viðbótin er hönnuð þannig að skástrikið líti út eins og innbyggður hluti af Home Assistant:
 * virkar með stöðluðum Tile-spjöldum án þess að skipta þeim út og varðveitir útlit, hegðun, liti, stærðir og samskipti;
 * breytir aðeins táknum sem þegar hafa verið birt og aðeins þegar engin innbyggð `-off` útgáfa er til;
-* bætir við daufum hringlaga bakgrunni í Home Assistant-stíl þegar innbyggðan bakgrunn vantar;
+* getur valfrjálst bætt við daufum hringlaga bakgrunni þegar innfæddan bakgrunn vantar;
 * breytir ekki stöðu eininga og hefur ekki áhrif á virkni tækja.
-
 <a id="installation"></a>
 ## 📦 Uppsetning
 
@@ -79,7 +78,7 @@ Einnig eru eftirfarandi stillingar notaðar:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Dæmi:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Til að fara aftur í innbyggða listann skaltu fjarlægja `states` úr stilling
 Aðrar stillingar eru óháðar: ef stilling er ekki tilgreind heldur hún innbyggðu gildi sínu.
 
 <a id="background"></a>
-#### Bakgrunnur óvirks tákns
+#### Valfrjáls bakgrunnur fyrir tákn án hrings
 
-Ef Home Assistant sýnir þegar innbyggðan bakgrunn óvirks tákns lætur viðbótin hann óbreyttan.
+Sum MDI tákn eru sjónrænt utan miðju. Eftir að skástrik hefur verið bætt við geta þau litið út í ójafnvægi þegar enginn hringlaga bakgrunnur er til að ramma þau inn.
 
-Ef bakgrunninn vantar bætir viðbótin við daufum hring sem passar við staðlaðan stíl óvirks Tile-tákns í Home Assistant.
+Þetta truflaði tilfinningu mína fyrir sjónrænni röð, þannig að viðbótin inniheldur valfrjálsa stillingu sem dregur daufan hring á bak við óvirk tákn þegar Home Assistant býður ekki upp á slíkt.
 
-Slökkva:
+Þessi valkostur er sjálfgefið óvirkur vegna þess að hringurinn hefur merkingu í Home Assistant viðmótinu: á Tile korti gefur það venjulega til kynna að það að smella á táknið framkvæmir aðra aðgerð en að smella á restina af kortinu. Að bæta við hring eingöngu fyrir sjónræna jöfnun breytir því þeirri sjónrænu merkingarfræði.
+
+Þú getur samt virkjað bakgrunninn ef þú vilt frekar jafnvægið útlit:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Breyta gagnsæi:
+Þegar það er virkt bætir viðbótin aðeins við bakgrunni þar sem Home Assistant gerir ekki þegar einn.
+
+Þú getur líka stillt ógagnsæi þess:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Veldu hvaða hegðun sem skiptir meira máli fyrir mælaborðið þitt: varðveittu innfæddar samskiptavísar Home Assistant eða haltu niðurskornum táknum sjónrænt í miðju.
 
 <a id="runtime-configuration"></a>
 #### Tímabundnar stillingar úr stjórnborði

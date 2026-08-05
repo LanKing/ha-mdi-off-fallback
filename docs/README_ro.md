@@ -15,9 +15,8 @@
 Pluginul este conceput astfel încât bara adăugată să pară o parte nativă a Home Assistant:
 * funcționează cu cardurile standard Dală fără să le înlocuiască și păstrează aspectul, comportamentul, culorile, dimensiunile și interacțiunile implicite;
 * modifică numai pictogramele deja randate și doar atunci când lipsește o variantă nativă `-off`;
-* adaugă un fundal circular discret în stil Home Assistant atunci când fundalul implicit lipsește;
+* poate adăuga opțional un fundal circular slab atunci când fundalul nativ lipsește;
 * nu modifică stările entităților și nu interferează cu funcționarea dispozitivelor.
-
 <a id="installation"></a>
 ## 📦 Instalare
 
@@ -79,7 +78,7 @@ Sunt folosite și următoarele setări:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Exemplu:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Pentru a reveni la lista încorporată, eliminați `states` din configurație sa
 Celelalte setări sunt independente: dacă o setare lipsește, rămâne activă valoarea sa încorporată.
 
 <a id="background"></a>
-#### Fundalul pictogramei inactive
+#### Fundal opțional pentru pictogramele fără cerc
 
-Dacă Home Assistant afișează deja fundalul nativ al pictogramei inactive, pluginul nu îl modifică.
+Unele pictograme MDI sunt vizual decentrate. După ce este adăugată o bară oblică, acestea pot părea dezechilibrate atunci când nu există un fundal circular care să le încadreze.
 
-Dacă fundalul lipsește, pluginul adaugă un cerc discret care corespunde stilului pictogramelor Dală inactive standard din Home Assistant.
+Acest lucru mi-a deranjat simțul ordinii vizuale, așa că pluginul include o setare opțională care desenează un cerc slab în spatele pictogramelor inactive atunci când Home Assistant nu oferă unul.
 
-Dezactivare:
+Această opțiune este dezactivată în mod implicit, deoarece cercul are o semnificație în interfața Home Assistant: pe un card Tile, în mod normal indică faptul că a face clic pe pictogramă efectuează o acțiune separată de a face clic pe restul cardului. Prin urmare, adăugarea unui cerc pur pentru alinierea vizuală schimbă acea semantică vizuală.
+
+Puteți activa în continuare fundalul dacă preferați aspectul mai echilibrat:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Modificarea opacității:
+Când este activat, pluginul adaugă doar fundalul în care Home Assistant nu redă deja unul.
+
+De asemenea, puteți ajusta opacitatea acestuia:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Alegeți comportamentul care contează mai mult pentru tabloul de bord: păstrarea indicațiilor native de interacțiune ale lui Home Assistant sau păstrarea pictogramelor tăiate centrate vizual.
 
 <a id="runtime-configuration"></a>
 #### Configurare temporară din consolă

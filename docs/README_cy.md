@@ -15,9 +15,8 @@
 Mae’r ategyn wedi’i gynllunio fel bod y llinell groes ychwanegol yn edrych fel rhan frodorol o Home Assistant:
 * yn gweithio gyda chardiau Tile safonol heb eu disodli ac yn cadw eu hymddangosiad, ymddygiad, lliwiau, meintiau a rhyngweithiadau gwreiddiol;
 * yn newid eiconau sydd eisoes wedi’u rendro yn unig, a dim ond pan nad oes amrywiad `-off` brodorol;
-* yn ychwanegu cefndir crwn golau yn arddull Home Assistant os nad oes cefndir brodorol;
+* yn gallu ychwanegu cefndir crwn gwan yn ddewisol pan fydd y cefndir brodorol ar goll;
 * nid yw’n newid cyflwr endidau nac yn ymyrryd â gweithrediad dyfeisiau.
-
 <a id="installation"></a>
 ## 📦 Gosod
 
@@ -80,7 +79,7 @@ Defnyddir y gosodiadau canlynol hefyd:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Enghraifft:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ I ddychwelyd at y rhestr adeiledig, tynnwch `states` o’r ffurfweddiad neu dil�
 Mae’r gosodiadau eraill yn annibynnol: os na nodir gosodiad, mae ei werth adeiledig yn parhau’n weithredol.
 
 <a id="background"></a>
-#### Cefndir eicon anweithredol
+#### Cefndir dewisol ar gyfer eiconau heb gylch
 
-Os yw Home Assistant eisoes yn dangos y cefndir brodorol ar gyfer eicon anweithredol, nid yw’r ategyn yn ei newid.
+Mae rhai eiconau MDI yn weledol oddi ar y canol. Ar ôl ychwanegu slaes, gallant edrych yn anghytbwys pan nad oes cefndir crwn i'w fframio.
 
-Os yw’r cefndir ar goll, mae’r ategyn yn ychwanegu cylch golau sy’n cyfateb i arddull safonol eicon Tile anweithredol yn Home Assistant.
+Roedd hyn yn poeni fy synnwyr o drefn weledol, felly mae'r ategyn yn cynnwys gosodiad dewisol sy'n tynnu cylch gwan y tu ôl i eiconau anactif pan nad yw Home Assistant yn darparu un.
 
-Analluogi:
+Mae'r opsiwn hwn wedi'i analluogi yn ddiofyn oherwydd bod gan y cylch ystyr yn y rhyngwyneb Home Assistant: ar gerdyn Tile, mae fel arfer yn nodi bod clicio ar yr eicon yn cyflawni gweithred ar wahân i glicio ar weddill y cerdyn. Felly mae ychwanegu cylch ar gyfer aliniad gweledol yn unig yn newid y semanteg weledol honno.
+
+Gallwch chi alluogi'r cefndir o hyd os yw'n well gennych edrychiad mwy cytbwys:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Newid tryloywder:
+Pan fydd wedi'i alluogi, dim ond y cefndir y mae'r ategyn yn ei ychwanegu lle nad yw Home Assistant yn gwneud un yn barod.
+
+Gallwch hefyd addasu ei anhryloywder:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Dewiswch pa bynnag ymddygiad sydd bwysicaf i'ch dangosfwrdd: cadw ciwiau rhyngweithio brodorol Home Assistant neu gadw eiconau wedi'u torri â ffocws gweledol.
 
 <a id="runtime-configuration"></a>
 #### Ffurfweddu dros dro drwy’r consol

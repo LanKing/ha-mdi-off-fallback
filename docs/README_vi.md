@@ -15,9 +15,8 @@
 Plugin được thiết kế để đường gạch chéo bổ sung trông như một phần gốc của Home Assistant:
 * hoạt động với thẻ Ô tiêu chuẩn mà không thay thế chúng, đồng thời giữ nguyên giao diện, hành vi, màu sắc, kích thước và tương tác;
 * chỉ thay đổi các biểu tượng đã được hiển thị và chỉ khi không có biến thể `-off` tích hợp;
-* thêm nền tròn mờ theo phong cách Home Assistant khi nền mặc định bị thiếu;
+* có thể tùy ý thêm nền tròn mờ khi thiếu nền gốc;
 * không thay đổi trạng thái thực thể và không can thiệp vào hoạt động của thiết bị.
-
 <a id="installation"></a>
 ## 📦 Cài đặt
 
@@ -79,7 +78,7 @@ Các cài đặt sau cũng được sử dụng:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Ví dụ:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Trong ví dụ này, đường gạch chéo chỉ được áp dụng cho `light
 Các cài đặt khác độc lập với nhau: nếu một cài đặt bị bỏ qua, giá trị tích hợp của nó vẫn được sử dụng.
 
 <a id="background"></a>
-#### Nền biểu tượng không hoạt động
+#### Nền tùy chọn cho các biểu tượng không có hình tròn
 
-Nếu Home Assistant đã hiển thị nền gốc cho biểu tượng không hoạt động, plugin sẽ không thay đổi nền đó.
+Một số biểu tượng MDI trông có vẻ lệch tâm. Sau khi thêm dấu gạch chéo, chúng có thể trông mất cân đối khi không có nền hình tròn để tạo khung cho chúng.
 
-Nếu thiếu nền, plugin thêm một vòng tròn mờ phù hợp với phong cách của biểu tượng Ô không hoạt động tiêu chuẩn trong Home Assistant.
+Điều này làm tôi khó chịu về trật tự trực quan, vì vậy plugin bao gồm cài đặt tùy chọn vẽ một vòng tròn mờ phía sau các biểu tượng không hoạt động khi Home Assistant không cung cấp.
 
-Tắt:
+Tùy chọn này bị tắt theo mặc định vì vòng tròn có ý nghĩa trong giao diện Home Assistant: trên thẻ Tile, nó thường chỉ ra rằng việc nhấp vào biểu tượng sẽ thực hiện một hành động riêng biệt với việc nhấp vào phần còn lại của thẻ. Việc thêm một vòng tròn hoàn toàn để căn chỉnh trực quan sẽ thay đổi ngữ nghĩa trực quan đó.
+
+Bạn vẫn có thể bật nền nếu bạn thích giao diện cân đối hơn:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Thay đổi độ mờ:
+Khi được bật, plugin chỉ thêm nền trong đó Home Assistant chưa hiển thị nền.
+
+Bạn cũng có thể điều chỉnh độ mờ của nó:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Chọn bất kỳ hành vi nào quan trọng hơn cho trang tổng quan của bạn: giữ nguyên các dấu hiệu tương tác gốc của Home Assistant hoặc giữ các biểu tượng bị gạch chéo ở giữa.
 
 <a id="runtime-configuration"></a>
 #### Cấu hình tạm thời qua bảng điều khiển

@@ -15,9 +15,8 @@
 De Plugin ass esou entwéckelt, datt de bäigesate Stréch wéi en natierlechen Deel vu Home Assistant ausgesäit:
 * funktionéiert mat Standard-Tile-Kaarten ouni se ze ersetzen a behält Ausgesinn, Verhalen, Faarwen, Gréissten an Interaktiounen;
 * ännert nëmmen Ikonen déi scho gerendert goufen, an nëmmen wann keng agebaute `-off`-Variant existéiert;
-* setzt en hellen, ronnen Hannergrond am Home-Assistant-Stil dobäi, wann den normale Hannergrond feelt;
+* kann optional e liichtschwaache kreesfërmegen Hannergrond addéieren wann den gebiertege Hannergrond fehlt;
 * ännert keng Entitéitszoustänn a gräift net an d'Funktioun vun Apparater an.
-
 <a id="installation"></a>
 ## 📦 Installatioun
 
@@ -79,7 +78,7 @@ Ausserdeem ginn dës Astellunge benotzt:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Beispill:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Fir op déi agebaute Lëscht zeréckzegoen, läsch `states` aus der Konfiguratio
 Déi aner Astellunge sinn onofhängeg: wann eng Astellung feelt, bleift hire agebaute Wäert aktiv.
 
 <a id="background"></a>
-#### Hannergrond vun der inaktiver Ikon
+#### Optional Hannergrond fir Ikonen ouni Krees
 
-Wann Home Assistant schonn den normale Hannergrond vun enger inaktiver Ikon weist, léisst de Plugin en onverännert.
+E puer MDI Symboler si visuell aus dem Zentrum. Nodeems e Slash bäigefüügt ass, kënne se onbalancéiert ausgesinn wann et kee kreesfërmegen Hannergrond ass fir se ze kadréieren.
 
-Wann deen Hannergrond feelt, setzt de Plugin en hellen Krees dobäi, deen zum Standardstil vun inaktive Tile-Ikonen passt.
+Dëst huet mäi Sënn vu visueller Uerdnung gestéiert, sou datt de Plugin eng fakultativ Astellung enthält, déi e liichtschwaache Krees hannert inaktiven Ikonen zitt wann Home Assistant keng ubitt.
 
-Auszeschalten:
+Dës Optioun ass par défaut deaktivéiert well de Krees eng Bedeitung an der Home Assistant Interface huet: op enger Tile Kaart weist et normalerweis un datt wann Dir op d'Ikon klickt, eng separat Handlung ausféiert vum Klick op de Rescht vun der Kaart. E Krees derbäi reng fir visuell Ausrichtung ännert dofir déi visuell Semantik.
+
+Dir kënnt nach ëmmer den Hannergrond aktivéieren wann Dir dat méi equilibréiert Erscheinungsbild léiwer hutt:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Transparenz änneren:
+Wann et aktivéiert ass, füügt de Plugin nëmmen den Hannergrond bäi wou Home Assistant net schonn een mécht.
+
+Dir kënnt och seng Opazitéit upassen:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Wielt wéi ee Verhalen méi wichteg ass fir Ären Dashboard: bewahrt dem Home Assistant seng gebierteg Interaktiounsstécker oder hält geschnidde Symboler visuell zentréiert.
 
 <a id="runtime-configuration"></a>
 #### Temporär Konfiguratioun iwwer d'Konsole

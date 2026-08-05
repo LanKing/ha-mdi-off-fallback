@@ -15,9 +15,8 @@
 Pistikprogramm on loodud nii, et lisatud kaldkriips näeks välja Home Assistanti loomuliku osana:
 * töötab standardsete Tile-kaartidega neid asendamata ning säilitab nende algse välimuse, käitumise, värvid, suurused ja interaktsioonid;
 * muudab ainult juba renderdatud ikoone ja ainult siis, kui sisseehitatud `-off` varianti pole;
-* lisab nõrga ümmarguse Home Assistanti stiilis tausta, kui algne taust puudub;
+* saab soovi korral lisada nõrga ringikujulise tausta, kui loomulik taust puudub;
 * ei muuda olemite olekuid ega sekku seadmete töösse.
-
 <a id="installation"></a>
 ## 📦 Paigaldamine
 
@@ -80,7 +79,7 @@ Kasutatakse ka järgmisi seadeid:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Näide:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Sisseehitatud loendi taastamiseks eemaldage seadistusest `states` või kustutage
 Muud seaded on sõltumatud: kui seadet pole määratud, jääb kehtima selle sisseehitatud väärtus.
 
 <a id="background"></a>
-#### Mitteaktiivse ikooni taust
+#### Valikuline taust ilma ringita ikoonide jaoks
 
-Kui Home Assistant kuvab juba mitteaktiivse ikooni algset tausta, ei muuda pistikprogramm seda.
+Mõned MDI ikoonid on visuaalselt keskelt väljas. Pärast kaldkriipsu lisamist võivad need välja näha tasakaalustamata, kui raamimiseks pole ringikujulist tausta.
 
-Kui taust puudub, lisab pistikprogramm nõrga ringi, mis vastab Home Assistanti standardse mitteaktiivse Tile-ikooni kujundusele.
+See häiris minu visuaalset järjestust, nii et pistikprogramm sisaldab valikulist sätet, mis tõmbab passiivsete ikoonide taha nõrga ringi, kui Home Assistant seda ei paku.
 
-Keelamine:
+See suvand on vaikimisi keelatud, kuna ringil on Home Assistant liideses tähendus: Tile-kaardil näitab see tavaliselt, et ikoonil klõpsamine teeb ülejäänud kaardi klõpsamisest erineva toimingu. Ringi lisamine ainult visuaalseks joondamiseks muudab visuaalset semantikat.
+
+Saate tausta siiski lubada, kui eelistate tasakaalustatumat välimust:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Läbipaistvuse muutmine:
+Kui see on lubatud, lisab pistikprogramm tausta ainult sinna, kus Home Assistant seda veel ei renderda.
+
+Samuti saate reguleerida selle läbipaistmatust:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Valige, milline käitumine on teie armatuurlaua jaoks olulisem: säilitades Home Assistant loomulikud interaktsioonijuhised või hoides kaldkriipsuga ikoonid visuaalselt keskel.
 
 <a id="runtime-configuration"></a>
 #### Ajutine seadistamine konsooli kaudu

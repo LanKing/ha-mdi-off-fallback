@@ -15,9 +15,8 @@
 Vtičnik je zasnovan tako, da dodano prečrtanje deluje kot izvorni del Home Assistanta:
 * deluje s standardnimi karticami Ploščica brez njihove zamenjave ter ohrani videz, vedenje, barve, velikosti in interakcije;
 * spreminja samo že izrisane ikone in samo takrat, ko ni vgrajene različice `-off`;
-* doda nežno okroglo ozadje v slogu Home Assistanta, kadar izvorno ozadje manjka;
+* lahko po želji doda bledo okroglo ozadje, ko izvorno ozadje manjka;
 * ne spreminja stanj entitet in ne posega v delovanje naprav.
-
 <a id="installation"></a>
 ## 📦 Namestitev
 
@@ -79,7 +78,7 @@ Uporabljajo se tudi naslednje nastavitve:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Primer:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Za vrnitev na vgrajeni seznam odstranite `states` iz konfiguracije ali izbrišit
 Druge nastavitve so neodvisne: če nastavitev ni navedena, ostane uporabljena njena vgrajena vrednost.
 
 <a id="background"></a>
-#### Ozadje neaktivne ikone
+#### Izbirno ozadje za ikone brez kroga
 
-Če Home Assistant že prikaže izvorno ozadje neaktivne ikone, ga vtičnik ne spremeni.
+Nekatere ikone MDI so vizualno izven sredine. Ko je dodana poševnica, so lahko videti neuravnotežene, če ni okroglega ozadja, ki bi jih uokvirilo.
 
-Če ozadje manjka, vtičnik doda nežen krog, ki ustreza slogu standardnih neaktivnih ikon Ploščica v Home Assistantu.
+To je motilo moj občutek vizualnega reda, zato vtičnik vključuje izbirno nastavitev, ki nariše šibek krog za neaktivnimi ikonami, kadar Home Assistant tega ne zagotavlja.
 
-Onemogočanje:
+Ta možnost je privzeto onemogočena, ker ima krog pomen v vmesniku Home Assistant: na kartici Tile običajno pomeni, da klik na ikono izvede dejanje, ločeno od klika preostale kartice. Dodajanje kroga zgolj zaradi vizualne poravnave torej spremeni to vizualno semantiko.
+
+Še vedno lahko omogočite ozadje, če imate raje bolj uravnotežen videz:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Spreminjanje prosojnosti:
+Ko je omogočen, vtičnik samo doda ozadje, kjer ga Home Assistant še ne upodablja.
+
+Prilagodite lahko tudi njegovo motnost:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Izberite vedenje, ki je pomembnejše za vašo nadzorno ploščo: ohranitev izvirnih interakcijskih namigov Home Assistant ali ohranjanje poševnih ikon vizualno na sredini.
 
 <a id="runtime-configuration"></a>
 #### Začasna konfiguracija prek konzole

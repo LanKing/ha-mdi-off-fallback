@@ -15,9 +15,8 @@
 Le plugin est conçu pour que la barre oblique ajoutée ressemble à un élément natif de Home Assistant :
 * fonctionne avec les cartes Tile standard sans les remplacer et conserve leur apparence, leur comportement, leurs couleurs, leurs dimensions et leurs interactions d’origine ;
 * ne modifie que les icônes déjà rendues, et uniquement lorsqu’aucune variante native `-off` n’est disponible ;
-* ajoute un fond circulaire discret dans le style de Home Assistant lorsque le fond natif est absent ;
+* peut éventuellement ajouter un arrière-plan circulaire pâle lorsque l'arrière-plan natif est manquant ;
 * ne modifie pas l’état des entités et n’interfère pas avec le fonctionnement des appareils.
-
 <a id="installation"></a>
 ## 📦 Installation
 
@@ -80,7 +79,7 @@ Les paramètres suivants sont également utilisés :
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Exemple :
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Pour revenir à la liste intégrée, supprimez `states` de la configuration ou s
 Les autres paramètres sont indépendants : si un paramètre n’est pas indiqué, sa valeur intégrée reste utilisée.
 
 <a id="background"></a>
-#### Fond d’une icône inactive
+#### Arrière-plan facultatif pour les icônes sans cercle
 
-Si Home Assistant affiche déjà le fond natif de l’icône inactive, le plugin ne le modifie pas.
+Certaines icônes MDI sont visuellement décentrées. Après l’ajout d’une barre oblique, ils peuvent paraître déséquilibrés s’il n’y a pas d’arrière-plan circulaire pour les encadrer.
 
-Si ce fond est absent, le plugin ajoute un cercle discret correspondant au style standard d’une icône Tile inactive dans Home Assistant.
+Cela a gêné mon sens de l'ordre visuel, c'est pourquoi le plugin inclut un paramètre facultatif qui dessine un léger cercle derrière les icônes inactives lorsque Home Assistant n'en fournit pas.
 
-Désactiver :
+Cette option est désactivée par défaut car le cercle a une signification dans l'interface Home Assistant : sur une carte Tile, il indique normalement que cliquer sur l'icône effectue une action distincte du clic sur le reste de la carte. L'ajout d'un cercle uniquement à des fins d'alignement visuel modifie donc cette sémantique visuelle.
+
+Vous pouvez toujours activer l'arrière-plan si vous préférez une apparence plus équilibrée :
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Modifier l’opacité :
+Lorsqu'il est activé, le plugin ajoute uniquement l'arrière-plan là où Home Assistant n'en rend pas déjà un.
+
+Vous pouvez également ajuster son opacité :
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Choisissez le comportement qui compte le plus pour votre tableau de bord : préserver les signaux d'interaction natifs de Home Assistant ou garder les icônes barrées visuellement centrées.
 
 <a id="runtime-configuration"></a>
 #### Configuration temporaire via la console

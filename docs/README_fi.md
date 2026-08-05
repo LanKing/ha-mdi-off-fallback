@@ -15,9 +15,8 @@
 Lisäosa on toteutettu niin, että lisätty vinoviiva näyttää Home Assistantin alkuperäiseltä osalta:
 * toimii tavallisten Tile-korttien kanssa korvaamatta niitä ja säilyttää niiden alkuperäisen ulkoasun, toiminnan, värit, koot ja vuorovaikutukset;
 * muuttaa vain jo renderöityjä kuvakkeita ja vain silloin, kun sisäänrakennettua `-off`-versiota ei ole;
-* lisää himmeän pyöreän Home Assistant -tyylisen taustan, jos alkuperäinen tausta puuttuu;
+* voi valinnaisesti lisätä himmeän pyöreän taustan, kun alkuperäinen tausta puuttuu;
 * ei muuta entiteettien tiloja eikä häiritse laitteiden toimintaa.
-
 <a id="installation"></a>
 ## 📦 Asennus
 
@@ -80,7 +79,7 @@ Myös seuraavia asetuksia käytetään:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Esimerkki:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Palaa sisäänrakennettuun luetteloon poistamalla `states` määrityksestä tai 
 Muut asetukset ovat riippumattomia: jos asetusta ei määritetä, sen sisäänrakennettu arvo säilyy.
 
 <a id="background"></a>
-#### Passiivisen kuvakkeen tausta
+#### Valinnainen tausta kuvakkeille ilman ympyrää
 
-Jos Home Assistant näyttää jo passiivisen kuvakkeen alkuperäisen taustan, lisäosa ei muuta sitä.
+Jotkut MDI-kuvakkeet ovat visuaalisesti keskikohdan ulkopuolella. Kun vinoviiva on lisätty, ne voivat näyttää epätasapainoisilta, jos niissä ei ole pyöreää taustaa kehystämään niitä.
 
-Jos tausta puuttuu, lisäosa lisää himmeän ympyrän, joka vastaa Home Assistantin tavallisen passiivisen Tile-kuvakkeen tyyliä.
+Tämä häiritsi visuaalista järjestystäni, joten laajennus sisältää valinnaisen asetuksen, joka piirtää himmeän ympyrän passiivisten kuvakkeiden taakse, kun Home Assistant ei tarjoa sellaista.
 
-Poista käytöstä:
+Tämä vaihtoehto on oletuksena pois käytöstä, koska ympyrällä on merkitys Home Assistant-käyttöliittymässä: Tile-kortissa se yleensä osoittaa, että kuvakkeen napsauttaminen suorittaa eri toiminnon kuin muun kortin napsauttaminen. Ympyrän lisääminen pelkästään visuaalista kohdistamista varten muuttaa siksi visuaalista semantiikkaa.
+
+Voit silti ottaa taustan käyttöön, jos haluat tasapainoisemman ulkonäön:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Muuta läpinäkyvyyttä:
+Kun se on käytössä, laajennus lisää vain taustan, jos Home Assistant ei vielä hahmonna sitä.
+
+Voit myös säätää sen peittävyyttä:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Valitse hallintapaneelillesi tärkeämpi toimintatapa: Säilytä Home Assistant:n alkuperäiset vuorovaikutusvihjeet tai pidä leikatut kuvakkeet visuaalisesti keskitettyinä.
 
 <a id="runtime-configuration"></a>
 #### Tilapäinen määritys konsolista

@@ -15,9 +15,8 @@
 Spraudnis ir izstrādāts tā, lai pievienotā svītra izskatītos kā dabiska Home Assistant daļa:
 * darbojas ar standarta Tile kartītēm, tās neaizstājot, un saglabā to izskatu, darbību, krāsas, izmērus un mijiedarbību;
 * maina tikai jau attēlotās ikonas un tikai tad, ja nav iebūvēta `-off` varianta;
-* pievieno blāvu apaļu fonu Home Assistant stilā, ja trūkst standarta fona;
+* pēc izvēles var pievienot vāju apļveida fonu, ja trūkst vietējā fona;
 * nemaina entītiju stāvokļus un netraucē ierīču darbību.
-
 <a id="installation"></a>
 ## 📦 Instalēšana
 
@@ -79,7 +78,7 @@ Tiek izmantoti arī šādi iestatījumi:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Piemērs:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Lai atgrieztos pie iebūvētā saraksta, noņemiet `states` no konfigurācijas v
 Pārējie iestatījumi ir neatkarīgi: ja iestatījums nav norādīts, paliek spēkā tā iebūvētā vērtība.
 
 <a id="background"></a>
-#### Neaktīvās ikonas fons
+#### Izvēles fons ikonām bez apļa
 
-Ja Home Assistant jau attēlo standarta neaktīvās ikonas fonu, spraudnis to nemaina.
+Dažas MDI ikonas ir vizuāli ārpus centra. Pēc slīpsvītras pievienošanas tie var izskatīties nelīdzsvaroti, ja nav apļveida fona, lai tos ierāmētu.
 
-Ja fona nav, spraudnis pievieno blāvu apli, kas atbilst Home Assistant standarta neaktīvās Tile ikonas stilam.
+Tas apgrūtināja manu vizuālās kārtības izjūtu, tāpēc spraudnī ir iekļauts izvēles iestatījums, kas aiz neaktīvām ikonām zīmē vāju apli, ja Home Assistant to nenodrošina.
 
-Atspējot:
+Šī opcija pēc noklusējuma ir atspējota, jo aplim ir nozīme saskarnē Home Assistant: Tile kartē tas parasti norāda, ka, noklikšķinot uz ikonas, tiek veikta cita darbība, nevis noklikšķināšana uz pārējās kartītes. Tāpēc apļa pievienošana tikai vizuālai izlīdzināšanai maina vizuālo semantiku.
+
+Jūs joprojām varat iespējot fonu, ja vēlaties līdzsvarotāku izskatu:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Mainīt necaurredzamību:
+Kad tas ir iespējots, spraudnis pievieno tikai fonu, kur Home Assistant to vēl nerenderē.
+
+Varat arī pielāgot tā necaurredzamību:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Izvēlieties, kura darbība jūsu informācijas panelim ir svarīgāka: saglabājot Home Assistant sākotnējās mijiedarbības norādes vai saglabājot slīpās ikonas vizuāli centrētas.
 
 <a id="runtime-configuration"></a>
 #### Pagaidu konfigurācija konsolē

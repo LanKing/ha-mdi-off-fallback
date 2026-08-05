@@ -15,9 +15,8 @@
 La kromprogramo estas farita tiel, ke la aldonita streko aspektu kiel denaska parto de Home Assistant:
 * funkcias kun normaj Tile-kartoj sen anstataŭigi ilin kaj konservas ilian denaskan aspekton, konduton, kolorojn, grandecojn kaj interagojn;
 * ŝanĝas nur jam bildigitajn piktogramojn kaj nur kiam ne ekzistas denaska varianto `-off`;
-* aldonas palan rondan fonon laŭ la stilo de Home Assistant kiam la denaska fono mankas;
+* povas laŭvole aldoni malklaran cirklan fonon kiam la denaska fono mankas;
 * ne ŝanĝas la statojn de entoj kaj ne intervenas en la funkciadon de aparatoj.
-
 <a id="installation"></a>
 ## 📦 Instalado
 
@@ -80,7 +79,7 @@ Ankaŭ estas uzataj la jenaj agordoj:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Ekzemplo:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Por reveni al la enkonstruita listo, forigu `states` el la agordo aŭ forigu la 
 La aliaj agordoj estas sendependaj: se agordo ne estas specifita, ĝia enkonstruita valoro restas valida.
 
 <a id="background"></a>
-#### Fono de neaktiva piktogramo
+#### Laŭvola fono por ikonoj sen cirklo
 
-Se Home Assistant jam montras la denaskan fonon de neaktiva piktogramo, la kromprogramo ne ŝanĝas ĝin.
+Kelkaj MDI-ikonoj estas videble malcentraj. Post kiam oblikvo estas aldonita, ili povas aspekti malekvilibraj kiam ne ekzistas cirkla fono por enkadrigi ilin.
 
-Se la fono mankas, la kromprogramo aldonas palan cirklon kongruan kun la norma stilo de neaktiva Tile-piktogramo en Home Assistant.
+Ĉi tio ĝenis mian senton de vida ordo, do la kromaĵo inkluzivas laŭvolan agordon, kiu desegnas malfortan cirklon malantaŭ neaktivaj ikonoj kiam Home Assistant ne provizas tian.
 
-Malŝalti:
+Ĉi tiu opcio estas malebligita defaŭlte ĉar la cirklo havas signifon en la interfaco Home Assistant: sur Tile-karto, ĝi normale indikas, ke klakado de la piktogramo faras apartan agon ol klakado de la resto de la karto. Aldonante cirklon pure por vida vicigo do ŝanĝas tiun vidan semantikon.
+
+Vi ankoraŭ povas ebligi la fonon se vi preferas la pli ekvilibran aspekton:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Ŝanĝi travideblecon:
+Kiam ĝi estas ebligita, la kromprogramo nur aldonas la fonon kie Home Assistant ne jam bildigas unu.
+
+Vi ankaŭ povas ĝustigi ĝian opakecon:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Elektu kian ajn konduton pli gravas por via instrumentpanelo: konservante la denaskajn interagadsignojn de Home Assistant aŭ konservante tranĉitajn ikonojn vide centritaj.
 
 <a id="runtime-configuration"></a>
 #### Provizora agordo per la konzolo

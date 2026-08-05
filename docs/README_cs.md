@@ -15,9 +15,8 @@
 Doplněk je navržen tak, aby přidané přeškrtnutí působilo jako nativní součást Home Assistantu:
 * funguje se standardními kartami Tile bez jejich nahrazení a zachovává jejich původní vzhled, chování, barvy, rozměry a interakce;
 * upravuje pouze již vykreslené ikony a jen tehdy, když není dostupná nativní varianta `-off`;
-* přidává jemné kruhové pozadí ve stylu Home Assistantu, pokud nativní pozadí chybí;
+* může volitelně přidat slabé kruhové pozadí, když nativní pozadí chybí;
 * nemění stavy entit a nezasahuje do fungování zařízení.
-
 <a id="installation"></a>
 ## 📦 Instalace
 
@@ -80,7 +79,7 @@ Používají se také následující parametry:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Příklad:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Chcete-li se vrátit k vestavěnému seznamu, odstraňte `states` z konfigurace 
 Ostatní parametry jsou nezávislé: pokud parametr není zadán, zůstane použita jeho vestavěná hodnota.
 
 <a id="background"></a>
-#### Pozadí neaktivní ikony
+#### Volitelné pozadí pro ikony bez kruhu
 
-Pokud Home Assistant již vykresluje nativní pozadí neaktivní ikony, doplněk jej nemění.
+Některé ikony MDI jsou vizuálně mimo střed. Po přidání lomítka mohou vypadat nevyváženě, když není žádné kruhové pozadí, které by je orámovalo.
 
-Pokud pozadí chybí, doplněk přidá jemný kruh odpovídající standardnímu vzhledu neaktivní ikony Tile v Home Assistantu.
+To vadilo mému smyslu pro vizuální pořádek, takže plugin obsahuje volitelné nastavení, které kreslí slabý kruh za neaktivními ikonami, když Home Assistant žádný neposkytuje.
 
-Vypnutí:
+Tato možnost je ve výchozím nastavení zakázána, protože kruh má význam v rozhraní Home Assistant: na kartě Tile obvykle znamená, že kliknutí na ikonu provede jinou akci než kliknutí na zbytek karty. Přidání kruhu čistě pro vizuální zarovnání proto mění tuto vizuální sémantiku.
+
+Stále můžete povolit pozadí, pokud dáváte přednost vyváženějšímu vzhledu:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Změna průhlednosti:
+Když je povoleno, plugin přidá pouze pozadí tam, kde Home Assistant ještě žádné nevykresluje.
+
+Můžete také upravit jeho neprůhlednost:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Vyberte si chování, které je pro váš řídicí panel důležitější: zachování nativních interakčních podnětů Home Assistant nebo ponechání seříznutých ikon vizuálně vycentrovaných.
 
 <a id="runtime-configuration"></a>
 #### Dočasné nastavení z konzole

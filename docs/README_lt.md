@@ -15,9 +15,8 @@
 Papildinys sukurtas taip, kad pridėtas brūkšnys atrodytų kaip natūrali Home Assistant dalis:
 * veikia su standartinėmis Tile kortelėmis jų nepakeisdamas ir išsaugo įprastą išvaizdą, elgseną, spalvas, dydžius bei sąveikas;
 * keičia tik jau atvaizduotas piktogramas ir tik tada, kai nėra integruoto `-off` varianto;
-* prideda blankų apvalų Home Assistant stiliaus foną, kai įprasto fono nėra;
+* pasirinktinai gali pridėti silpną apskritą foną, kai trūksta vietinio fono;
 * nekeičia objektų būsenų ir netrukdo įrenginių veikimui.
-
 <a id="installation"></a>
 ## 📦 Diegimas
 
@@ -79,7 +78,7 @@ Taip pat naudojami šie nustatymai:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Pavyzdys:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Norėdami grįžti prie integruoto sąrašo, pašalinkite `states` iš konfigūr
 Kiti nustatymai yra nepriklausomi: jei nustatymas nenurodytas, lieka galioti jo integruota reikšmė.
 
 <a id="background"></a>
-#### Neaktyvios piktogramos fonas
+#### Pasirenkamas piktogramų be apskritimo fonas
 
-Jei Home Assistant jau rodo integruotą neaktyvios piktogramos foną, papildinys jo nekeičia.
+Kai kurios MDI piktogramos yra vizualiai nukrypusios nuo centro. Pridėjus pasvirąjį brūkšnį, jie gali atrodyti nesubalansuoti, kai nėra apskrito fono juos įrėminti.
 
-Jei fono nėra, papildinys prideda blankų apskritimą, atitinkantį standartinį Home Assistant neaktyvios Tile piktogramos stilių.
+Tai sutrikdė mano vizualinės tvarkos jausmą, todėl įskiepyje yra pasirenkamas nustatymas, kuris už neaktyvių piktogramų nubrėžia silpną apskritimą, kai Home Assistant jo nepateikia.
 
-Išjungti:
+Ši parinktis yra išjungta pagal numatytuosius nustatymus, nes apskritimas turi reikšmę Home Assistant sąsajoje: Tile kortelėje jis paprastai nurodo, kad spustelėjus piktogramą atliekamas kitas veiksmas, nei spustelėjus likusią kortelės dalį. Apskritimo pridėjimas tik vizualiniam lygiavimui pakeičia vizualinę semantiką.
+
+Vis tiek galite įjungti foną, jei norite labiau subalansuotos išvaizdos:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Keisti nepermatomumą:
+Kai įjungta, papildinys prideda tik foną, kuriame Home Assistant jo dar nepateikia.
+
+Taip pat galite reguliuoti jo neskaidrumą:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Pasirinkite, kuris elgesys yra svarbesnis jūsų prietaisų skydeliui: išsaugokite Home Assistant savąsias sąveikos užuominas arba laikykite nupjautas piktogramas vizualiai centre.
 
 <a id="runtime-configuration"></a>
 #### Laikina konfigūracija per konsolę

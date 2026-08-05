@@ -15,9 +15,8 @@
 El complement està dissenyat perquè la barra diagonal afegida sembli una part nativa de Home Assistant:
 * funciona amb les targetes Tile estàndard sense substituir-les i conserva l’aspecte, el comportament, els colors, les mides i les interaccions originals;
 * només modifica les icones ja renderitzades i només quan no existeix cap variant `-off` nativa;
-* afegeix un fons circular tènue d’estil Home Assistant quan falta el fons natiu;
+* opcionalment pot afegir un fons circular tènue quan falta el fons natiu;
 * no modifica els estats de les entitats ni interfereix amb el funcionament dels dispositius.
-
 <a id="installation"></a>
 ## 📦 Instal·lació
 
@@ -80,7 +79,7 @@ També s’utilitzen els paràmetres següents:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Exemple:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Per tornar a la llista integrada, elimineu `states` de la configuració o suprim
 La resta de paràmetres són independents: si no s’indica un paràmetre, es conserva el seu valor integrat.
 
 <a id="background"></a>
-#### Fons de la icona inactiva
+#### Fons opcional per a icones sense cercle
 
-Si Home Assistant ja mostra el fons natiu de la icona inactiva, el complement no el modifica.
+Algunes icones MDI estan visualment descentrades. Després d'afegir una barra inclinada, poden semblar desequilibrats quan no hi ha fons circular per emmarcar-los.
 
-Si aquest fons no existeix, el complement afegeix un cercle tènue que coincideix amb l’estil de la icona Tile inactiva estàndard de Home Assistant.
+Això va molestar el meu sentit de l'ordre visual, de manera que el connector inclou una configuració opcional que dibuixa un cercle feble darrere de les icones inactives quan Home Assistant no en proporciona cap.
 
-Per desactivar-lo:
+Aquesta opció està desactivada per defecte perquè el cercle té un significat a la interfície Home Assistant: en una targeta Tile, normalment indica que fer clic a la icona realitza una acció diferent de fer clic a la resta de la targeta. Per tant, afegir un cercle només per a l'alineació visual canvia aquesta semàntica visual.
+
+Encara podeu activar el fons si preferiu l'aspecte més equilibrat:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Per canviar l’opacitat:
+Quan està activat, el connector només afegeix el fons on Home Assistant encara no en representa.
+
+També podeu ajustar la seva opacitat:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Trieu el comportament que sigui més important per al vostre tauler: conservant els senyals d'interacció nadius de Home Assistant o mantenint les icones tallades visualment centrades.
 
 <a id="runtime-configuration"></a>
 #### Configuració temporal des de la consola

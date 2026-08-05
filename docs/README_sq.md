@@ -15,9 +15,8 @@
 Shtojca është ndërtuar që vija e shtuar të duket si pjesë vendase e Home Assistant:
 * punon me kartat standarde Pllakë pa i zëvendësuar dhe ruan pamjen, sjelljen, ngjyrat, madhësitë dhe ndërveprimet;
 * ndryshon vetëm ikonat e renderuara dhe vetëm kur mungon varianti vendas `-off`;
-* shton një sfond të zbehtë rrethor në stilin e Home Assistant kur sfondi vendas mungon;
+* mund të shtojë opsionalisht një sfond rrethor të zbehtë kur sfondi origjinal mungon;
 * nuk ndryshon gjendjet e entiteteve dhe nuk ndërhyn në funksionimin e pajisjeve.
-
 <a id="installation"></a>
 ## 📦 Instalimi
 
@@ -79,7 +78,7 @@ Përdoren gjithashtu këto cilësime:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Shembull:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Për t'u kthyer te lista e integruar, hiqni `states` nga konfigurimi ose fshini 
 Cilësimet e tjera janë të pavarura: nëse një cilësim mungon, vazhdon të përdoret vlera e tij e integruar.
 
 <a id="background"></a>
-#### Sfondi i ikonës joaktive
+#### Sfondi opsional për ikonat pa rreth
 
-Nëse Home Assistant shfaq tashmë sfondin vendas të ikonës joaktive, shtojca nuk e ndryshon.
+Disa ikona MDI janë vizualisht jashtë qendrës. Pasi të shtohet një prerje, ato mund të duken të pabalancuara kur nuk ka sfond rrethor për t'i kornizuar.
 
-Kur sfondi mungon, shtojca shton një rreth të zbehtë që përputhet me stilin e ikonave standarde joaktive Pllakë në Home Assistant.
+Kjo e shqetësoi ndjenjën time të rendit vizual, kështu që shtojca përfshin një cilësim opsional që vizaton një rreth të zbehtë pas ikonave joaktive kur Home Assistant nuk ofron një të tillë.
 
-Çaktivizimi:
+Ky opsion është i çaktivizuar si parazgjedhje sepse rrethi ka një kuptim në ndërfaqen Home Assistant: në një kartë Tile, normalisht tregon se klikimi i ikonës kryen një veprim të veçantë nga klikimi i pjesës tjetër të kartës. Prandaj, shtimi i një rrethi thjesht për shtrirje vizuale ndryshon semantikën vizuale.
+
+Mund ta aktivizoni përsëri sfondin nëse preferoni pamjen më të ekuilibruar:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Ndryshimi i tejdukshmërisë:
+Kur aktivizohet, shtojca shton vetëm sfondin ku Home Assistant nuk e jep tashmë një të tillë.
+
+Ju gjithashtu mund të rregulloni mprehtësinë e tij:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Zgjidhni cilado sjellje që ka më shumë rëndësi për pultin tuaj: duke ruajtur shenjat e ndërveprimit të Home Assistant ose duke i mbajtur ikonat e prera të përqendruara vizualisht.
 
 <a id="runtime-configuration"></a>
 #### Konfigurim i përkohshëm nga konsola

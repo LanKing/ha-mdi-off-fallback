@@ -15,9 +15,8 @@
 S Plugin isch so gmacht, dass dr zuegfügti Schrägstrich wie en native Teil vo Home Assistant usgseht:
 * funktioniert mit de standardmässige Tile-Karte, ohni sie z ersetze, und behaltet Ussehe, Verhalte, Farbe, Grössi und Interaktione;
 * ändert nume scho grendereti Symbole und nume, wenn kei native `-off`-Variante vorhanden isch;
-* füegt en blasse, runde Hintergrund im Home-Assistant-Stil dezue, wenn dr native Hintergrund fehlt;
+* kann optional einen schwachen kreisförmigen Hintergrund hinzufügen, wenn der native Hintergrund fehlt;
 * ändert kei Entitätszuständ und mischt sich nöd i d Grätefunktion ii.
-
 <a id="installation"></a>
 ## 📦 Installation
 
@@ -79,7 +78,7 @@ Usserdem werded die Istellige bruucht:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +109,7 @@ Bispiel:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +137,33 @@ Zum zur integrierte Liste zruggkehre, entferne `states` us dr Konfiguration oder
 D andere Istellige sind unabhängig: Wenn e Istellung fehlt, bliibt dr integrierti Wärt aktiv.
 
 <a id="background"></a>
-#### Hintergrund vom inaktive Symbol
+#### Optionaler Hintergrund für Symbole ohne Kreis
 
-Wenn Home Assistant dr native Hintergrund vom inaktive Symbol scho zeichnet, laht s Plugin en unverändert.
+Einige MDI-Symbole sind optisch außermittig. Nachdem ein Schrägstrich hinzugefügt wurde, können sie unausgewogen aussehen, wenn kein kreisförmiger Hintergrund vorhanden ist, der sie einrahmt.
 
-Wenn dä Hintergrund fehlt, füegt s Plugin en blasse Kreis dezue, wo zum standardmässige Stil vo inaktive Tile-Symbole passt.
+Das störte meinen Sinn für visuelle Ordnung, daher enthält das Plugin eine optionale Einstellung, die einen schwachen Kreis hinter inaktiven Symbolen zeichnet, wenn Home Assistant keinen bereitstellt.
 
-Zum abschalte:
+Diese Option ist standardmäßig deaktiviert, da der Kreis in der Home Assistant-Schnittstelle eine Bedeutung hat: Auf einer Tile-Karte zeigt er normalerweise an, dass durch Klicken auf das Symbol eine andere Aktion ausgeführt wird als durch Klicken auf den Rest der Karte. Das Hinzufügen eines Kreises nur zur visuellen Ausrichtung verändert daher die visuelle Semantik.
+
+Sie können den Hintergrund weiterhin aktivieren, wenn Sie das ausgewogenere Erscheinungsbild bevorzugen:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Transparenz ändere:
+Wenn es aktiviert ist, fügt das Plugin nur den Hintergrund hinzu, wenn Home Assistant noch keinen darstellt.
+
+Sie können auch die Deckkraft anpassen:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Wählen Sie das Verhalten aus, das für Ihr Dashboard wichtiger ist: die Beibehaltung der nativen Interaktionshinweise von Home Assistant oder die visuelle Zentrierung der durchgestrichenen Symbole.
 
 <a id="runtime-configuration"></a>
 #### Temporäri Konfiguration über d Konsole

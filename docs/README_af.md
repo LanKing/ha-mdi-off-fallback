@@ -15,9 +15,8 @@
 Die inprop is ontwerp sodat die bygevoegde skuinsstreep soos ’n ingeboude deel van Home Assistant lyk:
 * werk met standaard Tile-kaarte sonder om hulle te vervang en behou hul gewone voorkoms, gedrag, kleure, groottes en interaksies;
 * verander slegs ikone wat reeds weergegee is, en slegs wanneer geen ingeboude `-off`-variant beskikbaar is nie;
-* voeg ’n dowwe ronde agtergrond in Home Assistant-styl by wanneer die ingeboude agtergrond ontbreek;
+* kan opsioneel 'n dowwe sirkelvormige agtergrond byvoeg wanneer die inheemse agtergrond ontbreek;
 * verander nie entiteitstoestande nie en meng nie met toestelle se werking in nie.
-
 <a id="installation"></a>
 ## 📦 Installasie
 
@@ -80,7 +79,7 @@ Die volgende parameters word ook gebruik:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -111,7 +110,7 @@ Voorbeeld:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -139,27 +138,33 @@ Verwyder `states` uit die opstelling of verwyder die opstellingslêer om na die 
 Die ander parameters is onafhanklik: wanneer ’n parameter nie vermeld word nie, bly sy ingeboude waarde van toepassing.
 
 <a id="background"></a>
-#### Agtergrond van ’n onaktiewe ikoon
+#### Opsionele agtergrond vir ikone sonder 'n sirkel
 
-As Home Assistant reeds die ingeboude agtergrond vir ’n onaktiewe ikoon teken, verander die inprop dit nie.
+Sommige MDI-ikone is visueel buite die middel. Nadat 'n skuinsstreep bygevoeg is, kan hulle ongebalanseerd lyk wanneer daar geen sirkelvormige agtergrond is om hulle te raam nie.
 
-Wanneer daardie agtergrond ontbreek, voeg die inprop ’n dowwe sirkel by wat ooreenstem met die standaardstyl van ’n onaktiewe Tile-ikoon in Home Assistant.
+Dit het my sin vir visuele orde gepla, so die inprop sluit 'n opsionele instelling in wat 'n dowwe sirkel agter onaktiewe ikone trek wanneer Home Assistant nie een verskaf nie.
 
-Deaktiveer dit:
+Hierdie opsie is by verstek gedeaktiveer omdat die sirkel 'n betekenis het in die Home Assistant-koppelvlak: op 'n Tile-kaart dui dit gewoonlik aan dat die klik van die ikoon 'n aparte aksie uitvoer as om die res van die kaart te klik. Die byvoeging van 'n sirkel suiwer vir visuele belyning verander dus daardie visuele semantiek.
+
+Jy kan steeds die agtergrond aktiveer as jy die meer gebalanseerde voorkoms verkies:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Verander die deursigtigheid:
+Wanneer dit geaktiveer is, voeg die inprop slegs die agtergrond by waar Home Assistant nie reeds een lewer nie.
+
+U kan ook die ondeursigtigheid daarvan aanpas:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Kies watter gedrag ook al meer saak maak vir jou dashboard: behou Home Assistant se inheemse interaksie-aanwysings of hou geskeurde ikone visueel gesentreer.
 
 <a id="runtime-configuration"></a>
 #### Tydelike opstelling via die konsole
