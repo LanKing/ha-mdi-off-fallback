@@ -1,0 +1,33 @@
+name: Fix README sync workflow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-sync-workflow.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add rebase before push
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('.github/workflows/sync-translated-readmes.yml')
+          text = path.read_text()
+          text = text.replace('          git push\n', '          git pull --rebase origin main\n          git push\n')
+          path.write_text(text)
+          PY
+          rm .github/workflows/fix-sync-workflow.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/sync-translated-readmes.yml .github/workflows/fix-sync-workflow.yml
+          git commit -m "Make README sync resilient to concurrent updates"
+          git push
