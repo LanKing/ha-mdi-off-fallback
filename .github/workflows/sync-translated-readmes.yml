@@ -1,0 +1,166 @@
+name: Sync translated READMEs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-translated-readmes.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install translator
+        run: pip install deep-translator==1.11.4
+
+      - name: Update translated READMEs
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          import re
+          import time
+          from deep_translator import GoogleTranslator
+
+          TARGETS = {
+              'af':'af','ar':'ar','bg':'bg','bn':'bn','bs':'bs','ca':'ca','cs':'cs','cy':'cy',
+              'da':'da','de':'de','el':'el','eo':'eo','es':'es','et':'et','eu':'eu','fa':'fa',
+              'fi':'fi','fy':'fy','fr':'fr','ga':'ga','gl':'gl','gsw':'de','he':'he','hi':'hi',
+              'hr':'hr','hu':'hu','hy':'hy','id':'id','is':'is','it':'it','ja':'ja','ka':'ka',
+              'ko':'ko','lb':'lb','lt':'lt','lv':'lv','mk':'mk','ml':'ml','nb':'no','nl':'nl',
+              'nn':'no','pl':'pl','pt':'pt','pt-BR':'pt','ro':'ro','ru':'ru','sk':'sk','sl':'sl',
+              'sq':'sq','sr':'sr','sr-Latn':'sr','sv':'sv','ta':'ta','te':'te','th':'th','tr':'tr',
+              'uk':'uk','ur':'ur','vi':'vi','zh-Hans':'zh-CN','zh-Hant':'zh-TW'
+          }
+
+          SECTION_SOURCE = '''#### Optional background for icons without a circle
+
+          Some MDI icons are visually off-center. After a slash is added, they can look unbalanced when there is no circular background to frame them.
+
+          This bothered my sense of visual order, so the plugin includes an optional setting that draws a faint circle behind inactive icons when Home Assistant does not provide one.
+
+          This option is disabled by default because the circle has a meaning in the Home Assistant interface: on a Tile card, it normally indicates that clicking the icon performs a separate action from clicking the rest of the card. Adding a circle purely for visual alignment therefore changes that visual semantics.
+
+          You can still enable the background if you prefer the more balanced appearance:
+
+          __CFG_TRUE__
+
+          When enabled, the plugin only adds the background where Home Assistant does not already render one.
+
+          You can also adjust its opacity:
+
+          __CFG_OPACITY__
+
+          Choose whichever behavior matters more for your dashboard: preserving Home Assistant's native interaction cues or keeping slashed icons visually centered.'''
+
+          BULLET_SOURCE = 'can optionally add a faint circular background when the native background is missing;'
+
+          CFG_TRUE = '''```json
+          {
+            "faint_background_when_missing": true
+          }
+          ```'''
+          CFG_OPACITY = '''```json
+          {
+            "faint_background_opacity": 0.2
+          }
+          ```'''
+
+          protected = {
+              'Home Assistant': '__HOME_ASSISTANT__',
+              'MDI': '__MDI__',
+              'Tile': '__TILE__',
+          }
+
+          def protect(s):
+              for source, token in protected.items():
+                  s = s.replace(source, token)
+              return s
+
+          def restore(s):
+              for source, token in protected.items():
+                  s = s.replace(token, source)
+              return s
+
+          def translate(text, target):
+              source = protect(text)
+              last = None
+              for attempt in range(5):
+                  try:
+                      result = GoogleTranslator(source='en', target=target).translate(source)
+                      if result:
+                          return restore(result)
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(2 + attempt * 2)
+              raise RuntimeError(f'Translation to {target} failed: {last}')
+
+          changed = []
+          for path in sorted(Path('docs').glob('README_*.md')):
+              code = path.stem.removeprefix('README_')
+              target = TARGETS.get(code)
+              if not target:
+                  raise RuntimeError(f'No translation target for {code}')
+
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              text = text.replace('"faint_background_when_missing": true', '"faint_background_when_missing": false')
+
+              section = translate(SECTION_SOURCE, target)
+              if '__CFG_TRUE__' not in section or '__CFG_OPACITY__' not in section:
+                  raise RuntimeError(f'Code placeholders were changed for {code}')
+              section = section.replace('__CFG_TRUE__', CFG_TRUE).replace('__CFG_OPACITY__', CFG_OPACITY)
+              section = '<a id="background"></a>\n' + section.strip() + '\n\n'
+
+              pattern = re.compile(
+                  r'<a id="background"></a>\n.*?(?=<a id="runtime-configuration"></a>)',
+                  re.S,
+              )
+              text, count = pattern.subn(section, text, count=1)
+              if count != 1:
+                  raise RuntimeError(f'Background section not found in {path}')
+
+              intro_end = text.find('<a id="installation"></a>')
+              if intro_end < 0:
+                  raise RuntimeError(f'Installation anchor not found in {path}')
+              intro = text[:intro_end]
+              rest = text[intro_end:]
+              lines = intro.splitlines()
+              bullets = [i for i, line in enumerate(lines) if line.startswith('* ')]
+              if len(bullets) < 4:
+                  raise RuntimeError(f'Expected intro bullets not found in {path}')
+              translated_bullet = translate(BULLET_SOURCE, target).strip()
+              lines[bullets[2]] = '* ' + translated_bullet
+              text = '\n'.join(lines) + rest
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+              print(f'updated {path}')
+              time.sleep(0.25)
+
+          if not changed:
+              raise RuntimeError('No README files changed')
+
+          print(f'Changed {len(changed)} translated READMEs')
+          PY
+
+      - name: Remove temporary workflow and commit
+        run: |
+          rm .github/workflows/sync-translated-readmes.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs .github/workflows/sync-translated-readmes.yml
+          git commit -m "Update translated README background documentation"
+          git push
