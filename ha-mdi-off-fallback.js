@@ -1,11 +1,11 @@
 /**
  * HA MDI Off Fallback
- * v0.2.6
+ * v0.2.9
  */
 (() => {
   "use strict";
 
-  const VERSION = "0.2.6";
+  const VERSION = "0.2.9";
   const DEFAULT_STATES = Object.freeze({
     light: ["off"],
     switch: ["off"],
@@ -289,8 +289,7 @@
 
   const scanRoot = (root) => {
     if (!root?.querySelectorAll) return;
-    if (root instanceof ShadowRoot && !processedRoots.has(root)) {
-      processedRoots.add(root);
+    if (root instanceof ShadowRoot) {
       observeRoot(root);
     }
 
