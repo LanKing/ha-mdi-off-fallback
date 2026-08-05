@@ -160,11 +160,11 @@ jobs:
           print(f'Changed {len(changed)} translated READMEs')
           PY
 
-      - name: Remove temporary workflow and commit
+      - name: Commit translated READMEs
         run: |
-          rm .github/workflows/sync-translated-readmes.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs .github/workflows/sync-translated-readmes.yml
+          git add docs
           git commit -m "Update translated README background documentation"
+          git pull --rebase origin main
           git push
