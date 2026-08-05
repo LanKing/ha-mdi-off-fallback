@@ -1,0 +1,71 @@
+name: Restore relative links in translated READMEs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/restore-relative-doc-links.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore relative language links in docs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          base = 'https://github.com/LanKing/ha-mdi-off-fallback/blob/main/'
+          changed = []
+
+          for path in sorted(Path('docs').glob('README_*.md')):
+              text = path.read_text(encoding='utf-8')
+              lines = text.splitlines(keepends=True)
+              if not lines:
+                  continue
+
+              first = lines[0]
+
+              def replace_href(match):
+                  href = match.group(1)
+                  if not href.startswith(base):
+                      return match.group(0)
+
+                  target = href[len(base):]
+                  if target == 'README.md':
+                      relative = '../README.md'
+                  elif target.startswith('docs/README_'):
+                      relative = target[len('docs/'):]
+                  else:
+                      return match.group(0)
+
+                  return f'href="{relative}"'
+
+              first = re.sub(r'href="([^"]+)"', replace_href, first)
+              new_text = first + ''.join(lines[1:])
+
+              if new_text != text:
+                  path.write_text(new_text, encoding='utf-8')
+                  changed.append(str(path))
+
+          print(f'Changed {len(changed)} translated README files')
+          for path in changed:
+              print(path)
+          PY
+
+      - name: Commit translated README updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/README_*.md
+          git commit -m "Restore relative links in translated READMEs"
+          git pull --rebase origin main
+          git push
