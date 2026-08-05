@@ -15,7 +15,7 @@
 The plugin is designed so that the added slash looks like a native part of Home Assistant:
 * works with standard Tile cards without replacing them, preserving their native appearance, behavior, colors, sizes, and interactions;
 * modifies only icons that have already been rendered and only when no native `-off` variant is available;
-* adds a faint circular Home Assistant-style background when the native background is missing;
+* can optionally add a faint circular background when the native background is missing;
 * does not change entity states or interfere with device operation.
 
 <a id="installation"></a>
@@ -79,7 +79,7 @@ The following settings are also used:
 
 ```json
 {
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -110,7 +110,7 @@ Example:
     "siren": ["off"],
     "remote": ["off"]
   },
-  "faint_background_when_missing": true,
+  "faint_background_when_missing": false,
   "faint_background_opacity": 0.2,
   "debug": false
 }
@@ -138,27 +138,33 @@ To return to the built-in list, remove `states` from the configuration or delete
 The other settings are independent: when a setting is omitted, its built-in value remains in effect.
 
 <a id="background"></a>
-#### Inactive icon background
+#### Optional background for icons without a circle
 
-If Home Assistant already renders the native inactive-icon background, the plugin leaves it unchanged.
+Some MDI icons are visually off-center. After a slash is added, they can look unbalanced when there is no circular background to frame them.
 
-When that background is missing, the plugin adds a faint circle matching the standard inactive Tile icon styling in Home Assistant, keeping icon presentation consistent.
+This bothered my sense of visual order, so the plugin includes an optional setting that draws a faint circle behind inactive icons when Home Assistant does not provide one.
 
-Disable it:
+This option is disabled by default because the circle has a meaning in the Home Assistant interface: on a Tile card, it normally indicates that clicking the icon performs a separate action from clicking the rest of the card. Adding a circle purely for visual alignment therefore changes that visual semantics.
+
+You can still enable the background if you prefer the more balanced appearance:
 
 ```json
 {
-  "faint_background_when_missing": false
+  "faint_background_when_missing": true
 }
 ```
 
-Change the opacity:
+When enabled, the plugin only adds the background where Home Assistant does not already render one.
+
+You can also adjust its opacity:
 
 ```json
 {
   "faint_background_opacity": 0.2
 }
 ```
+
+Choose whichever behavior matters more for your dashboard: preserving Home Assistant's native interaction cues or keeping slashed icons visually centered.
 
 <a id="runtime-configuration"></a>
 #### Temporary configuration from the console
