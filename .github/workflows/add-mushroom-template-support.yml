@@ -18,151 +18,27 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+          import base64
 
           path = Path("ha-mdi-off-fallback.js")
           text = path.read_text(encoding="utf-8")
-
           text = text.replace(" * v0.2.9\n", " * v0.2.11\n", 1)
           text = text.replace('const VERSION = "0.2.9";', 'const VERSION = "0.2.11";', 1)
+          text = text.replace('  let maskSequence = 0;\n', '  let maskSequence = 0;\n  const trackedMushroomEntities = new Set();\n  const mushroomEntityStates = new Map();\n  let mushroomStateSubscriptionStarted = false;\n', 1)
+          text = text.replace('    return { svgRoot, svg, path };', '    return { stateIcon, svgRoot, svg, path };', 1)
+          text = text.replace('    const { svgRoot, svg, path } = getIconDetails(tileIcon);', '    const { stateIcon, svgRoot, svg, path } = getIconDetails(tileIcon);', 1)
+          text = text.replace('      tileIcon.querySelector("ha-state-icon")?.getAttribute("icon") ??\n', '      stateIcon?.icon ??\n      stateIcon?.getAttribute("icon") ??\n', 1)
 
-          old = '''  let scanQueued = false;
-  let maskSequence = 0;
-'''
-          new = '''  let scanQueued = false;
-  let maskSequence = 0;
-  const trackedMushroomEntities = new Set();
-  const mushroomEntityStates = new Map();
-  let mushroomStateSubscriptionStarted = false;
-'''
-          assert old in text, "runtime state block not found"
-          text = text.replace(old, new, 1)
+          helper = base64.b64decode('ICBjb25zdCBmaW5kTXVzaHJvb21UZW1wbGF0ZUNhcmQgPSAodGlsZUljb24pID0+IHsKICAgIGxldCByb290ID0gdGlsZUljb24uZ2V0Um9vdE5vZGU/LigpOwogICAgd2hpbGUgKHJvb3QgaW5zdGFuY2VvZiBTaGFkb3dSb290KSB7CiAgICAgIGNvbnN0IGhvc3QgPSByb290Lmhvc3Q7CiAgICAgIGlmIChob3N0Py5sb2NhbE5hbWUgPT09ICJtdXNocm9vbS10ZW1wbGF0ZS1jYXJkIikgcmV0dXJuIGhvc3Q7CiAgICAgIHJvb3QgPSBob3N0Py5nZXRSb290Tm9kZT8uKCk7CiAgICB9CiAgICByZXR1cm4gbnVsbDsKICB9OwoKICBjb25zdCBlbnN1cmVNdXNocm9vbVN0YXRlU3Vic2NyaXB0aW9uID0gKGNhcmQsIGVudGl0eUlkKSA9PiB7CiAgICB0cmFja2VkTXVzaHJvb21FbnRpdGllcy5hZGQoZW50aXR5SWQpOwogICAgaWYgKG11c2hyb29tU3RhdGVTdWJzY3JpcHRpb25TdGFydGVkKSByZXR1cm47CgogICAgY29uc3QgY29ubmVjdGlvbiA9IGNhcmQ/Lmhhc3M/LmNvbm5lY3Rpb247CiAgICBpZiAoIWNvbm5lY3Rpb24/LnN1YnNjcmliZUV2ZW50cykgcmV0dXJuOwoKICAgIG11c2hyb29tU3RhdGVTdWJzY3JpcHRpb25TdGFydGVkID0gdHJ1ZTsKICAgIHRyeSB7CiAgICAgIFByb21pc2UucmVzb2x2ZSgKICAgICAgICBjb25uZWN0aW9uLnN1YnNjcmliZUV2ZW50cygoZXZlbnQpID0+IHsKICAgICAgICAgIGNvbnN0IGNoYW5nZWRFbnRpdHkgPSBldmVudD8uZGF0YT8uZW50aXR5X2lkOwogICAgICAgICAgaWYgKCFjaGFuZ2VkRW50aXR5IHx8ICF0cmFja2VkTXVzaHJvb21FbnRpdGllcy5oYXMoY2hhbmdlZEVudGl0eSkpIHJldHVybjsKCiAgICAgICAgICBjb25zdCBuZXh0U3RhdGUgPSBldmVudD8uZGF0YT8ubmV3X3N0YXRlOwogICAgICAgICAgaWYgKG5leHRTdGF0ZSkgbXVzaHJvb21FbnRpdHlTdGF0ZXMuc2V0KGNoYW5nZWRFbnRpdHksIG5leHRTdGF0ZSk7CiAgICAgICAgICBlbHNlIG11c2hyb29tRW50aXR5U3RhdGVzLmRlbGV0ZShjaGFuZ2VkRW50aXR5KTsKICAgICAgICAgIHF1ZXVlU2NhbigpOwogICAgICAgIH0sICJzdGF0ZV9jaGFuZ2VkIikKICAgICAgKS5jYXRjaCgoZXJyb3IpID0+IHsKICAgICAgICBtdXNocm9vbVN0YXRlU3Vic2NyaXB0aW9uU3RhcnRlZCA9IGZhbHNlOwogICAgICAgIGxvZygiTXVzaHJvb20gc3RhdGUgc3Vic2NyaXB0aW9uIGZhaWxlZCIsIGVycm9yKTsKICAgICAgfSk7CiAgICB9IGNhdGNoIChlcnJvcikgewogICAgICBtdXNocm9vbVN0YXRlU3Vic2NyaXB0aW9uU3RhcnRlZCA9IGZhbHNlOwogICAgICBsb2coIk11c2hyb29tIHN0YXRlIHN1YnNjcmlwdGlvbiBmYWlsZWQiLCBlcnJvcik7CiAgICB9CiAgfTsKCiAgY29uc3QgZ2V0VGlsZVN0YXRlQ29udGV4dCA9ICh0aWxlSWNvbikgPT4gewogICAgY29uc3QgZG9tYWluID0gdGlsZUljb24uZ2V0QXR0cmlidXRlKCJkYXRhLWRvbWFpbiIpOwogICAgY29uc3Qgc3RhdGUgPSB0aWxlSWNvbi5nZXRBdHRyaWJ1dGUoImRhdGEtc3RhdGUiKTsKICAgIGlmIChkb21haW4gJiYgc3RhdGUpIHJldHVybiB7IGRvbWFpbiwgc3RhdGUgfTsKCiAgICBjb25zdCBjYXJkID0gZmluZE11c2hyb29tVGVtcGxhdGVDYXJkKHRpbGVJY29uKTsKICAgIGNvbnN0IGVudGl0eUlkID0gY2FyZD8uX2NvbmZpZz8uZW50aXR5OwogICAgaWYgKCFlbnRpdHlJZCB8fCB0eXBlb2YgZW50aXR5SWQgIT09ICJzdHJpbmciKSByZXR1cm4gbnVsbDsKCiAgICBlbnN1cmVNdXNocm9vbVN0YXRlU3Vic2NyaXB0aW9uKGNhcmQsIGVudGl0eUlkKTsKICAgIGNvbnN0IHN0YXRlT2JqZWN0ID0KICAgICAgbXVzaHJvb21FbnRpdHlTdGF0ZXMuZ2V0KGVudGl0eUlkKSA/PyBjYXJkPy5oYXNzPy5zdGF0ZXM/LltlbnRpdHlJZF07CiAgICBpZiAoIXN0YXRlT2JqZWN0KSByZXR1cm4gbnVsbDsKCiAgICBjb25zdCBzZXBhcmF0b3IgPSBlbnRpdHlJZC5pbmRleE9mKCIuIik7CiAgICBpZiAoc2VwYXJhdG9yIDw9IDApIHJldHVybiBudWxsOwogICAgcmV0dXJuIHsKICAgICAgZG9tYWluOiBlbnRpdHlJZC5zbGljZSgwLCBzZXBhcmF0b3IpLAogICAgICBzdGF0ZTogU3RyaW5nKHN0YXRlT2JqZWN0LnN0YXRlKSwKICAgIH07CiAgfTsKCg==').decode('utf-8')
+          marker = '  const processTileIcon = (tileIcon) => {\n'
+          assert marker in text, 'processTileIcon marker not found'
+          text = text.replace(marker, helper + marker, 1)
+          text = text.replace('    const domain = tileIcon.getAttribute("data-domain");\n    const state = tileIcon.getAttribute("data-state");\n', '    const context = getTileStateContext(tileIcon);\n    const domain = context?.domain;\n    const state = context?.state;\n', 1)
 
-          old = '''  const getIconDetails = (tileIcon) => {
-    const stateIcon =
-      tileIcon.querySelector("ha-state-icon") ??
-      tileIcon.shadowRoot?.querySelector("ha-state-icon");
-    const haIcon = stateIcon?.shadowRoot?.querySelector("ha-icon");
-    const svgIcon = haIcon?.shadowRoot?.querySelector("ha-svg-icon");
-    const svgRoot = svgIcon?.shadowRoot;
-    const svg = svgRoot?.querySelector("svg");
-    const path = svg?.querySelector("path");
-    return { svgRoot, svg, path };
-  };
-'''
-          new = '''  const getIconDetails = (tileIcon) => {
-    const stateIcon =
-      tileIcon.querySelector("ha-state-icon") ??
-      tileIcon.shadowRoot?.querySelector("ha-state-icon");
-    const haIcon = stateIcon?.shadowRoot?.querySelector("ha-icon");
-    const svgIcon = haIcon?.shadowRoot?.querySelector("ha-svg-icon");
-    const svgRoot = svgIcon?.shadowRoot;
-    const svg = svgRoot?.querySelector("svg");
-    const path = svg?.querySelector("path");
-    return { stateIcon, svgRoot, svg, path };
-  };
-'''
-          assert old in text, "getIconDetails block not found"
-          text = text.replace(old, new, 1)
-
-          old = '''  const applyIconFallback = (tileIcon) => {
-    const { svgRoot, svg, path } = getIconDetails(tileIcon);
-'''
-          new = '''  const applyIconFallback = (tileIcon) => {
-    const { stateIcon, svgRoot, svg, path } = getIconDetails(tileIcon);
-'''
-          assert old in text, "applyIconFallback destructuring not found"
-          text = text.replace(old, new, 1)
-
-          old = '''    const iconName =
-      tileIcon.querySelector("ha-state-icon")?.getAttribute("icon") ??
-      tileIcon.getAttribute("icon") ??
-      "";
-'''
-          new = '''    const iconName =
-      stateIcon?.icon ??
-      stateIcon?.getAttribute("icon") ??
-      tileIcon.getAttribute("icon") ??
-      "";
-'''
-          assert old in text, "iconName block not found"
-          text = text.replace(old, new, 1)
-
-          marker = '''  const processTileIcon = (tileIcon) => {
-    const domain = tileIcon.getAttribute("data-domain");
-    const state = tileIcon.getAttribute("data-state");
-    if (!domain || !state || !shouldFallback(domain, state)) {
-'''
-          replacement = '''  const findMushroomTemplateCard = (tileIcon) => {
-    let root = tileIcon.getRootNode?.();
-    while (root instanceof ShadowRoot) {
-      const host = root.host;
-      if (host?.localName === "mushroom-template-card") return host;
-      root = host?.getRootNode?.();
-    }
-    return null;
-  };
-
-  const ensureMushroomStateSubscription = (card, entityId) => {
-    trackedMushroomEntities.add(entityId);
-    if (mushroomStateSubscriptionStarted) return;
-
-    const connection = card?.hass?.connection;
-    if (!connection?.subscribeEvents) return;
-
-    mushroomStateSubscriptionStarted = true;
-    try {
-      Promise.resolve(
-        connection.subscribeEvents((event) => {
-          const changedEntity = event?.data?.entity_id;
-          if (!changedEntity || !trackedMushroomEntities.has(changedEntity)) return;
-
-          const nextState = event?.data?.new_state;
-          if (nextState) mushroomEntityStates.set(changedEntity, nextState);
-          else mushroomEntityStates.delete(changedEntity);
-          queueScan();
-        }, "state_changed")
-      ).catch((error) => {
-        mushroomStateSubscriptionStarted = false;
-        log("Mushroom state subscription failed", error);
-      });
-    } catch (error) {
-      mushroomStateSubscriptionStarted = false;
-      log("Mushroom state subscription failed", error);
-    }
-  };
-
-  const getTileStateContext = (tileIcon) => {
-    const domain = tileIcon.getAttribute("data-domain");
-    const state = tileIcon.getAttribute("data-state");
-    if (domain && state) return { domain, state };
-
-    const card = findMushroomTemplateCard(tileIcon);
-    const entityId = card?._config?.entity;
-    if (!entityId || typeof entityId !== "string") return null;
-
-    ensureMushroomStateSubscription(card, entityId);
-    const stateObject =
-      mushroomEntityStates.get(entityId) ?? card?.hass?.states?.[entityId];
-    if (!stateObject) return null;
-
-    const separator = entityId.indexOf(".");
-    if (separator <= 0) return null;
-    return {
-      domain: entityId.slice(0, separator),
-      state: String(stateObject.state),
-    };
-  };
-
-  const processTileIcon = (tileIcon) => {
-    const context = getTileStateContext(tileIcon);
-    const domain = context?.domain;
-    const state = context?.state;
-    if (!domain || !state || !shouldFallback(domain, state)) {
-'''
-          assert marker in text, "processTileIcon block not found"
-          text = text.replace(marker, replacement, 1)
-
-          path.write_text(text, encoding="utf-8")
+          assert 'const VERSION = "0.2.11";' in text
+          assert 'findMushroomTemplateCard' in text
+          assert 'getTileStateContext' in text
+          path.write_text(text, encoding='utf-8')
           PY
 
       - name: Remove temporary workflow
