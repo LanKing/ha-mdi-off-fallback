@@ -1,0 +1,177 @@
+name: Add Mushroom Template support
+
+on:
+  push:
+    paths:
+      - ".github/workflows/add-mushroom-template-support.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update plugin
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("ha-mdi-off-fallback.js")
+          text = path.read_text(encoding="utf-8")
+
+          text = text.replace(" * v0.2.9\n", " * v0.2.11\n", 1)
+          text = text.replace('const VERSION = "0.2.9";', 'const VERSION = "0.2.11";', 1)
+
+          old = '''  let scanQueued = false;
+  let maskSequence = 0;
+'''
+          new = '''  let scanQueued = false;
+  let maskSequence = 0;
+  const trackedMushroomEntities = new Set();
+  const mushroomEntityStates = new Map();
+  let mushroomStateSubscriptionStarted = false;
+'''
+          assert old in text, "runtime state block not found"
+          text = text.replace(old, new, 1)
+
+          old = '''  const getIconDetails = (tileIcon) => {
+    const stateIcon =
+      tileIcon.querySelector("ha-state-icon") ??
+      tileIcon.shadowRoot?.querySelector("ha-state-icon");
+    const haIcon = stateIcon?.shadowRoot?.querySelector("ha-icon");
+    const svgIcon = haIcon?.shadowRoot?.querySelector("ha-svg-icon");
+    const svgRoot = svgIcon?.shadowRoot;
+    const svg = svgRoot?.querySelector("svg");
+    const path = svg?.querySelector("path");
+    return { svgRoot, svg, path };
+  };
+'''
+          new = '''  const getIconDetails = (tileIcon) => {
+    const stateIcon =
+      tileIcon.querySelector("ha-state-icon") ??
+      tileIcon.shadowRoot?.querySelector("ha-state-icon");
+    const haIcon = stateIcon?.shadowRoot?.querySelector("ha-icon");
+    const svgIcon = haIcon?.shadowRoot?.querySelector("ha-svg-icon");
+    const svgRoot = svgIcon?.shadowRoot;
+    const svg = svgRoot?.querySelector("svg");
+    const path = svg?.querySelector("path");
+    return { stateIcon, svgRoot, svg, path };
+  };
+'''
+          assert old in text, "getIconDetails block not found"
+          text = text.replace(old, new, 1)
+
+          old = '''  const applyIconFallback = (tileIcon) => {
+    const { svgRoot, svg, path } = getIconDetails(tileIcon);
+'''
+          new = '''  const applyIconFallback = (tileIcon) => {
+    const { stateIcon, svgRoot, svg, path } = getIconDetails(tileIcon);
+'''
+          assert old in text, "applyIconFallback destructuring not found"
+          text = text.replace(old, new, 1)
+
+          old = '''    const iconName =
+      tileIcon.querySelector("ha-state-icon")?.getAttribute("icon") ??
+      tileIcon.getAttribute("icon") ??
+      "";
+'''
+          new = '''    const iconName =
+      stateIcon?.icon ??
+      stateIcon?.getAttribute("icon") ??
+      tileIcon.getAttribute("icon") ??
+      "";
+'''
+          assert old in text, "iconName block not found"
+          text = text.replace(old, new, 1)
+
+          marker = '''  const processTileIcon = (tileIcon) => {
+    const domain = tileIcon.getAttribute("data-domain");
+    const state = tileIcon.getAttribute("data-state");
+    if (!domain || !state || !shouldFallback(domain, state)) {
+'''
+          replacement = '''  const findMushroomTemplateCard = (tileIcon) => {
+    let root = tileIcon.getRootNode?.();
+    while (root instanceof ShadowRoot) {
+      const host = root.host;
+      if (host?.localName === "mushroom-template-card") return host;
+      root = host?.getRootNode?.();
+    }
+    return null;
+  };
+
+  const ensureMushroomStateSubscription = (card, entityId) => {
+    trackedMushroomEntities.add(entityId);
+    if (mushroomStateSubscriptionStarted) return;
+
+    const connection = card?.hass?.connection;
+    if (!connection?.subscribeEvents) return;
+
+    mushroomStateSubscriptionStarted = true;
+    try {
+      Promise.resolve(
+        connection.subscribeEvents((event) => {
+          const changedEntity = event?.data?.entity_id;
+          if (!changedEntity || !trackedMushroomEntities.has(changedEntity)) return;
+
+          const nextState = event?.data?.new_state;
+          if (nextState) mushroomEntityStates.set(changedEntity, nextState);
+          else mushroomEntityStates.delete(changedEntity);
+          queueScan();
+        }, "state_changed")
+      ).catch((error) => {
+        mushroomStateSubscriptionStarted = false;
+        log("Mushroom state subscription failed", error);
+      });
+    } catch (error) {
+      mushroomStateSubscriptionStarted = false;
+      log("Mushroom state subscription failed", error);
+    }
+  };
+
+  const getTileStateContext = (tileIcon) => {
+    const domain = tileIcon.getAttribute("data-domain");
+    const state = tileIcon.getAttribute("data-state");
+    if (domain && state) return { domain, state };
+
+    const card = findMushroomTemplateCard(tileIcon);
+    const entityId = card?._config?.entity;
+    if (!entityId || typeof entityId !== "string") return null;
+
+    ensureMushroomStateSubscription(card, entityId);
+    const stateObject =
+      mushroomEntityStates.get(entityId) ?? card?.hass?.states?.[entityId];
+    if (!stateObject) return null;
+
+    const separator = entityId.indexOf(".");
+    if (separator <= 0) return null;
+    return {
+      domain: entityId.slice(0, separator),
+      state: String(stateObject.state),
+    };
+  };
+
+  const processTileIcon = (tileIcon) => {
+    const context = getTileStateContext(tileIcon);
+    const domain = context?.domain;
+    const state = context?.state;
+    if (!domain || !state || !shouldFallback(domain, state)) {
+'''
+          assert marker in text, "processTileIcon block not found"
+          text = text.replace(marker, replacement, 1)
+
+          path.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Remove temporary workflow
+        run: rm .github/workflows/add-mushroom-template-support.yml
+
+      - name: Commit update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Add Mushroom Template Card support"
+          git push
