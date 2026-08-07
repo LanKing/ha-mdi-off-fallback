@@ -315,9 +315,8 @@
   };
 
   const getTileStateContext = (tileIcon) => {
-    const context = getTileStateContext(tileIcon);
-    const domain = context?.domain;
-    const state = context?.state;
+    const domain = tileIcon.getAttribute("data-domain");
+    const state = tileIcon.getAttribute("data-state");
     if (domain && state) return { domain, state };
 
     const card = findMushroomTemplateCard(tileIcon);
@@ -338,8 +337,9 @@
   };
 
   const processTileIcon = (tileIcon) => {
-    const domain = tileIcon.getAttribute("data-domain");
-    const state = tileIcon.getAttribute("data-state");
+    const context = getTileStateContext(tileIcon);
+    const domain = context?.domain;
+    const state = context?.state;
     if (!domain || !state || !shouldFallback(domain, state)) {
       restoreIcon(tileIcon);
       restoreFaintBackground(tileIcon);
