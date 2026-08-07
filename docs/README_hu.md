@@ -14,7 +14,7 @@
 
 A bővítmény úgy készült, hogy a hozzáadott áthúzás a Home Assistant természetes részének tűnjön:
 * a szabványos Tile-kártyákkal azok lecserélése nélkül működik, megőrizve az eredeti megjelenést, viselkedést, színeket, méreteket és interakciókat;
-* a `Mushroom Template Card` kártyát is támogatja; a kártyán meg kell adni egy `entity` értéket, hogy a bővítmény meg tudja határozni az állapotát;
+* a 🍄 `Mushroom Template Card` kártyát is támogatja; a kártyán meg kell adni egy `entity` értéket, hogy a bővítmény meg tudja határozni az állapotát;
 * csak a már kirajzolt ikonokat módosítja, és csak akkor, ha nincs beépített `-off` változat;
 * opcionálisan hozzáadhat egy halvány kör alakú hátteret, ha a natív háttér hiányzik;
 * nem módosítja az entitások állapotát, és nem avatkozik az eszközök működésébe.

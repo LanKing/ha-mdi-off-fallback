@@ -14,7 +14,7 @@
 
 Die inprop is ontwerp sodat die bygevoegde skuinsstreep soos ’n ingeboude deel van Home Assistant lyk:
 * werk met standaard Tile-kaarte sonder om hulle te vervang en behou hul gewone voorkoms, gedrag, kleure, groottes en interaksies;
-* ondersteun ook `Mushroom Template Card`; die kaart moet 'n `entity` hê sodat die inprop die toestand daarvan kan bepaal;
+* ondersteun ook 🍄 `Mushroom Template Card`; die kaart moet 'n `entity` hê sodat die inprop die toestand daarvan kan bepaal;
 * verander slegs ikone wat reeds weergegee is, en slegs wanneer geen ingeboude `-off`-variant beskikbaar is nie;
 * kan opsioneel 'n dowwe sirkelvormige agtergrond byvoeg wanneer die inheemse agtergrond ontbreek;
 * verander nie entiteitstoestande nie en meng nie met toestelle se werking in nie.

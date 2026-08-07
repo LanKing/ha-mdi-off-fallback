@@ -14,7 +14,7 @@
 
 Pistikprogramm on loodud nii, et lisatud kaldkriips näeks välja Home Assistanti loomuliku osana:
 * töötab standardsete Tile-kaartidega neid asendamata ning säilitab nende algse välimuse, käitumise, värvid, suurused ja interaktsioonid;
-* toetab ka `Mushroom Template Card`-i; kaardil peab olema määratud `entity`, et plugin saaks selle oleku tuvastada;
+* toetab ka 🍄 `Mushroom Template Card`-i; kaardil peab olema määratud `entity`, et plugin saaks selle oleku tuvastada;
 * muudab ainult juba renderdatud ikoone ja ainult siis, kui sisseehitatud `-off` varianti pole;
 * saab soovi korral lisada nõrga ringikujulise tausta, kui loomulik taust puudub;
 * ei muuda olemite olekuid ega sekku seadmete töösse.

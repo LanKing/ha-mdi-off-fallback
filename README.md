@@ -14,7 +14,7 @@
 
 The plugin is designed so that the added slash looks like a native part of Home Assistant:
 * works with standard Tile cards without replacing them, preserving their native appearance, behavior, colors, sizes, and interactions;
-* also supports `Mushroom Template Card`; the card must have an `entity` configured so the plugin can determine its state;
+* also supports 🍄 `Mushroom Template Card`; the card must have an `entity` configured so the plugin can determine its state;
 * modifies only icons that have already been rendered and only when no native `-off` variant is available;
 * can optionally add a faint circular background when the native background is missing;
 * does not change entity states or interfere with device operation.

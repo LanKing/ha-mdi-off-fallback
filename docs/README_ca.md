@@ -14,7 +14,7 @@
 
 El complement està dissenyat perquè la barra diagonal afegida sembli una part nativa de Home Assistant:
 * funciona amb les targetes Tile estàndard sense substituir-les i conserva l’aspecte, el comportament, els colors, les mides i les interaccions originals;
-* també admet `Mushroom Template Card`; la targeta ha de tenir un `entity` configurat perquè el connector pugui determinar-ne l'estat;
+* també admet 🍄 `Mushroom Template Card`; la targeta ha de tenir un `entity` configurat perquè el connector pugui determinar-ne l'estat;
 * només modifica les icones ja renderitzades i només quan no existeix cap variant `-off` nativa;
 * opcionalment pot afegir un fons circular tènue quan falta el fons natiu;
 * no modifica els estats de les entitats ni interfereix amb el funcionament dels dispositius.

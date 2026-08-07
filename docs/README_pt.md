@@ -14,7 +14,7 @@
 
 O plug-in foi desenvolvido para que o traço adicionado pareça uma parte nativa do Home Assistant:
 * funciona com os cartões Mosaico padrão sem os substituir e preserva o aspeto, comportamento, cores, tamanhos e interações originais;
-* também suporta `Mushroom Template Card`; o cartão deve ter uma `entity` configurada para que o plugin possa determinar o seu estado;
+* também suporta 🍄 `Mushroom Template Card`; o cartão deve ter uma `entity` configurada para que o plugin possa determinar o seu estado;
 * altera apenas ícones já renderizados e apenas quando não existe uma variante nativa `-off`;
 * opcionalmente, pode adicionar um fundo circular fraco quando o fundo nativo estiver faltando;
 * não altera estados das entidades nem interfere com o funcionamento dos dispositivos.

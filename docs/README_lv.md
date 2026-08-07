@@ -14,7 +14,7 @@
 
 Spraudnis ir izstrādāts tā, lai pievienotā svītra izskatītos kā dabiska Home Assistant daļa:
 * darbojas ar standarta Tile kartītēm, tās neaizstājot, un saglabā to izskatu, darbību, krāsas, izmērus un mijiedarbību;
-* atbalsta arī `Mushroom Template Card`; kartē jābūt norādītam `entity`, lai spraudnis varētu noteikt tās stāvokli;
+* atbalsta arī 🍄 `Mushroom Template Card`; kartē jābūt norādītam `entity`, lai spraudnis varētu noteikt tās stāvokli;
 * maina tikai jau attēlotās ikonas un tikai tad, ja nav iebūvēta `-off` varianta;
 * pēc izvēles var pievienot vāju apļveida fonu, ja trūkst vietējā fona;
 * nemaina entītiju stāvokļus un netraucē ierīču darbību.

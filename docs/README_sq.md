@@ -14,7 +14,7 @@
 
 Shtojca është ndërtuar që vija e shtuar të duket si pjesë vendase e Home Assistant:
 * punon me kartat standarde Pllakë pa i zëvendësuar dhe ruan pamjen, sjelljen, ngjyrat, madhësitë dhe ndërveprimet;
-* mbështet gjithashtu `Mushroom Template Card`; karta duhet të ketë të përcaktuar një `entity` që shtojca të mund të përcaktojë gjendjen e saj;
+* mbështet gjithashtu 🍄 `Mushroom Template Card`; karta duhet të ketë të përcaktuar një `entity` që shtojca të mund të përcaktojë gjendjen e saj;
 * ndryshon vetëm ikonat e renderuara dhe vetëm kur mungon varianti vendas `-off`;
 * mund të shtojë opsionalisht një sfond rrethor të zbehtë kur sfondi origjinal mungon;
 * nuk ndryshon gjendjet e entiteteve dhe nuk ndërhyn në funksionimin e pajisjeve.

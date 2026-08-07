@@ -14,7 +14,7 @@
 
 Dodatak je napravljen tako da dodato precrtavanje izgleda kao sastavni deo Home Assistant-a:
 * radi sa standardnim karticama Pločica bez njihove zamene i čuva izgled, ponašanje, boje, veličine i interakcije;
-* podržava i `Mushroom Template Card`; kartica mora imati podešen `entity` kako bi dodatak mogao da odredi njeno stanje;
+* podržava i 🍄 `Mushroom Template Card`; kartica mora imati podešen `entity` kako bi dodatak mogao da odredi njeno stanje;
 * menja samo već iscrtane ikone i samo kada ne postoji ugrađena varijanta `-off`;
 * може опционо додати бледу кружну позадину када недостаје изворна позадина;
 * ne menja stanja entiteta i ne utiče na rad uređaja.

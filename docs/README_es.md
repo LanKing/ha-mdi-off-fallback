@@ -14,7 +14,7 @@
 
 El complemento está diseñado para que la barra diagonal añadida parezca una parte nativa de Home Assistant:
 * funciona con las tarjetas Tile estándar sin sustituirlas y conserva su aspecto, comportamiento, colores, tamaños e interacciones originales;
-* también admite `Mushroom Template Card`; la tarjeta debe tener una `entity` configurada para que el complemento pueda determinar su estado;
+* también admite 🍄 `Mushroom Template Card`; la tarjeta debe tener una `entity` configurada para que el complemento pueda determinar su estado;
 * modifica únicamente los iconos ya renderizados y solo cuando no existe una variante `-off` nativa;
 * opcionalmente, puede agregar un fondo circular tenue cuando falta el fondo nativo;
 * no cambia los estados de las entidades ni interfiere con el funcionamiento de los dispositivos.

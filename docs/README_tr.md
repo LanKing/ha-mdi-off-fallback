@@ -14,7 +14,7 @@
 
 Eklenti, eklenen çizginin Home Assistant'ın yerleşik bir parçası gibi görünmesi için tasarlanmıştır:
 * standart Döşeme kartlarını değiştirmeden çalışır ve yerleşik görünüm, davranış, renk, boyut ve etkileşimleri korur;
-* `Mushroom Template Card` desteği de vardır; eklentinin durumunu belirleyebilmesi için kartta bir `entity` tanımlanmış olmalıdır;
+* 🍄 `Mushroom Template Card` desteği de vardır; eklentinin durumunu belirleyebilmesi için kartta bir `entity` tanımlanmış olmalıdır;
 * yalnızca önceden oluşturulmuş simgeleri ve yalnızca yerleşik `-off` çeşidi yoksa değiştirir;
 * yerel arka plan eksik olduğunda isteğe bağlı olarak soluk bir dairesel arka plan ekleyebilir;
 * varlık durumlarını değiştirmez ve cihazların çalışmasına müdahale etmez.

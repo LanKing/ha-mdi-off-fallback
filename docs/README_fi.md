@@ -14,7 +14,7 @@
 
 Lisäosa on toteutettu niin, että lisätty vinoviiva näyttää Home Assistantin alkuperäiseltä osalta:
 * toimii tavallisten Tile-korttien kanssa korvaamatta niitä ja säilyttää niiden alkuperäisen ulkoasun, toiminnan, värit, koot ja vuorovaikutukset;
-* tukee myös `Mushroom Template Card` -korttia; kortille on määritettävä `entity`, jotta lisäosa voi määrittää sen tilan;
+* tukee myös 🍄 `Mushroom Template Card` -korttia; kortille on määritettävä `entity`, jotta lisäosa voi määrittää sen tilan;
 * muuttaa vain jo renderöityjä kuvakkeita ja vain silloin, kun sisäänrakennettua `-off`-versiota ei ole;
 * voi valinnaisesti lisätä himmeän pyöreän taustan, kun alkuperäinen tausta puuttuu;
 * ei muuta entiteettien tiloja eikä häiritse laitteiden toimintaa.

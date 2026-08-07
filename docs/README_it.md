@@ -14,7 +14,7 @@
 
 Il plugin è progettato affinché la barra aggiunta sembri una parte nativa di Home Assistant:
 * funziona con le schede Tile standard senza sostituirle e ne conserva aspetto, comportamento, colori, dimensioni e interazioni;
-* supporta anche `Mushroom Template Card`; la scheda deve avere una `entity` configurata affinché il plugin possa determinarne lo stato;
+* supporta anche 🍄 `Mushroom Template Card`; la scheda deve avere una `entity` configurata affinché il plugin possa determinarne lo stato;
 * modifica solo le icone già renderizzate e soltanto quando non è disponibile una variante nativa `-off`;
 * può facoltativamente aggiungere un debole sfondo circolare quando manca lo sfondo nativo;
 * non modifica gli stati delle entità e non interferisce con il funzionamento dei dispositivi.

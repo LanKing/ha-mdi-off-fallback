@@ -14,7 +14,7 @@
 
 Tá an breiseán deartha ionas go mbeidh an líne bhreise cosúil le cuid dhúchasach de Home Assistant:
 * oibríonn sé le gnáthchártaí Tile gan iad a athsholáthar agus coinníonn sé a gcuma, a n-iompar, a ndathanna, a méideanna agus a n-idirghníomhaíochtaí dúchasacha;
-* tacaíonn sé freisin le `Mushroom Template Card`; ní mór `entity` a bheith socraithe ar an gcárta ionas gur féidir leis an mbreiseán a staid a chinneadh;
+* tacaíonn sé freisin le 🍄 `Mushroom Template Card`; ní mór `entity` a bheith socraithe ar an gcárta ionas gur féidir leis an mbreiseán a staid a chinneadh;
 * ní athraíonn sé ach deilbhíní atá rindreáilte cheana féin agus sin amháin nuair nach bhfuil leagan dúchasach `-off` ar fáil;
 * is féidir cúlra beag ciorclach a chur leis go roghnach nuair atá an cúlra dúchais in easnamh;
 * ní athraíonn sé staid na n-eintiteas agus ní chuireann sé isteach ar oibriú na ngléasanna.

@@ -14,7 +14,7 @@
 
 O plugin foi desenvolvido para que o traço adicionado pareça uma parte nativa do Home Assistant:
 * funciona com os cartões Bloco padrão sem substituí-los, preservando aparência, comportamento, cores, tamanhos e interações;
-* também oferece suporte a `Mushroom Template Card`; o cartão deve ter uma `entity` configurada para que o plugin possa determinar seu estado;
+* também oferece suporte a 🍄 `Mushroom Template Card`; o cartão deve ter uma `entity` configurada para que o plugin possa determinar seu estado;
 * altera apenas ícones já renderizados e somente quando não existe uma variante nativa `-off`;
 * opcionalmente, pode adicionar um fundo circular fraco quando o fundo nativo estiver faltando;
 * não altera estados das entidades nem interfere no funcionamento dos dispositivos.

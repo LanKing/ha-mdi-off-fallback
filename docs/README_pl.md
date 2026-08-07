@@ -14,7 +14,7 @@
 
 Wtyczka została zaprojektowana tak, aby dodane przekreślenie wyglądało jak natywny element Home Assistant:
 * działa ze standardowymi kartami Kafelek bez ich zastępowania i zachowuje ich wygląd, zachowanie, kolory, rozmiary oraz interakcje;
-* obsługuje również `Mushroom Template Card`; karta musi mieć ustawione `entity`, aby wtyczka mogła określić jej stan;
+* obsługuje również 🍄 `Mushroom Template Card`; karta musi mieć ustawione `entity`, aby wtyczka mogła określić jej stan;
 * modyfikuje wyłącznie już wyrenderowane ikony i tylko wtedy, gdy brak natywnego wariantu `-off`;
 * może opcjonalnie dodać słabe, okrągłe tło, gdy brakuje tła natywnego;
 * nie zmienia stanów encji i nie ingeruje w działanie urządzeń.

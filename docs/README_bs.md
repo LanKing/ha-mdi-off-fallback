@@ -14,7 +14,7 @@
 
 Dodatak je napravljen tako da dodana kosa crta izgleda kao izvorni dio Home Assistanta:
 * radi sa standardnim Tile karticama bez njihove zamjene i zadržava izvorni izgled, ponašanje, boje, veličine i interakcije;
-* podržava i `Mushroom Template Card`; kartica mora imati postavljen `entity` kako bi dodatak mogao odrediti njeno stanje;
+* podržava i 🍄 `Mushroom Template Card`; kartica mora imati postavljen `entity` kako bi dodatak mogao odrediti njeno stanje;
 * mijenja samo već iscrtane ikone i samo kada nema ugrađene varijante `-off`;
 * može po želji dodati blijedu kružnu pozadinu kada nedostaje izvorna pozadina;
 * ne mijenja stanja entiteta i ne utiče na rad uređaja.

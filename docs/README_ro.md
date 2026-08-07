@@ -14,7 +14,7 @@
 
 Pluginul este conceput astfel încât bara adăugată să pară o parte nativă a Home Assistant:
 * funcționează cu cardurile standard Dală fără să le înlocuiască și păstrează aspectul, comportamentul, culorile, dimensiunile și interacțiunile implicite;
-* acceptă și `Mushroom Template Card`; cardul trebuie să aibă o `entity` configurată pentru ca pluginul să îi poată determina starea;
+* acceptă și 🍄 `Mushroom Template Card`; cardul trebuie să aibă o `entity` configurată pentru ca pluginul să îi poată determina starea;
 * modifică numai pictogramele deja randate și doar atunci când lipsește o variantă nativă `-off`;
 * poate adăuga opțional un fundal circular slab atunci când fundalul nativ lipsește;
 * nu modifică stările entităților și nu interferează cu funcționarea dispozitivelor.

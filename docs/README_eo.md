@@ -14,7 +14,7 @@
 
 La kromprogramo estas farita tiel, ke la aldonita streko aspektu kiel denaska parto de Home Assistant:
 * funkcias kun normaj Tile-kartoj sen anstataŭigi ilin kaj konservas ilian denaskan aspekton, konduton, kolorojn, grandecojn kaj interagojn;
-* ankaŭ subtenas `Mushroom Template Card`; la karto devas havi agorditan `entity`, por ke la kromprogramo povu determini ĝian staton;
+* ankaŭ subtenas 🍄 `Mushroom Template Card`; la karto devas havi agorditan `entity`, por ke la kromprogramo povu determini ĝian staton;
 * ŝanĝas nur jam bildigitajn piktogramojn kaj nur kiam ne ekzistas denaska varianto `-off`;
 * povas laŭvole aldoni malklaran cirklan fonon kiam la denaska fono mankas;
 * ne ŝanĝas la statojn de entoj kaj ne intervenas en la funkciadon de aparatoj.
