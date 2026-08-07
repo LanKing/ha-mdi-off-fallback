@@ -1,11 +1,11 @@
 /**
  * HA MDI Off Fallback
- * v0.2.9
+ * v0.2.11
  */
 (() => {
   "use strict";
 
-  const VERSION = "0.2.9";
+  const VERSION = "0.2.11";
   const DEFAULT_STATES = Object.freeze({
     light: ["off"],
     switch: ["off"],
@@ -24,6 +24,9 @@
 
   let scanQueued = false;
   let maskSequence = 0;
+  const trackedMushroomEntities = new Set();
+  const mushroomEntityStates = new Map();
+  let mushroomStateSubscriptionStarted = false;
 
   const normalizeStates = (source) => {
     const result = {};
@@ -170,7 +173,7 @@
     const svgRoot = svgIcon?.shadowRoot;
     const svg = svgRoot?.querySelector("svg");
     const path = svg?.querySelector("path");
-    return { svgRoot, svg, path };
+    return { stateIcon, svgRoot, svg, path };
   };
 
   const appearsAlreadyCrossed = (pathData) => {
@@ -182,12 +185,13 @@
   };
 
   const applyIconFallback = (tileIcon) => {
-    const { svgRoot, svg, path } = getIconDetails(tileIcon);
+    const { stateIcon, svgRoot, svg, path } = getIconDetails(tileIcon);
     if (!svgRoot || !svg || !path) return false;
     if (svg.getAttribute("viewBox") !== "0 0 24 24") return false;
 
     const iconName =
-      tileIcon.querySelector("ha-state-icon")?.getAttribute("icon") ??
+      stateIcon?.icon ??
+      stateIcon?.getAttribute("icon") ??
       tileIcon.getAttribute("icon") ??
       "";
     const pathData = path.getAttribute("d") ?? "";
@@ -269,6 +273,68 @@
       pathData,
     });
     return true;
+  };
+
+  const findMushroomTemplateCard = (tileIcon) => {
+    let root = tileIcon.getRootNode?.();
+    while (root instanceof ShadowRoot) {
+      const host = root.host;
+      if (host?.localName === "mushroom-template-card") return host;
+      root = host?.getRootNode?.();
+    }
+    return null;
+  };
+
+  const ensureMushroomStateSubscription = (card, entityId) => {
+    trackedMushroomEntities.add(entityId);
+    if (mushroomStateSubscriptionStarted) return;
+
+    const connection = card?.hass?.connection;
+    if (!connection?.subscribeEvents) return;
+
+    mushroomStateSubscriptionStarted = true;
+    try {
+      Promise.resolve(
+        connection.subscribeEvents((event) => {
+          const changedEntity = event?.data?.entity_id;
+          if (!changedEntity || !trackedMushroomEntities.has(changedEntity)) return;
+
+          const nextState = event?.data?.new_state;
+          if (nextState) mushroomEntityStates.set(changedEntity, nextState);
+          else mushroomEntityStates.delete(changedEntity);
+          queueScan();
+        }, "state_changed")
+      ).catch((error) => {
+        mushroomStateSubscriptionStarted = false;
+        log("Mushroom state subscription failed", error);
+      });
+    } catch (error) {
+      mushroomStateSubscriptionStarted = false;
+      log("Mushroom state subscription failed", error);
+    }
+  };
+
+  const getTileStateContext = (tileIcon) => {
+    const context = getTileStateContext(tileIcon);
+    const domain = context?.domain;
+    const state = context?.state;
+    if (domain && state) return { domain, state };
+
+    const card = findMushroomTemplateCard(tileIcon);
+    const entityId = card?._config?.entity;
+    if (!entityId || typeof entityId !== "string") return null;
+
+    ensureMushroomStateSubscription(card, entityId);
+    const stateObject =
+      mushroomEntityStates.get(entityId) ?? card?.hass?.states?.[entityId];
+    if (!stateObject) return null;
+
+    const separator = entityId.indexOf(".");
+    if (separator <= 0) return null;
+    return {
+      domain: entityId.slice(0, separator),
+      state: String(stateObject.state),
+    };
   };
 
   const processTileIcon = (tileIcon) => {
