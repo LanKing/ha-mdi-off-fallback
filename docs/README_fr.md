@@ -14,6 +14,7 @@
 
 Le plugin est conçu pour que la barre oblique ajoutée ressemble à un élément natif de Home Assistant :
 * fonctionne avec les cartes Tile standard sans les remplacer et conserve leur apparence, leur comportement, leurs couleurs, leurs dimensions et leurs interactions d’origine ;
+* prend également en charge `Mushroom Template Card` ; la carte doit avoir une `entity` configurée afin que le plugin puisse déterminer son état ;
 * ne modifie que les icônes déjà rendues, et uniquement lorsqu’aucune variante native `-off` n’est disponible ;
 * peut éventuellement ajouter un arrière-plan circulaire pâle lorsque l'arrière-plan natif est manquant ;
 * ne modifie pas l’état des entités et n’interfère pas avec le fonctionnement des appareils.

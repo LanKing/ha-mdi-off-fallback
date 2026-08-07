@@ -14,6 +14,7 @@
 
 Pluginet er udviklet, så den tilføjede skråstreg ser ud som en indbygget del af Home Assistant:
 * fungerer med standard Tile-kort uden at erstatte dem og bevarer deres normale udseende, adfærd, farver, størrelser og interaktioner;
+* understøtter også `Mushroom Template Card`; kortet skal have en `entity` angivet, så pluginet kan bestemme dets tilstand;
 * ændrer kun allerede gengivne ikoner og kun når der ikke findes en indbygget `-off`-variant;
 * kan eventuelt tilføje en svag cirkulær baggrund, når den oprindelige baggrund mangler;
 * ændrer ikke entiteternes tilstande og griber ikke ind i enhedernes funktion.

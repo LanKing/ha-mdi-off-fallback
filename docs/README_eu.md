@@ -14,6 +14,7 @@
 
 Plugina barra diagonala Home Assistant-en jatorrizko zati baten moduan agertzeko diseinatuta dago:
 * Tile txartel estandarrekin funtzionatzen du haiek ordezkatu gabe, eta jatorrizko itxura, portaera, koloreak, neurriak eta interakzioak mantentzen ditu;
+* `Mushroom Template Card` ere onartzen du; txartelak `entity` bat zehaztuta izan behar du pluginak haren egoera zehaztu ahal izateko;
 * dagoeneko errendatutako ikonoak bakarrik aldatzen ditu, eta soilik `-off` aldaera jatorrizkorik ez dagoenean;
 * aukeran, hondo zirkular ahul bat gehi dezake jatorrizko atzeko planoa falta denean;
 * ez ditu entitateen egoerak aldatzen eta ez du gailuen funtzionamenduan esku hartzen.

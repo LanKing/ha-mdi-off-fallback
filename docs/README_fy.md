@@ -14,6 +14,7 @@
 
 De plugin is sa makke dat de tafoege streek as in natuerlik ûnderdiel fan Home Assistant liket:
 * wurket mei standert Tile-kaarten sûnder se te ferfangen en behâldt har oarspronklike uterlik, gedrach, kleuren, maten en ynteraksjes;
+* stipet ek `Mushroom Template Card`; de kaart moat in `entity` ynsteld hawwe, sadat de plugin de steat bepale kin;
 * feroaret allinnich al werjûne piktogrammen en allinnich as der gjin ynboude `-off`-fariant is;
 * kin opsjoneel in swakke sirkulêre eftergrûn tafoegje as de eigen eftergrûn ûntbrekt;
 * feroaret gjin entiteitssteaten en bemuoit him net mei de wurking fan apparaten.

@@ -14,6 +14,7 @@
 
 Doplněk je navržen tak, aby přidané přeškrtnutí působilo jako nativní součást Home Assistantu:
 * funguje se standardními kartami Tile bez jejich nahrazení a zachovává jejich původní vzhled, chování, barvy, rozměry a interakce;
+* podporuje také `Mushroom Template Card`; karta musí mít nastavené `entity`, aby plugin mohl určit její stav;
 * upravuje pouze již vykreslené ikony a jen tehdy, když není dostupná nativní varianta `-off`;
 * může volitelně přidat slabé kruhové pozadí, když nativní pozadí chybí;
 * nemění stavy entit a nezasahuje do fungování zařízení.

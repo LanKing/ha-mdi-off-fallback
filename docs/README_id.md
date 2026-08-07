@@ -14,6 +14,7 @@
 
 Plugin dirancang agar garis yang ditambahkan terlihat seperti bagian bawaan Home Assistant:
 * bekerja dengan kartu Tile standar tanpa menggantinya serta mempertahankan tampilan, perilaku, warna, ukuran, dan interaksi bawaan;
+* juga mendukung `Mushroom Template Card`; kartu harus memiliki `entity` agar plugin dapat menentukan statusnya;
 * hanya mengubah ikon yang sudah dirender dan hanya jika varian `-off` bawaan tidak tersedia;
 * secara opsional dapat menambahkan latar belakang melingkar samar ketika latar belakang asli tidak ada;
 * tidak mengubah status entitas dan tidak mengganggu pengoperasian perangkat.

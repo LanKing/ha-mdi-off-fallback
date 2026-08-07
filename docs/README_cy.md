@@ -14,6 +14,7 @@
 
 Mae’r ategyn wedi’i gynllunio fel bod y llinell groes ychwanegol yn edrych fel rhan frodorol o Home Assistant:
 * yn gweithio gyda chardiau Tile safonol heb eu disodli ac yn cadw eu hymddangosiad, ymddygiad, lliwiau, meintiau a rhyngweithiadau gwreiddiol;
+* mae hefyd yn cefnogi `Mushroom Template Card`; rhaid i'r cerdyn gynnwys `entity` fel y gall yr ategyn bennu ei gyflwr;
 * yn newid eiconau sydd eisoes wedi’u rendro yn unig, a dim ond pan nad oes amrywiad `-off` brodorol;
 * yn gallu ychwanegu cefndir crwn gwan yn ddewisol pan fydd y cefndir brodorol ar goll;
 * nid yw’n newid cyflwr endidau nac yn ymyrryd â gweithrediad dyfeisiau.

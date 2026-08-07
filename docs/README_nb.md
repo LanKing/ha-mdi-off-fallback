@@ -14,6 +14,7 @@
 
 Programtillegget er laget slik at den ekstra skråstreken ser ut som en innebygd del av Home Assistant:
 * fungerer med standard Flis-kort uten å erstatte dem, og beholder standard utseende, oppførsel, farger, størrelser og interaksjoner;
+* støtter også `Mushroom Template Card`; kortet må ha en `entity` angitt slik at programtillegget kan fastslå tilstanden;
 * endrer bare ikoner som allerede er tegnet, og bare når det ikke finnes en innebygd `-off`-variant;
 * kan eventuelt legge til en svak sirkulær bakgrunn når den opprinnelige bakgrunnen mangler;
 * endrer ikke entitetstilstander og påvirker ikke enhetenes funksjon.

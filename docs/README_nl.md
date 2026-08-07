@@ -14,6 +14,7 @@
 
 De plug-in is zo ontworpen dat de toegevoegde schuine streep eruitziet als een standaardonderdeel van Home Assistant:
 * werkt met standaard Tegel-kaarten zonder ze te vervangen en behoudt hun standaarduiterlijk, gedrag, kleuren, afmetingen en interacties;
+* ondersteunt ook `Mushroom Template Card`; de kaart moet een `entity` hebben zodat de plugin de status ervan kan bepalen;
 * wijzigt alleen reeds weergegeven pictogrammen en alleen wanneer geen ingebouwde `-off`-variant bestaat;
 * kan optioneel een vage cirkelvormige achtergrond toevoegen als de oorspronkelijke achtergrond ontbreekt;
 * wijzigt geen entiteitsstatussen en grijpt niet in op de werking van apparaten.

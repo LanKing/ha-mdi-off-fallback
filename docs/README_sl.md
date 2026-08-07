@@ -14,6 +14,7 @@
 
 Vtičnik je zasnovan tako, da dodano prečrtanje deluje kot izvorni del Home Assistanta:
 * deluje s standardnimi karticami Ploščica brez njihove zamenjave ter ohrani videz, vedenje, barve, velikosti in interakcije;
+* podpira tudi `Mushroom Template Card`; kartica mora imeti nastavljen `entity`, da lahko vtičnik določi njeno stanje;
 * spreminja samo že izrisane ikone in samo takrat, ko ni vgrajene različice `-off`;
 * lahko po želji doda bledo okroglo ozadje, ko izvorno ozadje manjka;
 * ne spreminja stanj entitet in ne posega v delovanje naprav.

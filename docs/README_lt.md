@@ -14,6 +14,7 @@
 
 Papildinys sukurtas taip, kad pridėtas brūkšnys atrodytų kaip natūrali Home Assistant dalis:
 * veikia su standartinėmis Tile kortelėmis jų nepakeisdamas ir išsaugo įprastą išvaizdą, elgseną, spalvas, dydžius bei sąveikas;
+* taip pat palaiko `Mushroom Template Card`; kortelėje turi būti nurodytas `entity`, kad papildinys galėtų nustatyti jos būseną;
 * keičia tik jau atvaizduotas piktogramas ir tik tada, kai nėra integruoto `-off` varianto;
 * pasirinktinai gali pridėti silpną apskritą foną, kai trūksta vietinio fono;
 * nekeičia objektų būsenų ir netrukdo įrenginių veikimui.

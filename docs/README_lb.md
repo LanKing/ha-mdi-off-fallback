@@ -14,6 +14,7 @@
 
 De Plugin ass esou entwéckelt, datt de bäigesate Stréch wéi en natierlechen Deel vu Home Assistant ausgesäit:
 * funktionéiert mat Standard-Tile-Kaarten ouni se ze ersetzen a behält Ausgesinn, Verhalen, Faarwen, Gréissten an Interaktiounen;
+* ënnerstëtzt och `Mushroom Template Card`; d'Kaart muss eng `entity` definéiert hunn, fir datt de Plugin hire Status bestëmme kann;
 * ännert nëmmen Ikonen déi scho gerendert goufen, an nëmmen wann keng agebaute `-off`-Variant existéiert;
 * kann optional e liichtschwaache kreesfërmegen Hannergrond addéieren wann den gebiertege Hannergrond fehlt;
 * ännert keng Entitéitszoustänn a gräift net an d'Funktioun vun Apparater an.

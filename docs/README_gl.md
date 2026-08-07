@@ -14,6 +14,7 @@
 
 O complemento está deseñado para que a barra engadida pareza unha parte nativa de Home Assistant:
 * funciona coas tarxetas Tile estándar sen substituílas e conserva o seu aspecto, comportamento, cores, tamaños e interaccións nativas;
+* tamén admite `Mushroom Template Card`; a tarxeta debe ter unha `entity` configurada para que o complemento poida determinar o seu estado;
 * modifica unicamente as iconas xa renderizadas e só cando non existe unha variante nativa `-off`;
 * pode engadir opcionalmente un fondo circular tenue cando falta o fondo nativo;
 * non cambia os estados das entidades nin interfire co funcionamento dos dispositivos.

@@ -14,6 +14,7 @@
 
 Plugin được thiết kế để đường gạch chéo bổ sung trông như một phần gốc của Home Assistant:
 * hoạt động với thẻ Ô tiêu chuẩn mà không thay thế chúng, đồng thời giữ nguyên giao diện, hành vi, màu sắc, kích thước và tương tác;
+* cũng hỗ trợ `Mushroom Template Card`; thẻ phải được cấu hình `entity` để plugin có thể xác định trạng thái của thẻ;
 * chỉ thay đổi các biểu tượng đã được hiển thị và chỉ khi không có biến thể `-off` tích hợp;
 * có thể tùy ý thêm nền tròn mờ khi thiếu nền gốc;
 * không thay đổi trạng thái thực thể và không can thiệp vào hoạt động của thiết bị.

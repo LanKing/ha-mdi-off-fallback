@@ -14,6 +14,7 @@
 
 S Plugin isch so gmacht, dass dr zuegfügti Schrägstrich wie en native Teil vo Home Assistant usgseht:
 * funktioniert mit de standardmässige Tile-Karte, ohni sie z ersetze, und behaltet Ussehe, Verhalte, Farbe, Grössi und Interaktione;
+* unterstützt au `Mushroom Template Card`; d Charte muess e `entity` definiert ha, damit s Plugin dr Zustand cha bestimme;
 * ändert nume scho grendereti Symbole und nume, wenn kei native `-off`-Variante vorhanden isch;
 * kann optional einen schwachen kreisförmigen Hintergrund hinzufügen, wenn der native Hintergrund fehlt;
 * ändert kei Entitätszuständ und mischt sich nöd i d Grätefunktion ii.

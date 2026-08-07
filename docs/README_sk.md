@@ -14,6 +14,7 @@
 
 Doplnok je navrhnutý tak, aby pridané prečiarknutie pôsobilo ako natívna súčasť Home Assistant:
 * funguje so štandardnými kartami Dlaždica bez ich nahradenia a zachováva vzhľad, správanie, farby, rozmery a interakcie;
+* podporuje aj `Mushroom Template Card`; karta musí mať nastavené `entity`, aby plugin mohol určiť jej stav;
 * mení iba už vykreslené ikony a iba vtedy, keď chýba natívny variant `-off`;
 * môže voliteľne pridať slabé kruhové pozadie, keď pôvodné pozadie chýba;
 * nemení stavy entít a nezasahuje do fungovania zariadení.

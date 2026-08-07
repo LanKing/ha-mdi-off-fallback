@@ -14,6 +14,7 @@
 
 Tillägget är utformat så att det tillagda snedstrecket ser ut som en inbyggd del av Home Assistant:
 * fungerar med standardkortet Ruta utan att ersätta det och bevarar utseende, beteende, färger, storlekar och interaktioner;
+* stöder även `Mushroom Template Card`; kortet måste ha en `entity` angiven så att pluginet kan avgöra dess tillstånd;
 * ändrar endast redan renderade ikoner och endast när en inbyggd `-off`-variant saknas;
 * kan valfritt lägga till en svag cirkulär bakgrund när den ursprungliga bakgrunden saknas;
 * ändrar inte entiteternas tillstånd och påverkar inte enheternas funktion.

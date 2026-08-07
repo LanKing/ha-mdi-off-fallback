@@ -14,6 +14,7 @@
 
 Viðbótin er hönnuð þannig að skástrikið líti út eins og innbyggður hluti af Home Assistant:
 * virkar með stöðluðum Tile-spjöldum án þess að skipta þeim út og varðveitir útlit, hegðun, liti, stærðir og samskipti;
+* styður einnig `Mushroom Template Card`; kortið verður að hafa `entity` skilgreint svo viðbótin geti ákvarðað stöðu þess;
 * breytir aðeins táknum sem þegar hafa verið birt og aðeins þegar engin innbyggð `-off` útgáfa er til;
 * getur valfrjálst bætt við daufum hringlaga bakgrunni þegar innfæddan bakgrunn vantar;
 * breytir ekki stöðu eininga og hefur ekki áhrif á virkni tækja.
