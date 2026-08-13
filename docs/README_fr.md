@@ -24,6 +24,8 @@ Le plugin est conçu pour que la barre oblique ajoutée ressemble à un élémen
 ### 🛍 Installation via HACS
 ℹ️ [Qu’est-ce que HACS et comment l’installer ?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_fr.md)
 
+🚀 [Essayez d'ajouter le référentiel en utilisant ce lien](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Si votre HA prend en charge ce mode et qu'il fonctionne, cliquez sur **Add** dans la fenêtre qui s'ouvre, puis cliquez sur **Download** dans le coin inférieur droit. Si tout fonctionne, l'installation est terminée et vous pouvez ignorer les étapes d'installation restantes. Allez directement à [Configuration](#configuration).
+
 #### 1. Ajouter ce dépôt à HACS
 L’ajout officiel du plugin à HACS peut prendre plusieurs mois. Il faut donc commencer par ajouter manuellement le dépôt :
 1. Ouvrez HACS.

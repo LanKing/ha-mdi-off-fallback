@@ -24,6 +24,8 @@
 ### 🛍 HACS 経由でインストール
 ℹ️ [HACS とは何ですか？また、どのようにインストールしますか？](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ja.md)
 
+🚀 [このリンクを使用してリポジトリを追加してみてください](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). HA がこのモードをサポートしており、機能する場合は、 **Add** 開いたウィンドウで、 をクリックします。 **Download** 右下隅にあります。 すべてが正常に動作すれば、インストールは完了するため、残りのインストール手順はスキップできます。 直接アクセスしてください [設定](#configuration).
+
 #### 1. このリポジトリを HACS に追加
 プラグインが HACS の標準カタログに追加されるまで数か月かかる場合があるため、最初にこのリポジトリを手動で追加します。
 1. HACS を開きます。

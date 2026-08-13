@@ -24,6 +24,8 @@
 ### 🛍 HACS کے ذریعے تنصیب
 ℹ️ [HACS کیا ہے اور اسے کیسے نصب کیا جائے؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ur.md)
 
+🚀 [اس لنک کا استعمال کرتے ہوئے ذخیرہ کو شامل کرنے کی کوشش کریں۔](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). اگر آپ کا HA اس موڈ کو سپورٹ کرتا ہے اور یہ کام کرتا ہے، تو کلک کریں۔ **Add** کھلنے والی ونڈو میں، پھر کلک کریں۔ **Download** نیچے دائیں کونے میں۔ اگر سب کچھ کام کرتا ہے تو، انسٹالیشن مکمل ہو گئی ہے اور آپ انسٹالیشن کے باقی مراحل کو چھوڑ سکتے ہیں۔ براہ راست پر جائیں۔ [ترتیب](#configuration).
+
 #### 1. اس repository کو HACS میں شامل کریں
 پلگ اِن کو HACS کی سرکاری فہرست میں شامل ہونے میں کئی ماہ لگ سکتے ہیں، اس لیے پہلے یہ repository دستی طور پر HACS میں شامل کریں:
 1. **HACS** کھولیں۔

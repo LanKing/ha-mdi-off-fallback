@@ -24,6 +24,8 @@ Papildinys sukurtas taip, kad pridėtas brūkšnys atrodytų kaip natūrali Home
 ### 🛍 Diegimas per HACS
 ℹ️ [Kas yra HACS ir kaip jį įdiegti?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_lt.md)
 
+🚀 [Pabandykite pridėti saugyklą naudodami šią nuorodą](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Jei jūsų HA palaiko šį režimą ir jis veikia, spustelėkite **Add** atsidariusiame lange, tada spustelėkite **Download** apatiniame dešiniajame kampe. Jei viskas veikia, diegimas baigtas ir galite praleisti likusius diegimo veiksmus. Eikite tiesiai į [Konfigūracija](#configuration).
+
 #### 1. Šios saugyklos pridėjimas prie HACS
 Gali praeiti keli mėnesiai, kol papildinys bus įtrauktas į numatytąjį HACS katalogą, todėl pirmiausia saugyklą pridėkite rankiniu būdu:
 1. Atidarykite HACS.

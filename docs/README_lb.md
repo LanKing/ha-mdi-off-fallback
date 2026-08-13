@@ -24,6 +24,8 @@ De Plugin ass esou entwéckelt, datt de bäigesate Stréch wéi en natierlechen 
 ### 🛍 Installatioun iwwer HACS
 ℹ️ [Wat ass HACS a wéi gëtt et installéiert?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_lb.md)
 
+🚀 [Probéiert de Repository mat dësem Link ze addéieren](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Wann Är HA dëse Modus ënnerstëtzt an et funktionnéiert, klickt **Add** an der Fënster déi opmaacht, klickt dann **Download** am Eck ënnen riets. Wann alles funktionnéiert, ass d'Installatioun fäerdeg an Dir kënnt déi verbleiwen Installatiounsschrëtt iwwersprangen. Gitt direkt op [Konfiguratioun](#configuration).
+
 #### 1. Dëse Repository bei HACS dobäisetzen
 Et ka Méint daueren, bis de Plugin am Standard-HACS-Katalog steet. Dofir muss de Repository fir d'éischt manuell dobäigesat ginn:
 1. Maach HACS op.

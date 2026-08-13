@@ -24,6 +24,8 @@ El complemento está diseñado para que la barra diagonal añadida parezca una p
 ### 🛍 Instalación mediante HACS
 ℹ️ [¿Qué es HACS y cómo se instala?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_es.md)
 
+🚀 [Intente agregar el repositorio usando este enlace](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Si su HA admite este modo y funciona, haga clic en **Add** en la ventana que se abre, luego haga clic **Download** en la esquina inferior derecha. Si todo funciona, la instalación estará completa y podrá omitir los pasos de instalación restantes. Ir directamente a [Configuración](#configuration).
+
 #### 1. Añadir este repositorio a HACS
 La incorporación oficial del complemento a HACS puede tardar meses, por lo que primero es necesario añadir el repositorio manualmente:
 1. Abra HACS.

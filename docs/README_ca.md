@@ -24,6 +24,8 @@ El complement està dissenyat perquè la barra diagonal afegida sembli una part 
 ### 🛍 Instal·lació mitjançant HACS
 ℹ️ [Què és HACS i com s’instal·la?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ca.md)
 
+🚀 [Proveu d'afegir el repositori mitjançant aquest enllaç](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Si el vostre HA admet aquest mode i funciona, feu clic **Add** a la finestra que s'obre i, a continuació, feu clic **Download** a la cantonada inferior dreta. Si tot funciona, la instal·lació s'ha completat i podeu saltar els passos d'instal·lació restants. Aneu directament a [Configuració](#configuration).
+
 #### 1. Afegir aquest repositori a HACS
 La incorporació oficial del complement a HACS pot trigar mesos, així que primer cal afegir el repositori manualment:
 1. Obriu HACS.

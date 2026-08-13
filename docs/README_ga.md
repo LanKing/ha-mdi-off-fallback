@@ -24,6 +24,8 @@ Tá an breiseán deartha ionas go mbeidh an líne bhreise cosúil le cuid dhúch
 ### 🛍 Suiteáil trí HACS
 ℹ️ [Cad é HACS agus conas a shuiteáiltear é?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ga.md)
 
+🚀 [Bain triail as an stór a chur leis an nasc seo](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Má thacaíonn do HA leis an modh seo agus má oibríonn sé, cliceáil **Add** sa fhuinneog a osclaíonn, ansin cliceáil **Download** sa chúinne ag bun ar dheis. Má oibríonn gach rud, tá an suiteáil críochnaithe agus is féidir leat na céimeanna suiteála atá fágtha a scipeáil. Téigh go díreach chuig [Cumraíocht](#configuration).
+
 #### 1. Cuir an stór seo le HACS
 D’fhéadfadh sé míonna a ghlacadh sula gcuirfear an breiseán leis an gcatalóg réamhshocraithe HACS, mar sin cuir an stór seo le HACS de láimh ar dtús:
 1. Oscail HACS.

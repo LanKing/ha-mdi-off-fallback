@@ -24,6 +24,8 @@ Dodatak je napravljen tako da dodato precrtavanje izgleda kao sastavni deo Home 
 ### 🛍 Instalacija preko HACS-a
 ℹ️ [Šta je HACS i kako se instalira?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_sr-Latn.md)
 
+🚀 [Покушајте да додате спремиште користећи ову везу](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ако ваш ХА подржава овај режим и ради, кликните **Add** у прозору који се отвори, а затим кликните **Download** у доњем десном углу. Ако све функционише, инсталација је завршена и можете прескочити преостале кораке инсталације. Иди директно на [Konfiguracija](#configuration).
+
 #### 1. Dodavanje ovog repozitorijuma u HACS
 Uključivanje dodatka u podrazumevani HACS katalog može trajati mesecima, pa prvo ručno dodajte repozitorijum:
 1. Otvorite HACS.

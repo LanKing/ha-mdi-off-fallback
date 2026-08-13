@@ -24,6 +24,8 @@ Il plugin è progettato affinché la barra aggiunta sembri una parte nativa di H
 ### 🛍 Installazione tramite HACS
 ℹ️ [Che cos'è HACS e come si installa?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_it.md)
 
+🚀 [Prova ad aggiungere il repository utilizzando questo collegamento](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Se il tuo HA supporta questa modalità e funziona, fai clic su **Add** nella finestra che si apre, quindi fare clic su **Download** nell'angolo in basso a destra. Se tutto funziona, l'installazione è completa e puoi saltare i restanti passaggi di installazione. Vai direttamente a [Configurazione](#configuration).
+
 #### 1. Aggiunta di questo repository a HACS
 Potrebbero trascorrere mesi prima che il plugin venga aggiunto al catalogo HACS predefinito, quindi aggiungi prima manualmente questo repository:
 1. Apri HACS.

@@ -24,6 +24,8 @@ Programtillegget er laget slik at den ekstra skråstreken ser ut som en innebygd
 ### 🛍 Installasjon via HACS
 ℹ️ [Hva er HACS, og hvordan installerer jeg det?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_nb.md)
 
+🚀 [Prøv å legge til depotet ved å bruke denne lenken](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Hvis din HA støtter denne modusen og den fungerer, klikk **Add** i vinduet som åpnes, og klikk deretter **Download** nederst til høyre. Hvis alt fungerer, er installasjonen fullført og du kan hoppe over de gjenværende installasjonstrinnene. Gå direkte til [Konfigurasjon](#configuration).
+
 #### 1. Legg dette repositoriet til i HACS
 Det kan ta flere måneder før programtillegget blir lagt til i den offisielle HACS-katalogen, så først må du legge repositoriet til manuelt:
 1. Åpne HACS.

@@ -24,6 +24,8 @@ La kromprogramo estas farita tiel, ke la aldonita streko aspektu kiel denaska pa
 ### 🛍 Instalado per HACS
 ℹ️ [Kio estas HACS kaj kiel instali ĝin?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_eo.md)
 
+🚀 [Provu aldoni la deponejon per ĉi tiu ligo](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Se via HA subtenas ĉi tiun reĝimon kaj ĝi funkcias, alklaku **Add** en la fenestro kiu malfermiĝas, tiam alklaku **Download** en la malsupra dekstra angulo. Se ĉio funkcias, instalo estas kompleta kaj vi povas salti la ceterajn instalajn paŝojn. Iru rekte al [Agordo](#configuration).
+
 #### 1. Aldonu ĉi tiun deponejon al HACS
 Povas pasi monatoj antaŭ ol la kromprogramo estos oficiale aldonita al HACS, do unue aldonu la deponejon permane:
 1. Malfermu HACS.

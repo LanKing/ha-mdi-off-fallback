@@ -24,6 +24,8 @@ Shtojca është ndërtuar që vija e shtuar të duket si pjesë vendase e Home A
 ### 🛍 Instalimi përmes HACS
 ℹ️ [Çfarë është HACS dhe si instalohet?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_sq.md)
 
+🚀 [Provoni të shtoni depon duke përdorur këtë lidhje](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Nëse HA juaj e mbështet këtë mënyrë dhe funksionon, klikoni **Add** në dritaren që hapet, pastaj klikoni **Download** në këndin e poshtëm djathtas. Nëse gjithçka funksionon, instalimi ka përfunduar dhe mund të kaloni hapat e mbetur të instalimit. Shkoni direkt në [Konfigurimi](#configuration).
+
 #### 1. Shtimi i këtij repozitori në HACS
 Mund të duhen muaj që shtojca të futet në katalogun standard të HACS, prandaj fillimisht shtoni repozitorin manualisht:
 1. Hapni HACS.

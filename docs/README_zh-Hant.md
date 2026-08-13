@@ -24,6 +24,8 @@
 ### 🛍 透過 HACS 安裝
 ℹ️ [什麼是 HACS？如何安裝？](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_zh-Hant.md)
 
+🚀 [嘗試使用此連結新增儲存庫](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). 如果您的 HA 支援此模式並且可以正常運作，請按一下 **Add** 在打開的視窗中，然後按一下 **Download** 在右下角。 如果一切正常，則安裝完成，您可以跳過剩餘的安裝步驟。 直接前往 [設定](#configuration).
+
 #### 1. 將此儲存庫新增至 HACS
 外掛程式加入 HACS 預設目錄可能需要數個月，因此請先手動新增此儲存庫：
 1. 開啟 HACS。

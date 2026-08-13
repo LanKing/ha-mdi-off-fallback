@@ -24,6 +24,8 @@ Doplnok je navrhnutý tak, aby pridané prečiarknutie pôsobilo ako natívna s�
 ### 🛍 Inštalácia cez HACS
 ℹ️ [Čo je HACS a ako ho nainštalovať?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_sk.md)
 
+🚀 [Skúste pridať úložisko pomocou tohto odkazu](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ak váš HA podporuje tento režim a funguje, kliknite **Add** v okne, ktoré sa otvorí, potom kliknite **Download** v pravom dolnom rohu. Ak všetko funguje, inštalácia je dokončená a zostávajúce kroky inštalácie môžete preskočiť. Prejdite priamo na [Konfigurácia](#configuration).
+
 #### 1. Pridanie tohto repozitára do HACS
 Zaradenie doplnku do predvoleného katalógu HACS môže trvať niekoľko mesiacov, preto najprv pridajte repozitár ručne:
 1. Otvorte HACS.

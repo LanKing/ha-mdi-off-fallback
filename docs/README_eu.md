@@ -24,6 +24,8 @@ Plugina barra diagonala Home Assistant-en jatorrizko zati baten moduan agertzeko
 ### 🛍 HACS bidezko instalazioa
 ℹ️ [Zer da HACS eta nola instalatzen da?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_eu.md)
 
+🚀 [Saiatu biltegia gehitzen esteka hau erabiliz](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Zure HAk modu hau onartzen badu eta funtzionatzen badu, egin klik **Add** irekitzen den leihoan, eta egin klik **Download** beheko eskuineko izkinan. Dena funtzionatzen badu, instalazioa amaitu da eta gainerako instalazio-urratsak salta ditzakezu. Joan zuzenean [Konfigurazioa](#configuration).
+
 #### 1. Biltegi hau HACS-era gehitzea
 Plugina HACS-en ofizialki gehitzeak hilabeteak iraun ditzake, beraz lehenik biltegia eskuz gehitu behar da:
 1. Ireki HACS.

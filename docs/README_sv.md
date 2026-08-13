@@ -24,6 +24,8 @@ Tillägget är utformat så att det tillagda snedstrecket ser ut som en inbyggd 
 ### 🛍 Installation via HACS
 ℹ️ [Vad är HACS och hur installerar jag det?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_sv.md)
 
+🚀 [Försök att lägga till arkivet med den här länken](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Om din HA stöder detta läge och det fungerar, klicka på **Add** i fönstret som öppnas och klicka sedan **Download** i det nedre högra hörnet. Om allt fungerar är installationen klar och du kan hoppa över de återstående installationsstegen. Gå direkt till [Konfiguration](#configuration).
+
 #### 1. Lägg till detta arkiv i HACS
 Det kan ta flera månader innan tillägget läggs till i HACS standardkatalog, så lägg först till arkivet manuellt:
 1. Öppna HACS.

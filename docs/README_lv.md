@@ -24,6 +24,8 @@ Spraudnis ir izstrādāts tā, lai pievienotā svītra izskatītos kā dabiska H
 ### 🛍 Instalēšana ar HACS
 ℹ️ [Kas ir HACS un kā to instalēt?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_lv.md)
 
+🚀 [Mēģiniet pievienot repozitoriju, izmantojot šo saiti](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ja jūsu HA atbalsta šo režīmu un tas darbojas, noklikšķiniet **Add** atvērtajā logā, pēc tam noklikšķiniet uz **Download** apakšējā labajā stūrī. Ja viss darbojas, instalēšana ir pabeigta, un jūs varat izlaist atlikušās instalēšanas darbības. Dodieties tieši uz [Konfigurācija](#configuration).
+
 #### 1. Šī repozitorija pievienošana HACS
 Var paiet vairāki mēneši, līdz spraudnis tiks pievienots noklusējuma HACS katalogam, tāpēc vispirms pievienojiet repozitoriju manuāli:
 1. Atveriet HACS.

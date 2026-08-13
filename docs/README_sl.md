@@ -24,6 +24,8 @@ Vtičnik je zasnovan tako, da dodano prečrtanje deluje kot izvorni del Home Ass
 ### 🛍 Namestitev prek HACS
 ℹ️ [Kaj je HACS in kako ga namestim?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_sl.md)
 
+🚀 [Poskusite dodati repozitorij s to povezavo](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Če vaš HA podpira ta način in deluje, kliknite **Add** v oknu, ki se odpre, nato kliknite **Download** v spodnjem desnem kotu. Če vse deluje, je namestitev končana in lahko preskočite preostale korake namestitve. Pojdite neposredno na [Konfiguracija](#configuration).
+
 #### 1. Dodajanje tega repozitorija v HACS
 Dodajanje vtičnika v privzeti katalog HACS lahko traja več mesecev, zato najprej ročno dodajte repozitorij:
 1. Odprite HACS.

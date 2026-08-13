@@ -24,6 +24,8 @@ Plugin dirancang agar garis yang ditambahkan terlihat seperti bagian bawaan Home
 ### 🛍 Instalasi melalui HACS
 ℹ️ [Apa itu HACS dan bagaimana cara memasangnya?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_id.md)
 
+🚀 [Coba tambahkan repositori menggunakan tautan ini](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Jika HA Anda mendukung mode ini dan berfungsi, klik **Add** di jendela yang terbuka, lalu klik **Download** di pojok kanan bawah. Jika semuanya berfungsi, instalasi selesai dan Anda dapat melewati langkah instalasi selanjutnya. Langsung ke [Konfigurasi](#configuration).
+
 #### 1. Menambahkan repositori ini ke HACS
 Diperlukan waktu berbulan-bulan sebelum plugin ditambahkan ke katalog HACS bawaan, jadi tambahkan repositori ini secara manual terlebih dahulu:
 1. Buka HACS.

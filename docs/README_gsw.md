@@ -24,6 +24,8 @@ S Plugin isch so gmacht, dass dr zuegfügti Schrägstrich wie en native Teil vo 
 ### 🛍 Installation über HACS
 ℹ️ [Was isch HACS und wie installiert mer s?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_gsw.md)
 
+🚀 [Versuchen Sie, das Repository über diesen Link hinzuzufügen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Wenn Ihr HA diesen Modus unterstützt und er funktioniert, klicken Sie auf **Add** Klicken Sie im sich öffnenden Fenster auf **Download** in der unteren rechten Ecke. Wenn alles funktioniert, ist die Installation abgeschlossen und Sie können die restlichen Installationsschritte überspringen. Gehen Sie direkt zu [Konfiguration](#configuration).
+
 #### 1. Das Repository zu HACS hinzufüege
 Bis s Plugin im standardmässige HACS-Katalog isch, chönd Monet vergah. Drum muesch s Repository zerscht manuell hinzufüege:
 1. Öffne HACS.

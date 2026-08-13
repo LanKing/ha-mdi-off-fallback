@@ -24,6 +24,8 @@ Pistikprogramm on loodud nii, et lisatud kaldkriips näeks välja Home Assistant
 ### 🛍 Paigaldamine HACS-i kaudu
 ℹ️ [Mis on HACS ja kuidas seda paigaldada?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_et.md)
 
+🚀 [Proovige hoidla selle lingi abil lisada](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Kui teie HA toetab seda režiimi ja see töötab, klõpsake **Add** avanevas aknas, seejärel klõpsake nuppu **Download** alumises paremas nurgas. Kui kõik töötab, on installimine lõppenud ja võite ülejäänud installietapid vahele jätta. Minge otse aadressile [Seadistamine](#configuration).
+
 #### 1. Selle hoidla lisamine HACS-i
 Pistikprogrammi ametlik lisamine HACS-i võib võtta kuid, seega tuleb hoidla esmalt käsitsi lisada:
 1. Avage HACS.

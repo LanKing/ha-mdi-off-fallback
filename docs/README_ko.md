@@ -24,6 +24,8 @@
 ### 🛍 HACS를 통한 설치
 ℹ️ [HACS란 무엇이며 어떻게 설치하나요?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ko.md)
 
+🚀 [이 링크를 사용하여 저장소를 추가해 보세요.](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). HA가 이 모드를 지원하고 작동하는 경우 **Add** 열리는 창에서 다음을 클릭하세요. **Download** 오른쪽 하단에 있습니다. 모든 것이 작동하면 설치가 완료된 것이며 나머지 설치 단계를 건너뛸 수 있습니다. 직접 이동 [구성](#configuration).
+
 #### 1. 이 저장소를 HACS에 추가
 플러그인이 기본 HACS 카탈로그에 추가되기까지 몇 달이 걸릴 수 있으므로 먼저 저장소를 수동으로 추가해야 합니다.
 1. HACS를 엽니다.
