@@ -24,7 +24,7 @@
 ### 🛍 התקנה באמצעות HACS
 ℹ️ [מהו HACS וכיצד מתקינים אותו?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_he.md)
 
-🚀 [נסה להוסיף את המאגר באמצעות הקישור הזה](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). אם ה-HA שלך תומך במצב זה וזה עובד, לחץ **Add** בחלון שנפתח ולאחר מכן לחץ **Download** בפינה הימנית התחתונה. אם הכל עובד, ההתקנה הושלמה ותוכל לדלג על שלבי ההתקנה הנותרים. עבור ישירות אל [הגדרה](#configuration).
+🚀 [נסו להוסיף את המאגר באמצעות הקישור הזה](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). אם השיטה הזו נתמכת ב-HA שלכם ועובדת, לחצו על **Add** בחלון שנפתח ולאחר מכן על **Download** בפינה הימנית התחתונה. אם הכול הצליח, ההתקנה הושלמה ואפשר לדלג על שאר שלבי ההתקנה. עברו ישירות אל [הגדרה](#configuration).
 
 #### 1. הוספת המאגר הזה ל-HACS
 ייתכן שיחלפו חודשים עד שהתוסף יתווסף לקטלוג ברירת המחדל של HACS, ולכן תחילה יש להוסיף את המאגר ידנית:

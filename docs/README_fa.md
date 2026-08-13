@@ -24,7 +24,7 @@
 ### 🛍 نصب از طریق HACS
 ℹ️ [HACS چیست و چگونه نصب می‌شود؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_fa.md)
 
-🚀 [با استفاده از این لینک، مخزن را اضافه کنید](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). اگر HA شما از این حالت پشتیبانی می کند و کار می کند، کلیک کنید **Add** در پنجره باز شده کلیک کنید **Download** در گوشه پایین سمت راست اگر همه چیز کار کرد، نصب کامل شده است و می توانید مراحل نصب باقی مانده را رد کنید. مستقیم به [پیکربندی](#configuration).
+🚀 [سعی کنید مخزن را با این پیوند اضافه کنید](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). اگر این روش در HA شما پشتیبانی می‌شود و کار می‌کند، در پنجره بازشده روی **Add** و سپس در گوشه پایین راست روی **Download** کلیک کنید. اگر همه‌چیز درست انجام شد، نصب کامل است و می‌توانید مراحل باقی‌مانده را رد کنید. مستقیماً به [پیکربندی](#configuration) بروید.
 
 #### 1. افزودن این مخزن به HACS
 ممکن است اضافه‌شدن رسمی افزونه به HACS چند ماه طول بکشد، بنابراین ابتدا مخزن را به‌صورت دستی اضافه کنید:

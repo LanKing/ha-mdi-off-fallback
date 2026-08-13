@@ -24,7 +24,7 @@ Plugin được thiết kế để đường gạch chéo bổ sung trông như 
 ### 🛍 Cài đặt qua HACS
 ℹ️ [HACS là gì và cài đặt như thế nào?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_vi.md)
 
-🚀 [Hãy thử thêm kho lưu trữ bằng liên kết này](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Nếu HA của bạn hỗ trợ chế độ này và nó hoạt động, hãy nhấp vào **Add** trong cửa sổ mở ra, sau đó nhấp vào **Download** ở góc dưới bên phải. Nếu mọi thứ đều hoạt động, quá trình cài đặt đã hoàn tất và bạn có thể bỏ qua các bước cài đặt còn lại. Đi thẳng đến [Cấu hình](#configuration).
+🚀 [Thử thêm repository bằng liên kết này](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Nếu cách này được HA của bạn hỗ trợ và hoạt động, hãy nhấn **Add** trong cửa sổ mở ra, sau đó nhấn **Download** ở góc dưới bên phải. Nếu mọi thứ thành công, quá trình cài đặt đã hoàn tất và bạn có thể bỏ qua các bước còn lại. Đi thẳng đến [Cấu hình](#configuration).
 
 #### 1. Thêm kho lưu trữ này vào HACS
 Có thể mất nhiều tháng để plugin được thêm vào danh mục HACS mặc định, vì vậy trước tiên hãy thêm kho lưu trữ theo cách thủ công:

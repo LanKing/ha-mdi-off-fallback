@@ -24,7 +24,7 @@ Pluginul este conceput astfel încât bara adăugată să pară o parte nativă 
 ### 🛍 Instalare prin HACS
 ℹ️ [Ce este HACS și cum se instalează?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ro.md)
 
-🚀 [Încercați să adăugați depozitul folosind acest link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Dacă HA dvs. acceptă acest mod și funcționează, faceți clic **Add** în fereastra care se deschide, apoi faceți clic **Download** în colțul din dreapta jos. Dacă totul funcționează, instalarea este completă și puteți sări peste pașii de instalare rămași. Du-te direct la [Configurare](#configuration).
+🚀 [Încercați să adăugați depozitul folosind acest link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Dacă această metodă este acceptată de HA-ul dvs. și funcționează, apăsați **Add** în fereastra care se deschide, apoi **Download** în colțul din dreapta jos. Dacă totul a reușit, instalarea este finalizată și puteți omite pașii rămași. Mergeți direct la [Configurare](#configuration).
 
 #### 1. Adăugarea acestui depozit în HACS
 Poate dura luni până când pluginul va fi inclus în catalogul implicit HACS, așa că mai întâi adăugați manual acest depozit:

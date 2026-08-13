@@ -24,7 +24,7 @@ Wtyczka została zaprojektowana tak, aby dodane przekreślenie wyglądało jak n
 ### 🛍 Instalacja przez HACS
 ℹ️ [Czym jest HACS i jak go zainstalować?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_pl.md)
 
-🚀 [Spróbuj dodać repozytorium za pomocą tego linku](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Jeśli Twój HA obsługuje ten tryb i działa, kliknij **Add** w oknie, które zostanie otwarte, a następnie kliknij **Download** w prawym dolnym rogu. Jeśli wszystko działa, instalacja została zakończona i możesz pominąć pozostałe kroki instalacji. Przejdź bezpośrednio do [Konfiguracja](#configuration).
+🚀 [Spróbuj dodać repozytorium za pomocą tego linku](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Jeśli ten sposób jest obsługiwany przez Twój HA i działa, kliknij **Add** w otwartym oknie, a następnie **Download** w prawym dolnym rogu. Jeśli wszystko się udało, instalacja jest zakończona i możesz pominąć pozostałe kroki instalacji. Przejdź od razu do [Konfiguracja](#configuration).
 
 #### 1. Dodawanie tego repozytorium do HACS
 Dodanie wtyczki do domyślnego katalogu HACS może potrwać kilka miesięcy, dlatego najpierw dodaj repozytorium ręcznie:

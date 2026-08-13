@@ -24,7 +24,7 @@
 ### 🛍 การติดตั้งผ่าน HACS
 ℹ️ [HACS คืออะไรและติดตั้งอย่างไร?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_th.md)
 
-🚀 [ลองเพิ่มพื้นที่เก็บข้อมูลโดยใช้ลิงก์นี้](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). หาก HA ของคุณรองรับโหมดนี้และใช้งานได้ ให้คลิก **Add** ในหน้าต่างที่เปิดขึ้น จากนั้นคลิก **Download** ที่มุมขวาล่าง หากทุกอย่างใช้งานได้ แสดงว่าการติดตั้งเสร็จสมบูรณ์ และคุณสามารถข้ามขั้นตอนการติดตั้งที่เหลือได้ ตรงไป [การกำหนดค่า](#configuration).
+🚀 [ลองเพิ่ม repository ผ่านลิงก์นี้](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin) หาก HA ของคุณรองรับวิธีนี้และใช้งานได้ ให้กด **Add** ในหน้าต่างที่เปิดขึ้น แล้วกด **Download** ที่มุมขวาล่าง หากทุกอย่างสำเร็จ การติดตั้งเสร็จสิ้นและสามารถข้ามขั้นตอนที่เหลือได้ ไปที่ [การกำหนดค่า](#configuration) ได้เลย
 
 #### 1. เพิ่มที่เก็บนี้ใน HACS
 การเพิ่มปลั๊กอินนี้ลงในแค็ตตาล็อก HACS อย่างเป็นทางการอาจใช้เวลาหลายเดือน ดังนั้นก่อนอื่นให้เพิ่มที่เก็บนี้ใน HACS ด้วยตนเอง:

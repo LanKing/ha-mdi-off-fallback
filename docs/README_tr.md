@@ -24,7 +24,7 @@ Eklenti, eklenen çizginin Home Assistant'ın yerleşik bir parçası gibi gör�
 ### 🛍 HACS üzerinden kurulum
 ℹ️ [HACS nedir ve nasıl kurulur?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_tr.md)
 
-🚀 [Bu bağlantıyı kullanarak depoyu eklemeyi deneyin](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). HA'nız bu modu destekliyorsa ve çalışıyorsa, **Add** Açılan pencerede, ardından tıklayın **Download** sağ alt köşede. Her şey yolunda giderse kurulum tamamlanmıştır ve kalan kurulum adımlarını atlayabilirsiniz. Doğrudan şuraya git: [Yapılandırma](#configuration).
+🚀 [Depoyu bu bağlantı üzerinden eklemeyi deneyin](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Bu yöntem HA'nız tarafından destekleniyor ve çalışıyorsa açılan pencerede **Add**, ardından sağ altta **Download** düğmesine tıklayın. Her şey başarılı olduysa kurulum tamamlanmıştır ve kalan kurulum adımlarını atlayabilirsiniz. Doğrudan [Yapılandırma](#configuration) bölümüne gidin.
 
 #### 1. Bu depoyu HACS'e ekleme
 Eklentinin varsayılan HACS kataloğuna eklenmesi aylar sürebilir. Bu nedenle önce depoyu elle ekleyin:

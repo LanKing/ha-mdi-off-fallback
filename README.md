@@ -25,7 +25,7 @@ The plugin is designed so that the added slash looks like a native part of Home 
 ### 🛍 Installation via HACS
 ℹ️ [What is HACS and how do I install it?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/README.md)
 
-🚀 [Try adding the repository using this link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). If your HA supports this mode and it works, click **Add** in the window that opens, then click **Download** in the bottom-right corner. If everything works, installation is complete and you can skip the remaining installation steps. Go directly to [Configuration](#configuration).
+🚀 [Try adding the repository using this link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). If this mode is supported in your HA and it works, click **Add** in the window that opens, then click **Download** in the bottom-right corner. If everything works, installation is complete and you can skip the remaining installation steps. Go directly to [Configuration](#configuration).
 
 #### 1. Add this repository to HACS
 It may take months for the plugin to be added to the default HACS catalog (we are waiting), so first add this repository to HACS manually:

@@ -24,7 +24,7 @@ Lisäosa on toteutettu niin, että lisätty vinoviiva näyttää Home Assistanti
 ### 🛍 Asennus HACS:n kautta
 ℹ️ [Mikä HACS on ja miten se asennetaan?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_fi.md)
 
-🚀 [Yritä lisätä arkisto tämän linkin avulla](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Jos HA tukee tätä tilaa ja se toimii, napsauta **Add** avautuvassa ikkunassa ja napsauta sitten **Download** oikeassa alakulmassa. Jos kaikki toimii, asennus on valmis ja voit ohittaa muut asennusvaiheet. Siirry suoraan osoitteeseen [Määritys](#configuration).
+🚀 [Kokeile lisätä repository tämän linkin kautta](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Jos HA tukee tätä tapaa ja se toimii, napsauta avautuvassa ikkunassa **Add** ja sen jälkeen oikeasta alakulmasta **Download**. Jos kaikki onnistui, asennus on valmis ja voit ohittaa loput asennusvaiheet. Siirry suoraan kohtaan [Määritys](#configuration).
 
 #### 1. Tämän tietovaraston lisääminen HACS:iin
 Lisäosan virallinen lisääminen HACS:iin voi kestää kuukausia, joten tietovarasto on ensin lisättävä käsin:

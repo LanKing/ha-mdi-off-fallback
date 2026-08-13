@@ -24,7 +24,7 @@ De plug-in is zo ontworpen dat de toegevoegde schuine streep eruitziet als een s
 ### 🛍 Installatie via HACS
 ℹ️ [Wat is HACS en hoe installeer ik het?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_nl.md)
 
-🚀 [Probeer de repository toe te voegen via deze link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Als uw HA deze modus ondersteunt en deze werkt, klik dan op **Add** in het venster dat wordt geopend en klik vervolgens op **Download** in de rechterbenedenhoek. Als alles werkt, is de installatie voltooid en kunt u de resterende installatiestappen overslaan. Ga direct naar [Configuratie](#configuration).
+🚀 [Probeer de repository via deze link toe te voegen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Als deze methode door je HA wordt ondersteund en werkt, klik je in het geopende venster op **Add** en daarna rechtsonder op **Download**. Als alles is gelukt, is de installatie voltooid en kun je de resterende installatiestappen overslaan. Ga direct naar [Configuratie](#configuration).
 
 #### 1. Deze repository aan HACS toevoegen
 Het kan maanden duren voordat de plug-in aan de standaard HACS-catalogus wordt toegevoegd. Voeg daarom eerst deze repository handmatig toe:

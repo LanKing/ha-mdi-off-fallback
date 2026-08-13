@@ -24,7 +24,7 @@ O plugin foi desenvolvido para que o traço adicionado pareça uma parte nativa 
 ### 🛍 Instalação pelo HACS
 ℹ️ [O que é o HACS e como instalá-lo?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_pt-BR.md)
 
-🚀 [Tente adicionar o repositório usando este link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Se o seu HA suportar este modo e funcionar, clique em **Add** na janela que se abre e clique em **Download** no canto inferior direito. Se tudo funcionar, a instalação estará concluída e você poderá pular as etapas restantes da instalação. Vá diretamente para [Configuração](#configuration).
+🚀 [Tente adicionar o repositório por este link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Se esse método for compatível com o seu HA e funcionar, clique em **Add** na janela que abrir e depois em **Download** no canto inferior direito. Se tudo der certo, a instalação estará concluída e você poderá pular as etapas restantes. Vá direto para [Configuração](#configuration).
 
 #### 1. Adicionar este repositório ao HACS
 A inclusão do plugin no catálogo padrão do HACS pode levar meses. Por isso, adicione primeiro este repositório manualmente:

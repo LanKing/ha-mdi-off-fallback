@@ -24,7 +24,7 @@ Die inprop is ontwerp sodat die bygevoegde skuinsstreep soos ’n ingeboude deel
 ### 🛍 Installasie via HACS
 ℹ️ [Wat is HACS en hoe installeer ek dit?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_af.md)
 
-🚀 [Probeer om die bewaarplek by te voeg deur hierdie skakel te gebruik](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). As jou HA hierdie modus ondersteun en dit werk, klik **Add** in die venster wat oopmaak, klik dan **Download** in die onderste regterhoek. As alles werk, is die installasie voltooi en jy kan die oorblywende installasiestappe oorslaan. Gaan direk na [Opstelling](#configuration).
+🚀 [Probeer om die repository via hierdie skakel by te voeg](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). As hierdie modus in jou HA ondersteun word en dit werk, klik **Add** in die venster wat oopmaak en daarna **Download** regs onder. As alles werk, is die installasie voltooi en kan jy die oorblywende installasiestappe oorslaan. Gaan direk na [Opstelling](#configuration).
 
 #### 1. Voeg hierdie bewaarplek by HACS
 Dit kan maande neem voordat die inprop amptelik by HACS gevoeg word, daarom moet die bewaarplek aanvanklik handmatig by HACS gevoeg word:

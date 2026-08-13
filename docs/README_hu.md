@@ -24,7 +24,7 @@ A bővítmény úgy készült, hogy a hozzáadott áthúzás a Home Assistant te
 ### 🛍 Telepítés HACS segítségével
 ℹ️ [Mi az a HACS, és hogyan telepíthető?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_hu.md)
 
-🚀 [Próbálja meg hozzáadni a tárolót ezzel a hivatkozással](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ha a HA támogatja ezt a módot, és működik, kattintson **Add** a megnyíló ablakban, majd kattintson a gombra **Download** a jobb alsó sarokban. Ha minden működik, a telepítés befejeződött, és kihagyhatja a többi telepítési lépést. Menjen közvetlenül a címre [Konfiguráció](#configuration).
+🚀 [Próbáld meg hozzáadni a tárolót ezzel a hivatkozással](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ha ezt a módot támogatja a HA-d és működik, kattints a megnyíló ablakban az **Add**, majd jobb alul a **Download** gombra. Ha minden sikerült, a telepítés kész, a hátralévő lépések kihagyhatók. Lépj közvetlenül ide: [Konfiguráció](#configuration).
 
 #### 1. A tároló hozzáadása a HACS-hoz
 Hónapokba telhet, mire a bővítmény bekerül az alapértelmezett HACS-katalógusba, ezért először kézzel add hozzá ezt a tárolót:

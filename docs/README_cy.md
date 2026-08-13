@@ -24,7 +24,7 @@ Mae’r ategyn wedi’i gynllunio fel bod y llinell groes ychwanegol yn edrych f
 ### 🛍 Gosod drwy HACS
 ℹ️ [Beth yw HACS a sut mae ei osod?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_cy.md)
 
-🚀 [Ceisiwch ychwanegu'r ystorfa gan ddefnyddio'r ddolen hon](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Os yw'ch HA yn cefnogi'r modd hwn a'i fod yn gweithio, cliciwch **Add** yn y ffenestr sy'n agor, yna cliciwch **Download** yn y gornel dde isaf. Os yw popeth yn gweithio, mae'r gosodiad wedi'i gwblhau a gallwch hepgor y camau gosod sy'n weddill. Ewch yn syth i [Ffurfweddu](#configuration).
+🚀 [Rhowch gynnig ar ychwanegu'r ystorfa drwy'r ddolen hon](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Os yw'r modd hwn yn cael ei gefnogi yn eich HA ac yn gweithio, cliciwch **Add** yn y ffenestr sy'n agor ac yna **Download** yn y gornel dde isaf. Os yw popeth wedi gweithio, mae'r gosodiad wedi'i gwblhau a gallwch hepgor gweddill y camau gosod. Ewch yn syth i [Ffurfweddu](#configuration).
 
 #### 1. Ychwanegu’r ystorfa hon at HACS
 Gall gymryd misoedd cyn i’r ategyn gael ei ychwanegu’n swyddogol at HACS, felly ychwanegwch yr ystorfa â llaw yn gyntaf:

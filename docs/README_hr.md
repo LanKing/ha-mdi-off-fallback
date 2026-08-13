@@ -24,7 +24,7 @@ Dodatak je napravljen tako da dodana crta izgleda kao izvorni dio Home Assistant
 ### 🛍 Instalacija putem HACS-a
 ℹ️ [Što je HACS i kako ga instalirati?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_hr.md)
 
-🚀 [Pokušajte dodati spremište pomoću ove veze](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ako vaš HA podržava ovaj način rada i radi, kliknite **Add** u prozoru koji se otvori, a zatim kliknite **Download** u donjem desnom kutu. Ako sve radi, instalacija je dovršena i možete preskočiti preostale korake instalacije. Idi izravno na [Konfiguracija](#configuration).
+🚀 [Pokušajte dodati repozitorij putem ove poveznice](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ako je ovaj način podržan u vašem HA i radi, kliknite **Add** u otvorenom prozoru, a zatim **Download** u donjem desnom kutu. Ako je sve uspjelo, instalacija je dovršena i preostale korake možete preskočiti. Idite izravno na [Konfiguracija](#configuration).
 
 #### 1. Dodavanje ovog repozitorija u HACS
 Može proći nekoliko mjeseci prije nego što dodatak bude dodan u zadani HACS katalog, zato prvo ručno dodajte ovaj repozitorij:

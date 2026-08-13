@@ -24,7 +24,7 @@ De plugin is sa makke dat de tafoege streek as in natuerlik ûnderdiel fan Home 
 ### 🛍 Ynstallaasje fia HACS
 ℹ️ [Wat is HACS en hoe wurdt it ynstallearre?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_fy.md)
 
-🚀 [Besykje it repository ta te foegjen mei dizze keppeling](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). As jo ​​HA dizze modus stipet en it wurket, klik dan **Add** yn it finster dat iepent, klik dan **Download** yn 'e hoek rjochts ûnder. As alles wurket, is de ynstallaasje foltôge en kinne jo de oerbleaune ynstallaasjestappen oerslaan. Gean direkt nei [Konfiguraasje](#configuration).
+🚀 [Besykje it repository fia dizze keppeling ta te foegjen](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). As dizze metoade troch dyn HA stipe wurdt en wurket, klik dan op **Add** yn it finster dat iepenet en dêrnei op **Download** rjochtsûnder. As alles slagge is, is de ynstallaasje klear en kinst de oerbleaune stappen oerslaan. Gean direkt nei [Konfiguraasje](#configuration).
 
 #### 1. Dizze repository oan HACS tafoegje
 It kin moannen duorje foardat de plugin offisjeel oan HACS tafoege wurdt, dus foegje de repository earst hânmjittich ta:

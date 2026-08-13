@@ -24,7 +24,7 @@
 ### 🛍 Տեղադրում HACS-ի միջոցով
 ℹ️ [Ի՞նչ է HACS-ը և ինչպե՞ս տեղադրել այն։](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_hy.md)
 
-🚀 [Փորձեք ավելացնել պահեստը՝ օգտագործելով այս հղումը](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Եթե ​​ձեր HA-ն աջակցում է այս ռեժիմին և այն աշխատում է, սեղմեք **Add** բացվող պատուհանում, ապա սեղմեք **Download** ներքևի աջ անկյունում: Եթե ​​ամեն ինչ աշխատում է, տեղադրումն ավարտված է, և դուք կարող եք բաց թողնել տեղադրման մնացած քայլերը: Անցեք ուղիղ դեպի [Կարգավորում](#configuration).
+🚀 [Փորձեք պահոցը ավելացնել այս հղումով](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin)։ Եթե այս եղանակը աջակցվում է ձեր HA-ում և աշխատում է, բացված պատուհանում սեղմեք **Add**, ապա ներքևի աջ անկյունում՝ **Download**։ Եթե ամեն ինչ հաջող է, տեղադրումն ավարտված է և մնացած քայլերը կարող եք բաց թողնել։ Անցեք անմիջապես [Կարգավորում](#configuration) բաժին։
 
 #### 1. Այս պահոցի ավելացումը HACS-ում
 Հավելումը HACS-ի լռելյայն կատալոգում հայտնվելու համար կարող են ամիսներ պահանջվել, ուստի նախ ձեռքով ավելացրեք այս պահոցը․

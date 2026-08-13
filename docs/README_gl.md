@@ -24,7 +24,7 @@ O complemento está deseñado para que a barra engadida pareza unha parte nativa
 ### 🛍 Instalación mediante HACS
 ℹ️ [Que é HACS e como se instala?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_gl.md)
 
-🚀 [Proba a engadir o repositorio usando esta ligazón](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Se o teu HA admite este modo e funciona, fai clic **Add** na xanela que se abre e, a continuación, fai clic **Download** na esquina inferior dereita. Se todo funciona, a instalación está completa e podes omitir os pasos de instalación restantes. Vaia directamente a [Configuración](#configuration).
+🚀 [Proba a engadir o repositorio mediante esta ligazón](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Se este método é compatible co teu HA e funciona, preme **Add** na xanela que se abre e despois **Download** na esquina inferior dereita. Se todo foi ben, a instalación está rematada e podes omitir os pasos restantes. Vai directamente a [Configuración](#configuration).
 
 #### 1. Engadir este repositorio a HACS
 Pode pasar meses antes de que o complemento se engada ao catálogo predeterminado de HACS, polo que primeiro debes engadir este repositorio manualmente:

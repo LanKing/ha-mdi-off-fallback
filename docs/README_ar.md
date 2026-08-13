@@ -24,7 +24,7 @@
 ### 🛍 التثبيت عبر HACS
 ℹ️ [ما هو HACS وكيف يمكن تثبيته؟](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_ar.md)
 
-🚀 [حاول إضافة المستودع باستخدام هذا الرابط](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). إذا كان HA الخاص بك يدعم هذا الوضع ويعمل، فانقر فوق **Add** في النافذة التي تفتح، ثم انقر فوق **Download** في الزاوية اليمنى السفلية. إذا كان كل شيء يعمل، فهذا يعني أن التثبيت قد اكتمل ويمكنك تخطي خطوات التثبيت المتبقية. اذهب مباشرة الى [الإعداد](#configuration).
+🚀 [جرّب إضافة المستودع باستخدام هذا الرابط](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). إذا كان هذا الوضع مدعومًا في HA لديك ونجح، فانقر على **Add** في النافذة التي تفتح، ثم على **Download** في الزاوية السفلية اليمنى. إذا نجح كل شيء، فقد اكتمل التثبيت ويمكنك تخطي بقية خطوات التثبيت. انتقل مباشرة إلى [الإعداد](#configuration).
 
 #### 1. إضافة هذا المستودع إلى HACS
 قد يستغرق إدراج الإضافة رسميًا في HACS عدة أشهر، لذلك يجب أولًا إضافة المستودع يدويًا إلى HACS:

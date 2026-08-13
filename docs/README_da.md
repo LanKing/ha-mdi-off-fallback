@@ -24,7 +24,7 @@ Pluginet er udviklet, så den tilføjede skråstreg ser ud som en indbygget del 
 ### 🛍 Installation via HACS
 ℹ️ [Hvad er HACS, og hvordan installeres det?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_da.md)
 
-🚀 [Prøv at tilføje depotet ved hjælp af dette link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Hvis din HA understøtter denne tilstand, og den virker, skal du klikke **Add** i det vindue, der åbnes, og klik derefter **Download** i nederste højre hjørne. Hvis alt fungerer, er installationen fuldført, og du kan springe de resterende installationstrin over. Gå direkte til [Konfiguration](#configuration).
+🚀 [Prøv at tilføje repositoryet via dette link](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Hvis denne metode understøttes i din HA og virker, skal du klikke på **Add** i vinduet, der åbnes, og derefter på **Download** nederst til højre. Hvis alt lykkes, er installationen færdig, og du kan springe de resterende installationstrin over. Gå direkte til [Konfiguration](#configuration).
 
 #### 1. Tilføj dette lager til HACS
 Det kan tage måneder, før pluginet officielt bliver tilføjet til HACS, så lageret skal først tilføjes manuelt:

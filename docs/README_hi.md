@@ -24,7 +24,7 @@
 ### 🛍 HACS के माध्यम से इंस्टॉलेशन
 ℹ️ [HACS क्या है और इसे कैसे इंस्टॉल करें?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_hi.md)
 
-🚀 [इस लिंक का उपयोग करके रिपॉजिटरी जोड़ने का प्रयास करें](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). यदि आपका HA इस मोड का समर्थन करता है और यह काम करता है, तो क्लिक करें **Add** खुलने वाली विंडो में, फिर क्लिक करें **Download** निचले दाएं कोने में. यदि सब कुछ काम करता है, तो इंस्टॉलेशन पूरा हो गया है और आप शेष इंस्टॉलेशन चरणों को छोड़ सकते हैं। सीधे जाएं [कॉन्फ़िगरेशन](#configuration).
+🚀 [इस लिंक से रिपॉज़िटरी जोड़ने की कोशिश करें](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin)। यदि आपके HA में यह तरीका समर्थित है और काम करता है, तो खुली विंडो में **Add** पर क्लिक करें और फिर नीचे दाईं ओर **Download** पर क्लिक करें। सब कुछ सफल होने पर इंस्टॉलेशन पूरा है और बाकी चरण छोड़े जा सकते हैं। सीधे [कॉन्फ़िगरेशन](#configuration) पर जाएँ।
 
 #### 1. इस रिपॉज़िटरी को HACS में जोड़ें
 प्लगइन को डिफ़ॉल्ट HACS कैटलॉग में शामिल होने में कई महीने लग सकते हैं, इसलिए पहले इस रिपॉज़िटरी को मैन्युअल रूप से जोड़ें:

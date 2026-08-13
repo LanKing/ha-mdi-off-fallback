@@ -24,7 +24,7 @@ Viðbótin er hönnuð þannig að skástrikið líti út eins og innbyggður hl
 ### 🛍 Uppsetning með HACS
 ℹ️ [Hvað er HACS og hvernig er það sett upp?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_is.md)
 
-🚀 [Prófaðu að bæta við geymslunni með þessum hlekk](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ef HA þinn styður þessa stillingu og það virkar skaltu smella **Add** í glugganum sem opnast, smelltu síðan á **Download** neðst í hægra horninu. Ef allt virkar er uppsetningu lokið og þú getur sleppt þeim uppsetningarskrefum sem eftir eru. Farðu beint á [Stillingar](#configuration).
+🚀 [Prófaðu að bæta repository við með þessum tengli](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ef þessi leið er studd í HA hjá þér og virkar skaltu smella á **Add** í glugganum sem opnast og síðan **Download** neðst til hægri. Ef allt gekk upp er uppsetningu lokið og hægt að sleppa skrefunum sem eftir eru. Farðu beint í [Stillingar](#configuration).
 
 #### 1. Bæta þessari geymslu við HACS
 Það getur tekið marga mánuði áður en viðbótin birtist í sjálfgefna HACS-safninu, svo fyrst þarf að bæta geymslunni við handvirkt:

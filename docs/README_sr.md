@@ -24,7 +24,7 @@
 ### 🛍 Инсталација преко HACS-а
 ℹ️ [Шта је HACS и како се инсталира?](https://github.com/LanKing/ha-tools/blob/main/appendix-what-is-hacs/docs/README_sr.md)
 
-🚀 [Покушајте да додате спремиште користећи ову везу](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ако ваш ХА подржава овај режим и ради, кликните **Add** у прозору који се отвори, а затим кликните **Download** у доњем десном углу. Ако све функционише, инсталација је завршена и можете прескочити преостале кораке инсталације. Иди директно на [Конфигурација](#configuration).
+🚀 [Покушајте да додате репозиторијум преко овог линка](https://my.home-assistant.io/redirect/hacs_repository/?owner=LanKing&repository=ha-mdi-off-fallback&category=plugin). Ако је овај начин подржан у вашем HA и ради, кликните **Add** у отвореном прозору, а затим **Download** доле десно. Ако је све успело, инсталација је завршена и преостале кораке можете прескочити. Идите директно на [Конфигурација](#configuration).
 
 #### 1. Додавање овог репозиторијума у HACS
 Укључивање додатка у подразумевани HACS каталог може трајати месецима, па прво ручно додајте репозиторијум:
